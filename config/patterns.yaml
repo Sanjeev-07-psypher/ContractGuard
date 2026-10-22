@@ -1,0 +1,92 @@
+# Regex / phrase patterns (HLD 6.2, 6.3, 6.4, 7.1, 7.3).
+# Python `re` syntax. Matching is case-sensitive unless a pattern carries (?i).
+
+cleaning:
+  page_number_line: '(?i)^\s*(page\s*)?\d+(\s*(of|/)\s*\d+)?\s*$'
+  dehyphenate: '(\w)-\n(\w)'
+  header_footer_lines: 3          # top/bottom N lines per page considered
+  header_footer_min_ratio: 0.5    # fraction of pages a line must appear on
+  header_footer_min_pages: 3
+
+segmentation:
+  l1:
+    - '^(ARTICLE|Article)\s+[IVXLC\d]+'
+    - '^\d{1,2}\.\s+[A-Z]'
+    - '^\d{1,2}\s+[A-Z][A-Z ]{3,}$'
+    - '^SECTION\s+\d+'
+  l2:
+    - '^\d{1,2}\.\d{1,2}\.?\s+'
+  l3:
+    - '^\(?[a-z]\)\s+'
+    - '^\(?[ivx]+\)\s+'
+    - '^\d{1,2}\.\d{1,2}\.\d{1,2}'
+  definitions_heading: '(?i)definitions|interpretation'
+  exhibit_heading: '(?i)^\s*(exhibit|schedule|annex|appendix)\b'
+  signature: '(?i)in witness whereof|^\s*signature|^\s*by:'
+  fallback_merge_chars: 200
+
+sla_keywords:
+  - '(?i)service level'
+  - '\bSLA\b'
+  - '(?i)uptime'
+  - '(?i)availability of \d+(\.\d+)?\s?%'
+  - '(?i)response time'
+  - '(?i)resolution time'
+  - '(?i)service credits'
+
+parties:
+  preamble: '(?is)between\s+(?P<a>.+?)\s*\(.*?["“](?P<alias_a>[^"”]+)["”].*?\)\s*,?\s*and\s+(?P<b>.+?)\s*\(.*?["“](?P<alias_b>[^"”]+)["”].*?\)'
+  fuzzy_threshold: 85
+  our_org_aliases: [Company, Client, Customer, Licensee, Buyer, Purchaser]
+  counterparty_aliases: [Vendor, Supplier, Service Provider, Provider, Contractor, Consultant, Licensor, Seller]
+
+dates:
+  effective: '(?i)(effective\s+(as\s+of|date)|dated)'
+
+governing_law:
+  jurisdiction: 'laws of (the )?(State of )?(?P<j>[A-Z][A-Za-z ]+?)(,|\.| and| without)'
+  aliases:
+    Karnataka: India (Karnataka)
+    Maharashtra: India (Maharashtra)
+    Tamil Nadu: India (Tamil Nadu)
+    Delhi: India (Delhi)
+    India: India
+    Republic of India: India
+    New York: USA (New York)
+    England and Wales: UK (England and Wales)
+    England: UK (England and Wales)
+    Singapore: Singapore
+
+facts:
+  negation_cues: ['\bnot\b', '\bno\b', '(?i)in no event', '(?i)shall not', '(?i)\bneither\b']
+  negation_window_tokens: 8
+  termination:
+    keyword: '(?i)terminat\w*'
+    notice: '(?i)notice|prior written'
+    window_tokens: 12
+    convenience: ['(?i)for convenience', '(?i)without cause', '(?i)for any reason', '(?i)at any time']
+    mutual: ['(?i)either party', '(?i)both parties']
+  liability:
+    cap:
+      - '(?i)shall not exceed'
+      - '(?i)limited to'
+      - '(?i)in no event .{0,80} exceed'
+      - '(?i)aggregate liability .{0,60} (not exceed|limited)'
+      - '(?i)maximum (aggregate )?liability'
+    uncapped:
+      - '(?i)unlimited liability'
+      - '(?i)without (any )?limit(ation)? (as to|on) (the )?amount'
+      - '(?i)liable for all (losses|damages)'
+      - '(?i)any and all (losses|damages)'
+    exclusions: ['(?i)including (but not limited to|without limitation)']
+    carve_out: '(?i)(cap|limitation).{0,40}shall not apply'
+  renewal:
+    automatic:
+      - '(?i)automatic(ally)? renew'
+      - '(?i)shall renew (automatically|for successive)'
+      - '(?i)evergreen'
+      - '(?i)unless .{0,40}notice of non-renewal'
+    manual: ['(?i)may be renewed by mutual (written )?agreement']
+  payment:
+    sentence: '(?i)invoice|payment'
+    trigger: '(?i)within|net|no later than'

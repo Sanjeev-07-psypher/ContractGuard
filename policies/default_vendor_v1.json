@@ -1,0 +1,173 @@
+{
+  "policy_id": "default_vendor_v1",
+  "name": "Default Vendor & SaaS Contract Policy",
+  "version": "1.0.0",
+  "our_org_default": "ABC Technologies Pvt. Ltd.",
+  "thresholds": {
+    "tau_missing": 0.55
+  },
+  "rules": [
+    {
+      "id": "R01",
+      "name": "Liability must be capped",
+      "category": "LIABILITY",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "SAAS_LICENSE"
+      ],
+      "check": "BOOLEAN_EQUALS",
+      "fact": "liability.has_cap",
+      "expected": true,
+      "required_clause": true,
+      "severity": "HIGH",
+      "policy_text": "The counterparty's total liability under the contract must be subject to a stated cap or limit.",
+      "recommendation_template": "Check whether the contract states an aggregate cap on liability and what it covers."
+    },
+    {
+      "id": "R02",
+      "name": "No unlimited liability",
+      "category": "LIABILITY",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "SAAS_LICENSE"
+      ],
+      "check": "BOOLEAN_EQUALS",
+      "fact": "liability.is_uncapped",
+      "expected": false,
+      "required_clause": false,
+      "severity": "HIGH",
+      "policy_text": "Neither party should accept unlimited or uncapped liability for losses or damages.",
+      "recommendation_template": "Review whether any party is exposed to unlimited liability and whether a cap should apply."
+    },
+    {
+      "id": "R03",
+      "name": "Minimum termination notice",
+      "category": "TERMINATION",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "SAAS_LICENSE"
+      ],
+      "check": "NUMERIC_MIN",
+      "fact": "termination.notice_days",
+      "threshold": 30,
+      "required_clause": false,
+      "severity": "HIGH",
+      "policy_text": "Either party's right to terminate for convenience must require at least 30 days' prior written notice.",
+      "recommendation_template": "Review whether the notice period can be extended to at least 30 days."
+    },
+    {
+      "id": "R04",
+      "name": "Mutual termination rights",
+      "category": "TERMINATION",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "SAAS_LICENSE"
+      ],
+      "check": "BOOLEAN_EQUALS",
+      "fact": "termination.counterparty_unilateral",
+      "expected": false,
+      "required_clause": false,
+      "severity": "MEDIUM",
+      "policy_text": "A right to terminate for convenience must not be granted only to the counterparty; termination rights should be mutual.",
+      "recommendation_template": "Check whether our organization has the same right to terminate for convenience as the counterparty."
+    },
+    {
+      "id": "R05",
+      "name": "No automatic renewal",
+      "category": "RENEWAL",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "NDA",
+        "SAAS_LICENSE",
+        "OTHER"
+      ],
+      "check": "BOOLEAN_EQUALS",
+      "fact": "renewal.is_automatic",
+      "expected": false,
+      "required_clause": false,
+      "severity": "MEDIUM",
+      "policy_text": "The contract must not renew automatically; any renewal should require mutual written agreement.",
+      "recommendation_template": "Check the renewal mechanism and any deadline for giving notice of non-renewal."
+    },
+    {
+      "id": "R06",
+      "name": "SLA required",
+      "category": "SLA",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "SAAS_LICENSE"
+      ],
+      "check": "CLAUSE_PRESENT",
+      "required_clause": false,
+      "severity": "MEDIUM",
+      "policy_text": "The contract must contain a service level agreement covering availability, response or resolution times, and service credits.",
+      "recommendation_template": "Check whether service levels are defined in the contract or in an attached schedule."
+    },
+    {
+      "id": "R07",
+      "name": "Confidentiality clause required",
+      "category": "CONFIDENTIALITY",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "NDA",
+        "SAAS_LICENSE",
+        "OTHER"
+      ],
+      "check": "CLAUSE_PRESENT",
+      "required_clause": false,
+      "severity": "HIGH",
+      "policy_text": "The contract must contain a confidentiality clause protecting non-public information disclosed by either party.",
+      "recommendation_template": "Check whether confidential information is protected and for how long."
+    },
+    {
+      "id": "R08",
+      "name": "Indian governing law",
+      "category": "GOVERNING_LAW",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "NDA",
+        "SAAS_LICENSE",
+        "OTHER"
+      ],
+      "check": "ENUM_IN",
+      "fact": "governing_law.jurisdiction",
+      "allowed": [
+        "India"
+      ],
+      "required_clause": true,
+      "severity": "MEDIUM",
+      "policy_text": "The contract must be governed by the laws of India.",
+      "recommendation_template": "Check the governing law and jurisdiction clause and whether Indian law can apply."
+    },
+    {
+      "id": "R09",
+      "name": "Payment terms at least 30 days",
+      "category": "PAYMENT",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "SAAS_LICENSE"
+      ],
+      "check": "NUMERIC_MIN",
+      "fact": "payment.due_days",
+      "threshold": 30,
+      "required_clause": false,
+      "severity": "LOW",
+      "policy_text": "Invoices must be payable no earlier than 30 days after receipt.",
+      "recommendation_template": "Review whether the payment period can be extended to at least 30 days."
+    },
+    {
+      "id": "R10",
+      "name": "Indemnification clause required",
+      "category": "INDEMNIFICATION",
+      "applies_to": [
+        "VENDOR_SERVICE",
+        "SAAS_LICENSE"
+      ],
+      "check": "CLAUSE_PRESENT",
+      "required_clause": false,
+      "severity": "MEDIUM",
+      "policy_text": "The contract must contain an indemnification clause under which the counterparty indemnifies our organization.",
+      "recommendation_template": "Check whether the counterparty indemnifies our organization, for example against third-party claims."
+    }
+  ]
+}

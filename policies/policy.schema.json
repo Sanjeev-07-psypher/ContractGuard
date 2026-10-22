@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "policy.schema.json",
+  "title": "ContractGuard policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "policy_id",
+    "name",
+    "version",
+    "rules"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "our_org_default": {
+      "type": "string"
+    },
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "tau_missing": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "category",
+          "applies_to",
+          "check",
+          "severity",
+          "policy_text",
+          "recommendation_template"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^R\\d{2,}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "enum": [
+              "CONFIDENTIALITY",
+              "TERMINATION",
+              "PAYMENT",
+              "LIABILITY",
+              "INDEMNIFICATION",
+              "IP",
+              "GOVERNING_LAW",
+              "RENEWAL",
+              "SLA",
+              "OTHER"
+            ]
+          },
+          "applies_to": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "VENDOR_SERVICE",
+                "NDA",
+                "SAAS_LICENSE",
+                "OTHER"
+              ]
+            }
+          },
+          "check": {
+            "enum": [
+              "CLAUSE_PRESENT",
+              "BOOLEAN_EQUALS",
+              "NUMERIC_MIN",
+              "NUMERIC_MAX",
+              "ENUM_IN"
+            ]
+          },
+          "fact": {
+            "enum": [
+              "termination.notice_days",
+              "termination.counterparty_unilateral",
+              "liability.has_cap",
+              "liability.is_uncapped",
+              "renewal.is_automatic",
+              "payment.due_days",
+              "governing_law.jurisdiction"
+            ]
+          },
+          "expected": {
+            "type": "boolean"
+          },
+          "threshold": {
+            "type": "number"
+          },
+          "allowed": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required_clause": {
+            "type": "boolean"
+          },
+          "severity": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ]
+          },
+          "policy_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recommendation_template": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "check": {
+                  "not": {
+                    "const": "CLAUSE_PRESENT"
+                  }
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "fact"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "check": {
+                  "const": "BOOLEAN_EQUALS"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "expected"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "check": {
+                  "enum": [
+                    "NUMERIC_MIN",
+                    "NUMERIC_MAX"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "threshold"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "check": {
+                  "const": "ENUM_IN"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "allowed"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

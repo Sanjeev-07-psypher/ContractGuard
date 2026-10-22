@@ -1,0 +1,11 @@
+# Keyword scoring for contract type detection (HLD 6.5).
+# Title (first 3 non-empty lines) weighted x3, first 1,500 chars x1. Score < min_score -> OTHER.
+title_lines: 3
+title_weight: 3
+body_chars: 1500
+body_weight: 1
+min_score: 2
+types:
+  NDA: ["non-disclosure", "confidentiality agreement", "NDA"]
+  SAAS_LICENSE: ["license agreement", "subscription", "software as a service", "SaaS", "end user license"]
+  VENDOR_SERVICE: ["services agreement", "master service", "vendor", "supply agreement", "procurement", "consulting agreement"]

@@ -1,0 +1,26 @@
+# Dataset label -> ContractGuard category (HLD 6.4).
+#
+# STATUS: DRAFT, NOT VERIFIED. Per the HLD, only label names actually printed by
+# `python training/inspect_labels.py` may be used. The names below are the HLD's
+# candidates. Run the script; it writes docs/labels_ledgar.txt and docs/labels_cuad.txt
+# and reports every name below that does not exist in the dataset. Delete those
+# names before training. Unmapped labels go to OTHER.
+verified: false
+
+ledgar:
+  CONFIDENTIALITY: [Confidentiality]
+  TERMINATION: [Terminations]
+  PAYMENT: [Payments, Fees]
+  INDEMNIFICATION: [Indemnifications, Indemnity]
+  IP: [Intellectual Property]
+  GOVERNING_LAW: [Governing Laws]
+  LIABILITY: []            # add a LEDGAR label only if inspect_labels.py prints one
+
+cuad:
+  TERMINATION: [Termination For Convenience]
+  LIABILITY: [Cap On Liability, Uncapped Liability]
+  IP: [Ip Ownership Assignment]
+  GOVERNING_LAW: [Governing Law]
+  RENEWAL: [Renewal Term, Notice Period To Terminate Renewal]
+
+# SLA has no public labels: keyword rules + prototypes only.

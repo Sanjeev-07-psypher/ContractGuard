@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+*.egg-info/
+data/*
+!data/.gitkeep
+models/*
+!models/README.md
+evaluation/results/*
+!evaluation/results/.gitkeep
