@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import logging
 import sys
@@ -46,9 +47,8 @@ def _cmd_analyze(args: argparse.Namespace) -> int:
     if not args.file.is_file():
         print(f"error: file not found: {args.file}", file=sys.stderr)
         return 2
-    try:
-        from contractguard import pipeline  # noqa: F401  (added in a later phase)
-    except ImportError:
+    # The orchestrator (contractguard.pipeline) arrives once Phases 2-7 exist.
+    if importlib.util.find_spec("contractguard.pipeline") is None:
         print("error: the analysis pipeline is not implemented yet.", file=sys.stderr)
         return 3
     return 0  # pragma: no cover

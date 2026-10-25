@@ -30,3 +30,10 @@ def test_config_hides_secret(capsys, monkeypatch):
 
 def test_analyze_missing_file(tmp_path):
     assert main(["analyze", str(tmp_path / "nope.pdf")]) == 2
+
+
+def test_analyze_without_pipeline(tmp_path, capsys):
+    f = tmp_path / "c.pdf"
+    f.write_bytes(b"%PDF-1.7")
+    assert main(["analyze", str(f)]) == 3
+    assert "not implemented" in capsys.readouterr().err
