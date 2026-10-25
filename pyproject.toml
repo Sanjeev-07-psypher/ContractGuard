@@ -33,7 +33,7 @@ dependencies = [
 training = ["datasets"]
 ollama = ["ollama"]
 app = ["fastapi", "uvicorn", "python-multipart", "sqlmodel", "streamlit", "requests"]
-dev = ["pytest", "httpx", "ruff", "reportlab"]
+dev = ["pytest", "httpx", "ruff", "mypy", "reportlab"]
 
 [project.scripts]
 contractguard = "contractguard.cli:main"

@@ -9,3 +9,4 @@ data/*
 !data/.gitkeep
 models/*
 !models/README.md
+.mypy_cache/
