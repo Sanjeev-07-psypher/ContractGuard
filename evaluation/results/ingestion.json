@@ -1,0 +1,241 @@
+{
+  "files_loaded": 24,
+  "files_total": 24,
+  "ocr_cer_mean": 0.011,
+  "ocr_cer_max": 0.0176,
+  "ocr_cer_target": 0.05,
+  "contracts": [
+    {
+      "contract": "gc01",
+      "docx": {
+        "ok": true,
+        "blocks": 65,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.14
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 62,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.69
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 17,
+        "ocr_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "warnings": [],
+        "seconds": 10.62
+      },
+      "ocr_cer": 0.005
+    },
+    {
+      "contract": "gc02",
+      "docx": {
+        "ok": true,
+        "blocks": 71,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.09
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 63,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.01
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 38,
+        "ocr_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "warnings": [],
+        "seconds": 10.86
+      },
+      "ocr_cer": 0.0161
+    },
+    {
+      "contract": "gc03",
+      "docx": {
+        "ok": true,
+        "blocks": 45,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.07
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 40,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.01
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 9,
+        "ocr_pages": [
+          1,
+          2,
+          3
+        ],
+        "warnings": [],
+        "seconds": 7.51
+      },
+      "ocr_cer": 0.0088
+    },
+    {
+      "contract": "gc04",
+      "docx": {
+        "ok": true,
+        "blocks": 58,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.09
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 45,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.01
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 26,
+        "ocr_pages": [
+          1,
+          2,
+          3
+        ],
+        "warnings": [],
+        "seconds": 8.62
+      },
+      "ocr_cer": 0.0115
+    },
+    {
+      "contract": "gc05",
+      "docx": {
+        "ok": true,
+        "blocks": 44,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.06
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 36,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.01
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 4,
+        "ocr_pages": [
+          1,
+          2,
+          3
+        ],
+        "warnings": [],
+        "seconds": 7.25
+      },
+      "ocr_cer": 0.0091
+    },
+    {
+      "contract": "gc06",
+      "docx": {
+        "ok": true,
+        "blocks": 34,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.07
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 27,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.0
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 13,
+        "ocr_pages": [
+          1,
+          2
+        ],
+        "warnings": [],
+        "seconds": 6.07
+      },
+      "ocr_cer": 0.0089
+    },
+    {
+      "contract": "gc07",
+      "docx": {
+        "ok": true,
+        "blocks": 36,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.09
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 29,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.01
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 3,
+        "ocr_pages": [
+          1,
+          2
+        ],
+        "warnings": [],
+        "seconds": 5.4
+      },
+      "ocr_cer": 0.0112
+    },
+    {
+      "contract": "gc08",
+      "docx": {
+        "ok": true,
+        "blocks": 46,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.06
+      },
+      "text_pdf": {
+        "ok": true,
+        "blocks": 39,
+        "ocr_pages": [],
+        "warnings": [],
+        "seconds": 0.01
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "blocks": 3,
+        "ocr_pages": [
+          1,
+          2,
+          3
+        ],
+        "warnings": [],
+        "seconds": 7.08
+      },
+      "ocr_cer": 0.0176
+    }
+  ]
+}

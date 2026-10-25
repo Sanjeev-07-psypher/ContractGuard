@@ -45,6 +45,7 @@ class Block(BaseModel):
     para_index: int | None = None  # DOCX paragraph index; None for PDF
     is_ocr: bool = False
     ocr_confidence: float | None = None  # 0-100 mean word confidence
+    style: str | None = None  # DOCX paragraph style, e.g. "Heading 2" (segmentation hint)
 
 
 class Document(BaseModel):
@@ -54,6 +55,46 @@ class Document(BaseModel):
     blocks: list[Block]
     ocr_pages: list[int] = Field(default_factory=list)
     warnings: list[str] = Field(default_factory=list)
+
+
+class TextSpan(BaseModel):
+    """Where a stretch of cleaned text came from: [start, end) offsets into CleanedText.text."""
+
+    start: int
+    end: int
+    block_index: int  # index into Document.blocks
+    page: int | None = None
+    para_index: int | None = None
+    is_ocr: bool = False
+
+
+class CleanedText(BaseModel):
+    """Cleaned full text plus the offset map back to pages / paragraphs (HLD 6.2).
+
+    Blocks are separated by a blank line ("\n\n"); lines inside a block by "\n".
+    """
+
+    text: str
+    spans: list[TextSpan]
+    file_type: Literal["pdf", "docx"]
+    removed_lines: list[str] = Field(default_factory=list)  # repeating headers/footers dropped
+
+    def span_at(self, offset: int) -> TextSpan | None:
+        """The span containing ``offset``, or the nearest one before it (offsets in separators)."""
+        best: TextSpan | None = None
+        for span in self.spans:
+            if span.start <= offset:
+                best = span
+            if span.start <= offset < span.end:
+                return span
+        return best
+
+    def pages_for(self, start: int, end: int) -> tuple[int | None, int | None]:
+        """First and last page touched by the character range [start, end)."""
+        pages = [
+            s.page for s in self.spans if s.page is not None and s.start < end and s.end > start
+        ]
+        return (min(pages), max(pages)) if pages else (None, None)
 
 
 class Clause(BaseModel):

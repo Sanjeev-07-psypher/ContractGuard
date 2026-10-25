@@ -7,6 +7,9 @@ cleaning:
   header_footer_lines: 3          # top/bottom N lines per page considered
   header_footer_min_ratio: 0.5    # fraction of pages a line must appear on
   header_footer_min_pages: 3
+  soft_wrap_end: '[.:;]\s*$'          # a line ending like this is NOT joined to the next
+  soft_wrap_next: '^[a-z]'            # ...and the next line must start lowercase
+  number_only_line: '^\(?(\d{1,2}(\.\d{1,2})*|[a-z]|[ivx]+)[.)]?$'  # "10.1" alone on a line
 
 segmentation:
   l1:
