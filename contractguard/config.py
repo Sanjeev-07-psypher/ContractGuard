@@ -78,6 +78,7 @@ class PolicySettings(BaseModel):
 class LLMSettings(BaseModel):
     provider: Literal["gemini", "ollama", "mock", "none"]
     model: str | None = None
+    ollama_host: str = "http://localhost:11434"
     rpm: int
     max_findings: int
     temperature: float

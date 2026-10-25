@@ -31,7 +31,6 @@ dependencies = [
 
 [project.optional-dependencies]
 training = ["datasets"]
-ollama = ["ollama"]
 app = ["fastapi", "uvicorn", "python-multipart", "sqlmodel", "streamlit", "requests"]
 dev = ["pytest", "httpx", "ruff", "mypy", "reportlab"]
 
@@ -52,6 +51,9 @@ extend-exclude = ["data", "models", ".venv"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"contractguard/llm/prompts.py" = ["E501"]  # prompt text is kept verbatim
 
 [tool.mypy]
 python_version = "3.11"
