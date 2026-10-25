@@ -155,8 +155,14 @@ class Explainer:
         self.limiter = limiter or RateLimiter(self.settings.llm.rpm)
         self.sleep = sleep
         self.t = get_templates()
-        self.stats = {"llm": 0, "template": 0, "cache_hits": 0, "grounding_failures": 0,
-                      "number_failures": 0, "errors": 0}  # fmt: skip
+        self.stats = {
+            "llm": 0,
+            "template": 0,
+            "cache_hits": 0,
+            "grounding_failures": 0,
+            "number_failures": 0,
+            "errors": 0,
+        }
 
     # ----- templates -------------------------------------------------------------------------
     def template_explanation(self, finding: Finding, rule: Rule | None) -> Explanation:
@@ -188,10 +194,12 @@ class Explainer:
             self.limiter.acquire()
             try:
                 return self.provider.generate_json(
-                    system, user, schema,
+                    system,
+                    user,
+                    schema,
                     temperature=self.settings.llm.temperature,
                     timeout_s=self.settings.llm.timeout_s,
-                )  # fmt: skip
+                )
             except LLMError as exc:
                 if not exc.retryable or attempt == tries - 1:
                     raise
@@ -228,8 +236,15 @@ class Explainer:
             location=finding.location or "-",
             clause_text=prompt_clause,
         )
-        key = LLMCache.make_key(PROMPT_VERSION, finding.rule_id, finding.status, clause_text,
-                                finding.expected, finding.found, self.provider.model)  # fmt: skip
+        key = LLMCache.make_key(
+            PROMPT_VERSION,
+            finding.rule_id,
+            finding.status,
+            clause_text,
+            finding.expected,
+            finding.found,
+            self.provider.model,
+        )
         cached = self.cache.get(key)
         if cached is not None:
             self.stats["cache_hits"] += 1
@@ -239,8 +254,9 @@ class Explainer:
         answer: dict[str, Any] | None = None
         for attempt in range(2):  # first try + one grounding retry
             try:
-                raw = self._call(EXPLAIN_SYSTEM, user + (GROUNDING_RETRY_NOTE if attempt else ""),
-                                 EXPLAIN_SCHEMA)  # fmt: skip
+                raw = self._call(
+                    EXPLAIN_SYSTEM, user + (GROUNDING_RETRY_NOTE if attempt else ""), EXPLAIN_SCHEMA
+                )
             except LLMError as exc:
                 log.warning("LLM explanation failed for %s: %s", finding.rule_id, exc)
                 self.stats["errors"] += 1
@@ -283,8 +299,9 @@ class Explainer:
         by_rule = {r.id: r for r in rules}
         by_clause = {c.clause_id: c for c in clauses}
         our = next((p.alias or p.name for p in meta.parties if p.role == "OUR_ORG"), "unknown")
-        other = next((p.alias or p.name for p in meta.parties if p.role == "COUNTERPARTY"),
-                     "unknown")  # fmt: skip
+        other = next(
+            (p.alias or p.name for p in meta.parties if p.role == "COUNTERPARTY"), "unknown"
+        )
 
         flagged = [i for i, f in enumerate(findings) if f.status in EXPLAINED_STATUSES]
         ranked = sorted(flagged, key=lambda i: (_SEVERITY_RANK[findings[i].severity], i))
@@ -329,8 +346,10 @@ class Explainer:
     def template_summary(self, findings: Sequence[Finding]) -> str:
         cfg = self.t["executive_summary"]
         applicable = [f for f in findings if f.status != "NOT_APPLICABLE"]
-        count = {s: sum(f.status == s for f in applicable) for s in
-                 ("NON_COMPLIANT", "MISSING", "NEEDS_REVIEW", "COMPLIANT")}  # fmt: skip
+        count = {
+            s: sum(f.status == s for f in applicable)
+            for s in ("NON_COMPLIANT", "MISSING", "NEEDS_REVIEW", "COMPLIANT")
+        }
         text = cfg["counts"].format(
             n_rules=len(applicable),
             n_noncompliant=count["NON_COMPLIANT"],

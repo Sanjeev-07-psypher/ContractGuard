@@ -32,8 +32,15 @@ def test_analyze_missing_file(tmp_path):
     assert main(["analyze", str(tmp_path / "nope.pdf")]) == 2
 
 
-def test_analyze_without_pipeline(tmp_path, capsys):
+def test_analyze_without_classifier_artifacts(tmp_path, capsys, monkeypatch):
+    from contractguard import pipeline
+    from contractguard.errors import ModelArtifactError
+
+    def missing(**_):
+        raise ModelArtifactError("Classifier artifact missing: models/classifier.joblib")
+
+    monkeypatch.setattr(pipeline.Resources, "load", staticmethod(missing))
     f = tmp_path / "c.pdf"
     f.write_bytes(b"%PDF-1.7")
-    assert main(["analyze", str(f)]) == 3
-    assert "not implemented" in capsys.readouterr().err
+    assert main(["analyze", str(f)]) == 1
+    assert "Classifier artifact missing" in capsys.readouterr().err

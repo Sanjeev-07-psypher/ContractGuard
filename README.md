@@ -191,7 +191,7 @@ from contractguard.preprocessing.cleaner import clean_document
 from contractguard.segmentation.segmenter import segment
 from contractguard.extraction.document import extract_meta
 
-doc = load_document("evaluation/gold/gc01/contract_scanned.pdf")   # OCR runs here
+doc = load_document("evaluation/gold/gc01/contract_scanned.pdf")  # OCR runs here
 clauses = segment(clean_document(doc), doc)
 for c in clauses[:4]:
     print(c.clause_id, c.section_path, c.heading, f"page {c.page_start}")

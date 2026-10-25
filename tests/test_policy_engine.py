@@ -43,9 +43,12 @@ def rule(**kw):
 
 def engine(*rules, embedder=None, tau=None):
     policy = Policy(
-        policy_id="t", name="t", version="1.0.0", rules=list(rules),
+        policy_id="t",
+        name="t",
+        version="1.0.0",
+        rules=list(rules),
         thresholds={"tau_missing": tau},
-    )  # fmt: skip
+    )
     return PolicyEngine(policy, embedder=embedder)
 
 
@@ -73,8 +76,10 @@ def test_not_applicable_by_contract_type():
 
 # --- step 3 -----------------------------------------------------------------------------------
 def test_missing_when_clause_present_check_and_no_clause():
-    f = run(rule(check="CLAUSE_PRESENT", fact=None, threshold=None, category="SLA"),
-            [clause("c001", ["PAYMENT"])])  # fmt: skip
+    f = run(
+        rule(check="CLAUSE_PRESENT", fact=None, threshold=None, category="SLA"),
+        [clause("c001", ["PAYMENT"])],
+    )
     assert f.status == "MISSING" and f.severity == "HIGH" and f.clause_ids == []
 
 
@@ -89,8 +94,13 @@ def test_not_applicable_when_absent_and_not_required():
 
 
 def test_semantic_candidate_gives_needs_review():
-    sla = rule(check="CLAUSE_PRESENT", fact=None, threshold=None, category="SLA",
-               policy_text="An SLA with uptime commitments is required.")  # fmt: skip
+    sla = rule(
+        check="CLAUSE_PRESENT",
+        fact=None,
+        threshold=None,
+        category="SLA",
+        policy_text="An SLA with uptime commitments is required.",
+    )
     clauses = [clause("c001", ["PAYMENT"]), clause("c002", [], "Uptime: 99.5% uptime monthly.")]
     f = run(sla, clauses, embedder=FakeEmbedder(), tau=0.55)
     assert f.status == "NEEDS_REVIEW" and f.severity == "LOW"
@@ -98,15 +108,25 @@ def test_semantic_candidate_gives_needs_review():
 
 
 def test_semantic_below_threshold_falls_back_to_missing():
-    sla = rule(check="CLAUSE_PRESENT", fact=None, threshold=None, category="SLA",
-               policy_text="Unrelated policy wording.")  # fmt: skip
+    sla = rule(
+        check="CLAUSE_PRESENT",
+        fact=None,
+        threshold=None,
+        category="SLA",
+        policy_text="Unrelated policy wording.",
+    )
     f = run(sla, [clause("c001", [], "uptime 99%.")], embedder=FakeEmbedder(), tau=0.55)
     assert f.status == "MISSING"
 
 
 def test_semantic_search_ignores_non_body_clauses():
-    sla = rule(check="CLAUSE_PRESENT", fact=None, threshold=None, category="SLA",
-               policy_text="An SLA with uptime commitments is required.")  # fmt: skip
+    sla = rule(
+        check="CLAUSE_PRESENT",
+        fact=None,
+        threshold=None,
+        category="SLA",
+        policy_text="An SLA with uptime commitments is required.",
+    )
     clauses = [clause("c001", [], "uptime defined as ...", kind="DEFINITIONS")]
     assert run(sla, clauses, embedder=FakeEmbedder(), tau=0.55).status == "MISSING"
 
@@ -118,8 +138,11 @@ def test_definitions_clause_does_not_match_rule():
 
 # --- step 4 -----------------------------------------------------------------------------------
 def test_all_low_confidence_gives_needs_review():
-    f = run(rule(), [clause("c001", ["TERMINATION"], low=True)],
-            {"termination.notice_days": Fact(key="termination.notice_days", value=60)})  # fmt: skip
+    f = run(
+        rule(),
+        [clause("c001", ["TERMINATION"], low=True)],
+        {"termination.notice_days": Fact(key="termination.notice_days", value=60)},
+    )
     assert f.status == "NEEDS_REVIEW" and f.severity == "LOW"
 
 
@@ -158,8 +181,11 @@ def test_ambiguous_fact_gives_needs_review():
 # --- step 7, one per check type ---------------------------------------------------------------
 @pytest.mark.parametrize("value,status", [(30, "COMPLIANT"), (7, "NON_COMPLIANT")])
 def test_numeric_min(value, status):
-    facts = {"termination.notice_days": Fact(key="termination.notice_days", value=value,
-                                             clause_ids=["c001"], evidence_text="x")}  # fmt: skip
+    facts = {
+        "termination.notice_days": Fact(
+            key="termination.notice_days", value=value, clause_ids=["c001"], evidence_text="x"
+        )
+    }
     f = run(rule(), [clause("c001", ["TERMINATION"], page=2)], facts)
     assert f.status == status
     assert f.expected == ">= 30 days" and f.found == f"{value} days"
@@ -178,8 +204,13 @@ def test_numeric_max(value, status):
 
 @pytest.mark.parametrize("value,status", [(True, "COMPLIANT"), (False, "NON_COMPLIANT")])
 def test_boolean_equals(value, status):
-    r = rule(check="BOOLEAN_EQUALS", category="LIABILITY", fact="liability.has_cap",
-             expected=True, threshold=None)  # fmt: skip
+    r = rule(
+        check="BOOLEAN_EQUALS",
+        category="LIABILITY",
+        fact="liability.has_cap",
+        expected=True,
+        threshold=None,
+    )
     f = run(
         r,
         [clause("c001", ["LIABILITY"])],
@@ -189,11 +220,18 @@ def test_boolean_equals(value, status):
     assert f.expected == "liability is capped"
 
 
-@pytest.mark.parametrize("value,status", [("India (Karnataka)", "COMPLIANT"),
-                                          ("USA (New York)", "NON_COMPLIANT")])  # fmt: skip
+@pytest.mark.parametrize(
+    "value,status", [("India (Karnataka)", "COMPLIANT"), ("USA (New York)", "NON_COMPLIANT")]
+)
 def test_enum_in_substring_case_insensitive(value, status):
-    r = rule(check="ENUM_IN", category="GOVERNING_LAW", fact="governing_law.jurisdiction",
-             allowed=["india"], threshold=None, severity="MEDIUM")  # fmt: skip
+    r = rule(
+        check="ENUM_IN",
+        category="GOVERNING_LAW",
+        fact="governing_law.jurisdiction",
+        allowed=["india"],
+        threshold=None,
+        severity="MEDIUM",
+    )
     facts = {"governing_law.jurisdiction": Fact(key="governing_law.jurisdiction", value=value)}
     f = run(r, [clause("c001", ["GOVERNING_LAW"])], facts)
     assert f.status == status and f.found == value
@@ -212,8 +250,9 @@ def test_compare_rejects_bool_for_numeric():
 # --- evidence, location, ordering -------------------------------------------------------------
 def test_evidence_uses_fact_clauses():
     clauses = [clause("c001", ["TERMINATION"], page=1), clause("c002", ["TERMINATION"], page=4)]
-    facts = {"termination.notice_days": Fact(key="termination.notice_days", value=7,
-                                             clause_ids=["c002"])}  # fmt: skip
+    facts = {
+        "termination.notice_days": Fact(key="termination.notice_days", value=7, clause_ids=["c002"])
+    }
     f = run(rule(), clauses, facts)
     assert f.clause_ids == ["c002"] and f.location == "Page 4"
 
@@ -228,11 +267,16 @@ def test_location_formats():
 def test_findings_sorted_by_status_then_severity():
     rules = [
         rule(id="R01", check="CLAUSE_PRESENT", fact=None, threshold=None, category="IP"),
-        rule(id="R02", severity="LOW", required_clause=True, category="PAYMENT",
-             fact="payment.due_days"),
+        rule(
+            id="R02",
+            severity="LOW",
+            required_clause=True,
+            category="PAYMENT",
+            fact="payment.due_days",
+        ),
         rule(id="R03"),
         rule(id="R04", severity="MEDIUM"),
-    ]  # fmt: skip
+    ]
     clauses = [clause("c001", ["TERMINATION", "IP"])]
     facts = {"termination.notice_days": Fact(key="termination.notice_days", value=7)}
     out = engine(*rules).evaluate("VENDOR_SERVICE", clauses, facts)

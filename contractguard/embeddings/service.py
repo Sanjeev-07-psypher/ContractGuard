@@ -57,7 +57,12 @@ class EmbeddingService:
                 from sentence_transformers import SentenceTransformer
 
                 log.info("Loading embedding model %s", self.model_name)
-                self._model = SentenceTransformer(self.model_name, device="cpu")
+                try:  # use the local cache first, so no network call when already downloaded
+                    self._model = SentenceTransformer(
+                        self.model_name, device="cpu", local_files_only=True
+                    )
+                except Exception:
+                    self._model = SentenceTransformer(self.model_name, device="cpu")
         return self._model
 
     def encode(self, texts: list[str]) -> np.ndarray:

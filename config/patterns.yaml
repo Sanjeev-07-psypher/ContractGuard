@@ -44,6 +44,19 @@ sla_keywords:
   - '(?i)resolution time'
   - '(?i)service credits'
 
+# Hand-written SLA examples: added to the SLA prototype (HLD 6.4), which has no training data.
+sla_prototypes:
+  - "The Vendor shall ensure that the Services are available at least 99.5% of the time in each calendar month."
+  - "Service levels: the Provider shall meet the service levels set out in Schedule 2 and report on them monthly."
+  - "If monthly availability falls below the committed level, the Customer shall be entitled to service credits."
+  - "The Contractor shall respond to Priority 1 incidents within one hour and resolve them within four hours."
+  - "Scheduled maintenance is excluded from downtime, provided the Customer is notified at least 48 hours in advance."
+  - "The Supplier shall maintain a help desk available 24 hours a day, seven days a week, to log support requests."
+  - "Uptime shall be measured monthly, excluding planned maintenance windows agreed in advance."
+  - "Failure to meet the response time targets for three consecutive months shall entitle the Company to terminate."
+  - "The Provider shall deliver a monthly performance report showing achievement against each key performance indicator."
+  - "Support requests shall be acknowledged within 30 minutes during business hours."
+
 parties:
   # alias = the quoted words inside the parentheses after each name; the opening quote may be
   # lost to OCR ('(the Provider")'), so it is optional

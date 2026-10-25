@@ -77,8 +77,17 @@ META = ContractMeta(
         Party(name="Sharma Infotech", alias="Vendor", role="COUNTERPARTY"),
     ],
 )
-CLAUSES = [Clause(clause_id="c010", number="10.1", text=CLAUSE, section_path="10 > 10.1",
-                  char_start=0, char_end=len(CLAUSE), categories=["TERMINATION"])]  # fmt: skip
+CLAUSES = [
+    Clause(
+        clause_id="c010",
+        number="10.1",
+        text=CLAUSE,
+        section_path="10 > 10.1",
+        char_start=0,
+        char_end=len(CLAUSE),
+        categories=["TERMINATION"],
+    )
+]
 
 
 # --- grounding ------------------------------------------------------------------------------
@@ -214,8 +223,11 @@ def test_only_flagged_findings_are_explained_and_capped(monkeypatch):
     monkeypatch.setattr(ex.settings.llm, "max_findings", 2)
     out = ex.explain_findings(findings, RULES, CLAUSES, META)
     assert [f.explanation.source if f.explanation else None for f in out] == [
-        "llm", "template", "llm", None,
-    ]  # fmt: skip
+        "llm",
+        "template",
+        "llm",
+        None,
+    ]
     assert [f.status for f in out] == [f.status for f in findings]  # status never changes
     assert [f.severity for f in out] == [f.severity for f in findings]
 

@@ -183,3 +183,9 @@ class Report(BaseModel):
     pipeline_version: str
     generated_at: datetime
     disclaimer: str
+    # Additive fields (D41): shown on the UI overview card and used for E8 timing.
+    file_type: Literal["pdf", "docx"] | None = None
+    num_pages: int | None = None
+    ocr_pages: list[int] = Field(default_factory=list)
+    llm_used: bool = False
+    timings_s: dict[str, float] = Field(default_factory=dict)

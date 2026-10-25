@@ -62,11 +62,13 @@ def violation_scores(pairs: list[tuple[str, str]]) -> dict[str, float | int | No
     precision = tp / (tp + fp) if tp + fp else None
     recall = tp / (tp + fn) if tp + fn else None
     return {
-        "tp": tp, "fp": fp, "fn": fn,
+        "tp": tp,
+        "fp": fp,
+        "fn": fn,
         "precision": round(precision, 4) if precision is not None else None,
         "recall": round(recall, 4) if recall is not None else None,
         "status_accuracy": round(sum(g == p for g, p in pairs) / len(pairs), 4) if pairs else None,
-    }  # fmt: skip
+    }
 
 
 def confusion(pairs: list[tuple[str, str]]) -> dict[str, dict[str, int]]:
@@ -123,9 +125,10 @@ def _pct(v: float | None) -> str:
 def to_markdown(report: dict) -> str:
     fmts = list(report["summary"])
     src = (
-        "the trained classifier" if report["categories"] == "model"
+        "the trained classifier"
+        if report["categories"] == "model"
         else "the gold labels (draft); no classifier"
-    )  # fmt: skip
+    )
     emb = "on" if report["embeddings"] else "off (semantic NEEDS_REVIEW step skipped)"
     lines = [
         f"# Policy engine check (E5, categories from {report['categories']})",
@@ -136,8 +139,11 @@ def to_markdown(report: dict) -> str:
         "| Measure | " + " | ".join(fmts) + " |",
         "|---" * (len(fmts) + 1) + "|",
     ]
-    for key, label in (("recall", "**Violation recall**"), ("precision", "**Violation precision**"),
-                       ("status_accuracy", "Exact status accuracy")):  # fmt: skip
+    for key, label in (
+        ("recall", "**Violation recall**"),
+        ("precision", "**Violation precision**"),
+        ("status_accuracy", "Exact status accuracy"),
+    ):
         lines.append(
             f"| {label} | " + " | ".join(_pct(report["summary"][f][key]) for f in fmts) + " |"
         )
@@ -148,9 +154,13 @@ def to_markdown(report: dict) -> str:
 
     for fmt in fmts:
         cm = report["summary"][fmt]["confusion"]
-        lines += ["", f"## Confusion matrix: {fmt} (rows gold, columns predicted)", "",
-                  "| gold \\ pred | " + " | ".join(STATUSES) + " |",
-                  "|---" * (len(STATUSES) + 1) + "|"]  # fmt: skip
+        lines += [
+            "",
+            f"## Confusion matrix: {fmt} (rows gold, columns predicted)",
+            "",
+            "| gold \\ pred | " + " | ".join(STATUSES) + " |",
+            "|---" * (len(STATUSES) + 1) + "|",
+        ]
         for g in STATUSES:
             lines.append(f"| {g} | " + " | ".join(str(cm[g][p]) for p in STATUSES) + " |")
 
@@ -169,8 +179,9 @@ def to_markdown(report: dict) -> str:
     lines += ["", "## Disagreements", ""]
     lines += (
         ["| Contract | Format | Rule | Gold | Predicted |", "|---|---|---|---|---|", *errors]
-        if errors else ["None."]
-    )  # fmt: skip
+        if errors
+        else ["None."]
+    )
     return "\n".join(lines) + "\n"
 
 
@@ -194,10 +205,11 @@ def main(argv: list[str] | None = None) -> int:
     (args.out_dir / f"{stem}.md").write_text(to_markdown(report))
     print(to_markdown(report))
     ok = all(
-        (s["recall"] or 0) >= RECALL_TARGET and (s["precision"] or 0) >= PRECISION_TARGET
+        (s["recall"] or 0) >= RECALL_TARGET
+        and (s["precision"] or 0) >= PRECISION_TARGET
         and not s["failed_files"]
         for s in report["summary"].values()
-    )  # fmt: skip
+    )
     return 0 if ok else 1
 
 

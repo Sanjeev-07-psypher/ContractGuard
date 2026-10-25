@@ -1,10 +1,11 @@
 # Dataset label -> ContractGuard category (HLD 6.4).
 #
-# STATUS: DRAFT, NOT VERIFIED. Per the HLD, only label names actually printed by
-# `python training/inspect_labels.py` may be used. The names below are the HLD's
-# candidates. Run the script; it writes docs/labels_ledgar.txt and docs/labels_cuad.txt
-# and reports every name below that does not exist in the dataset. Delete those
-# names before training. Unmapped labels go to OTHER.
+# Only label names actually printed by `python training/inspect_labels.py` may be used.
+# CUAD: verified 2026-10-25 against CUADv1.json (docs/labels_cuad.txt, 41 categories).
+# LEDGAR: every name below appears in the LexGLUE dataset card's LEDGAR label list
+# (huggingface.co/datasets/coastalcph/lex_glue README), but the script has not printed them from the
+# dataset itself yet, because dataset file downloads are blocked in the build environment.
+# LEDGAR has no liability label, so LIABILITY comes from CUAD only. Unmapped labels go to OTHER.
 verified: false
 
 ledgar:
@@ -14,7 +15,7 @@ ledgar:
   INDEMNIFICATION: [Indemnifications, Indemnity]
   IP: [Intellectual Property]
   GOVERNING_LAW: [Governing Laws]
-  LIABILITY: []            # add a LEDGAR label only if inspect_labels.py prints one
+  LIABILITY: []
 
 cuad:
   TERMINATION: [Termination For Convenience]
@@ -22,5 +23,10 @@ cuad:
   IP: [Ip Ownership Assignment]
   GOVERNING_LAW: [Governing Law]
   RENEWAL: [Renewal Term, Notice Period To Terminate Renewal]
+
+# CUAD paragraphs without an annotation count as negatives only for these categories (D39).
+# TERMINATION and IP map to narrow CUAD labels (convenience termination, IP assignment), so a CUAD
+# paragraph about termination for cause or a licence is not a negative example for them.
+cuad_negatives: [LIABILITY, GOVERNING_LAW, RENEWAL]
 
 # SLA has no public labels: keyword rules + prototypes only.
