@@ -38,10 +38,11 @@ dev = ["pytest", "httpx", "ruff", "mypy", "reportlab"]
 contractguard = "contractguard.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["contractguard*"]
+include = ["contractguard*", "backend*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = [".", "tests"]
 addopts = "-q"
 
 [tool.ruff]
@@ -52,6 +53,9 @@ extend-exclude = ["data", "models", ".venv"]
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP"]
 
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.File", "fastapi.Form", "fastapi.Body"]
+
 [tool.ruff.lint.per-file-ignores]
 "contractguard/llm/prompts.py" = ["E501"]  # prompt text is kept verbatim
 
@@ -60,4 +64,4 @@ python_version = "3.11"
 plugins = ["pydantic.mypy"]
 ignore_missing_imports = true
 warn_unused_ignores = true
-files = ["contractguard"]
+files = ["contractguard", "backend"]

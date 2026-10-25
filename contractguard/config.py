@@ -94,6 +94,7 @@ class OrgSettings(BaseModel):
 class FrontendSettings(BaseModel):
     api_url: str
     poll_seconds: float
+    origin: str = "http://localhost:8501"  # Streamlit origin allowed by CORS
 
 
 class PathSettings(BaseModel):

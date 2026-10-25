@@ -11,6 +11,6 @@ embeddings:
 policy: {default_policy_id: default_vendor_v1, tau_missing: 0.55, policies_dir: policies}
 llm: {provider: gemini, model: null, ollama_host: "http://localhost:11434", rpm: 8, max_findings: 15, temperature: 0.2, timeout_s: 30, max_retries: 3}
 org: {default_name: "ABC Technologies Pvt. Ltd.", date_order: DMY}
-frontend: {api_url: "http://localhost:8000/api/v1", poll_seconds: 2}
+frontend: {api_url: "http://localhost:8000/api/v1", poll_seconds: 2, origin: "http://localhost:8501"}
 paths: {data_dir: data, uploads_dir: data/uploads, sqlite_path: data/contractguard.db, models_dir: models}
 disclaimer: "ContractGuard produces AI-assisted review flags to support contract reviewers. It is not legal advice and does not determine legal validity."

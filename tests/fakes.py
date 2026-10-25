@@ -63,11 +63,11 @@ def fake_classifier(embedder=None, prototypes=True) -> ClauseClassifier:
     )
 
 
-def fake_resources(provider=None, embedder=None) -> Resources:
+def fake_resources(provider=None, embedder=None, settings=None) -> Resources:
     return Resources(
         classifier=fake_classifier(embedder),
         embedder=embedder,
         provider=provider,
         cache=LLMCache(),
-        settings=get_settings(),
+        settings=settings or get_settings(),
     )

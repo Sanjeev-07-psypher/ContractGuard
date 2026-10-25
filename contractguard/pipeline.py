@@ -27,7 +27,7 @@ from contractguard.llm.base import LLMProvider
 from contractguard.llm.explainer import Explainer, LLMCache, make_provider
 from contractguard.models import PipelineStage, Report
 from contractguard.policy.engine import PolicyEngine
-from contractguard.policy.schema import load_policy
+from contractguard.policy.schema import load_policy, policies_dir
 from contractguard.preprocessing.cleaner import clean_document
 from contractguard.report.builder import build_report
 from contractguard.segmentation.segmenter import segment
@@ -112,7 +112,9 @@ def run(
 
     t = time.perf_counter()
     progress("EVALUATING", 65)
-    policy = load_policy(options.policy_id or settings.policy.default_policy_id)
+    policy = load_policy(
+        options.policy_id or settings.policy.default_policy_id, policies_dir(settings)
+    )
     our_org = options.our_org_name or policy.our_org_default or settings.org.default_name
     user_type = options.contract_type if options.contract_type not in (None, "auto") else None
     meta = extract_meta(clauses, our_org, user_type, settings.org.date_order)
