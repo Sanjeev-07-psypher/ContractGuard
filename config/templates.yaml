@@ -1,0 +1,82 @@
+# Deterministic text for findings (HLD 8.3 step 9). The policy engine fills these; the LLM never
+# changes them. Placeholders use Python str.format names.
+
+# How a fact value is shown in "expected" / "found" and in reasons.
+facts:
+  termination.notice_days: {label: "Termination notice period", unit: days}
+  payment.due_days: {label: "Payment period", unit: days}
+  governing_law.jurisdiction: {label: "Governing law"}
+  liability.has_cap:
+    label: "Liability cap"
+    "true": "liability is capped"
+    "false": "no liability cap found"
+  liability.is_uncapped:
+    label: "Unlimited liability"
+    "true": "unlimited liability"
+    "false": "no unlimited liability"
+  renewal.is_automatic:
+    label: "Automatic renewal"
+    "true": "renews automatically"
+    "false": "no automatic renewal"
+  termination.counterparty_unilateral:
+    label: "Convenience termination right"
+    "true": "only the counterparty may terminate for convenience"
+    "false": "termination rights are mutual"
+
+expected:
+  CLAUSE_PRESENT: "{category_label} clause present"
+  NUMERIC_MIN: ">= {threshold} {unit}"
+  NUMERIC_MAX: "<= {threshold} {unit}"
+  ENUM_IN: "one of: {allowed}"
+
+found:
+  clause_present: "clause present"
+  clause_absent: "no clause found"
+  unextracted: "could not be determined"
+  ambiguous: "conflicting values"
+
+reasons:
+  not_applicable_type: "Rule applies to {applies_to}; this contract was treated as {contract_type}."
+  not_applicable_absent: "No {category_label} clause was found, and this rule only applies when one exists."
+  missing: "No {category_label} clause was found; the policy requires one."
+  semantic_candidate: "No clause was classified as {category_label}, but clause {clause_ref} may cover it (similarity {similarity:.2f}); confirm manually."
+  low_confidence: "The {category_label} clause was identified with low confidence; confirm it manually."
+  present: "A {category_label} clause is present ({location})."
+  unextracted: "{fact_label} could not be extracted from the {category_label} clause; confirm it manually."
+  ambiguous: "Conflicting values were found for {fact_label_lower}; confirm it manually."
+  NUMERIC_MIN_pass: "{fact_label} is {found}; policy requires at least {threshold} {unit}."
+  NUMERIC_MIN_fail: "{fact_label} is {found}; policy requires at least {threshold} {unit}."
+  NUMERIC_MAX_pass: "{fact_label} is {found}; policy allows at most {threshold} {unit}."
+  NUMERIC_MAX_fail: "{fact_label} is {found}; policy allows at most {threshold} {unit}."
+  BOOLEAN_EQUALS_pass: "Found: {found}. This meets the policy ({expected})."
+  BOOLEAN_EQUALS_fail: "Found: {found}. The policy requires: {expected}."
+  ENUM_IN_pass: "{fact_label} is {found}, which the policy allows ({allowed})."
+  ENUM_IN_fail: "{fact_label} is {found}; the policy allows only {allowed}."
+
+category_labels:
+  CONFIDENTIALITY: Confidentiality
+  TERMINATION: Termination
+  PAYMENT: Payment
+  LIABILITY: Limitation of liability
+  INDEMNIFICATION: Indemnification
+  IP: Intellectual property
+  GOVERNING_LAW: Governing law
+  RENEWAL: Renewal
+  SLA: Service level (SLA)
+  OTHER: Other
+
+# Template explanations (HLD 9.3) used when the LLM is off, fails, or is over the limit.
+explanation:
+  summary: "{rule_name}: {status_label}."
+  why_it_matters: "{policy_text}"
+  missing_evidence_note: "The clause was not found in the contract."
+  status_labels:
+    NON_COMPLIANT: "does not meet the policy"
+    MISSING: "required clause not found"
+    NEEDS_REVIEW: "needs manual review"
+    COMPLIANT: "meets the policy"
+    NOT_APPLICABLE: "not applicable"
+executive_summary:
+  counts: "ContractGuard checked {n_rules} policy rules: {n_noncompliant} not met, {n_missing} required clauses missing, {n_review} need manual review and {n_compliant} met."
+  top_issues: "Top issues: {issues}."
+  no_issues: "No policy issues were flagged."

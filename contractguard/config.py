@@ -192,6 +192,11 @@ def get_contract_types() -> dict[str, Any]:
     return load_yaml("contract_types.yaml")
 
 
+@lru_cache(maxsize=1)
+def get_templates() -> dict[str, Any]:
+    return load_yaml("templates.yaml")
+
+
 def clear_caches() -> None:
-    for fn in (get_settings, get_patterns, get_label_map, get_contract_types):
+    for fn in (get_settings, get_patterns, get_label_map, get_contract_types, get_templates):
         fn.cache_clear()
