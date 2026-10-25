@@ -11,6 +11,7 @@ label_map.yaml that does not exist in the dataset. Exit code 1 if any mapped nam
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -27,8 +28,22 @@ def ledgar_labels() -> list[str]:
     return list(ds["train"].features["label"].names)
 
 
+def cuad_labels_from_json(path: Path) -> list[str]:
+    """CUAD categories from a local ``CUADv1.json`` (question ids end in ``__<Category>``)."""
+    data = json.loads(path.read_text(encoding="utf-8"))["data"]
+    found: dict[str, None] = {}
+    for doc in data:
+        for qa in doc["paragraphs"][0]["qas"]:
+            found.setdefault(qa["id"].split("__")[-1], None)
+    return list(found)
+
+
 def cuad_labels() -> list[str]:
-    """CUAD categories, parsed from the QA questions of ``theatticusproject/cuad-qa``."""
+    """CUAD categories: from data/raw/cuad/CUADv1.json if present (GitHub download), else
+    parsed from the QA questions of ``theatticusproject/cuad-qa`` on Hugging Face."""
+    local = REPO_ROOT / "data" / "raw" / "cuad" / "CUADv1.json"
+    if local.is_file():
+        return cuad_labels_from_json(local)
     from datasets import load_dataset
 
     ds = load_dataset("theatticusproject/cuad-qa", split="train")
@@ -52,8 +67,14 @@ def main(argv: list[str] | None = None) -> int:
 
     label_map = get_label_map()
     problems = 0
+    failed: list[str] = []
     for source, loader in (("ledgar", ledgar_labels), ("cuad", cuad_labels)):
-        names = loader()
+        try:
+            names = loader()
+        except Exception as exc:  # e.g. dataset download blocked
+            print(f"!! could not load {source} labels: {type(exc).__name__}: {exc}")
+            failed.append(source)
+            continue
         out = args.out_dir / f"labels_{source}.txt"
         out.write_text("\n".join(names) + "\n", encoding="utf-8")
         print(f"== {source}: {len(names)} labels (written to {out})")
@@ -64,6 +85,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"!! label_map.yaml [{source}] maps '{name}', which is not a {source} label")
         problems += len(missing)
 
+    if failed:
+        print(f"\nNot verified: could not load {', '.join(failed)}. Keep `verified: false`.")
+        return 1
     if problems:
         print(f"\n{problems} unknown name(s): fix config/label_map.yaml before training.")
         return 1
