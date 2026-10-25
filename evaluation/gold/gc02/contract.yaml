@@ -1,0 +1,230 @@
+# GC02: VENDOR_SERVICE, fully compliant counterpart.
+# Tests: two-level numbering (12.1), curly quotes, cap with carve-outs (note, still capped),
+# "including without limitation" in an indemnity, "in no event" exclusion of indirect loss,
+# renewal by mutual agreement, SLA in a schedule table, 45-day payment.
+id: gc02
+contract_type: VENDOR_SERVICE
+title: MASTER SERVICES AGREEMENT
+short_title: Master Services Agreement
+heading_style: num_caps
+numbering: text
+our_org: ABC Technologies Pvt. Ltd.
+counterparty: Nexgen Consulting Services Pvt. Ltd.
+
+preamble:
+  - This Master Services Agreement (this “Agreement”) is dated 15/05/2026 and is effective as of that date (the “Effective Date”).
+  - It is entered into between ABC Technologies Pvt. Ltd., a company incorporated under the Companies Act, 2013, with its registered office at 4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103 (the “Client”), and Nexgen Consulting Services Pvt. Ltd., a company incorporated under the Companies Act, 2013, with its registered office at Unit 702, Lodha Supremus, Lower Parel, Mumbai 400013 (the “Service Provider”).
+  - The Client wishes to engage the Service Provider to provide software development and application maintenance services from time to time under statements of work, and the Service Provider agrees to provide such services on the terms of this Agreement.
+
+clauses:
+  - number: "1"
+    heading: Definitions and Interpretation
+    kind: DEFINITIONS
+    categories: []
+    body:
+      - In this Agreement the following terms have the following meanings.
+      - (a) “Deliverables” means all software, documents and other materials delivered by the Service Provider under a Statement of Work.
+      - (b) “Fees” means the fees payable by the Client as set out in each Statement of Work.
+      - (c) “Statement of Work” or “SOW” means a document substantially in the form of Schedule 1 signed by both Parties.
+      - (d) Headings are for convenience only and do not affect interpretation. References to Clauses and Schedules are to clauses of and schedules to this Agreement.
+
+  - number: "2"
+    heading: Appointment and Scope
+    categories: [OTHER]
+    body:
+      - The Client appoints the Service Provider on a non-exclusive basis to provide the services described in each Statement of Work (the “Services”).
+      - Each Statement of Work forms part of this Agreement. If there is a conflict between this Agreement and a Statement of Work, this Agreement prevails unless the Statement of Work expressly states otherwise.
+
+  - number: "3"
+    heading: Term and Renewal
+    sub:
+      - number: "3.1"
+        categories: [OTHER]
+        body:
+          - This Agreement commences on the Effective Date and remains in force for an initial term of three (3) years, unless terminated earlier in accordance with Clause 12.
+      - number: "3.2"
+        categories: [RENEWAL]
+        body:
+          - On expiry of the initial term, this Agreement may be renewed by mutual written agreement of the Parties for a further period and on such terms as the Parties may agree at the time of renewal.
+
+  - number: "4"
+    heading: Statements of Work and Change Control
+    categories: [OTHER]
+    body:
+      - The Service Provider shall not commence work under a Statement of Work until it has been signed by authorised representatives of both Parties.
+      - Either Party may request a change to a Statement of Work. No change shall be effective until a written change order describing the change and its effect on the Fees and timelines is signed by both Parties.
+
+  - number: "5"
+    heading: Fees and Payment
+    sub:
+      - number: "5.1"
+        categories: [PAYMENT]
+        body:
+          - The Client shall pay the Fees set out in each Statement of Work. The Service Provider shall invoice the Client monthly in arrears for Services performed in the previous month.
+      - number: "5.2"
+        categories: [PAYMENT]
+        body:
+          - The Client shall pay each correct and undisputed invoice within forty-five (45) days from the date of receipt of the invoice.
+      - number: "5.3"
+        categories: [PAYMENT]
+        body:
+          - All Fees are exclusive of Goods and Services Tax, which shall be payable by the Client in addition at the applicable rate. The Client may deduct tax at source as required by the Income-tax Act, 1961.
+
+  - number: "6"
+    heading: Service Levels
+    sub:
+      - number: "6.1"
+        categories: [SLA]
+        body:
+          - The Service Provider shall meet the service levels set out in Schedule 2, including application availability of 99.5% measured monthly.
+      - number: "6.2"
+        categories: [SLA]
+        body:
+          - If the Service Provider fails to meet a service level, the Client shall be entitled to the service credits set out in Schedule 2. Service credits are a price adjustment and are without prejudice to the Client's other rights and remedies.
+
+  - number: "7"
+    heading: Personnel
+    categories: [OTHER]
+    body:
+      - The Service Provider shall assign suitably qualified and experienced personnel to perform the Services and shall not replace key personnel named in a Statement of Work without the Client's prior written approval, which shall not be unreasonably withheld.
+      - The Service Provider is solely responsible for the salaries, statutory contributions and other employment obligations in respect of its personnel.
+
+  - number: "8"
+    heading: Confidentiality
+    sub:
+      - number: "8.1"
+        categories: [CONFIDENTIALITY]
+        body:
+          - Each Party (the “Recipient”) shall keep confidential all non-public information of the other Party (the “Discloser”) received in connection with this Agreement, and shall use it solely to perform its obligations or exercise its rights under this Agreement.
+      - number: "8.2"
+        categories: [CONFIDENTIALITY]
+        body:
+          - Clause 8.1 does not apply to information that is in the public domain through no fault of the Recipient, was lawfully known to the Recipient before disclosure, or is independently developed by the Recipient without use of the Discloser's information.
+      - number: "8.3"
+        categories: [CONFIDENTIALITY]
+        body:
+          - The obligations in this Clause 8 shall continue for five (5) years after the expiry or termination of this Agreement.
+
+  - number: "9"
+    heading: Intellectual Property
+    categories: [IP]
+    body:
+      - Upon full payment of the applicable Fees, all intellectual property rights in the Deliverables shall vest in the Client. The Service Provider hereby assigns to the Client all such rights, and shall execute any documents reasonably required to perfect the assignment.
+      - The Service Provider retains all rights in its pre-existing materials and grants the Client a perpetual, royalty-free, non-exclusive licence to use any pre-existing materials incorporated in the Deliverables.
+
+  - number: "10"
+    heading: Indemnity
+    categories: [INDEMNIFICATION]
+    body:
+      - The Service Provider shall indemnify and hold harmless the Client from and against all losses, damages, costs and expenses, including without limitation reasonable attorneys' fees, arising out of (a) any claim that the Deliverables infringe the intellectual property rights of a third party, or (b) any breach by the Service Provider of applicable law.
+
+  - number: "11"
+    heading: Limitation of Liability
+    sub:
+      - number: "11.1"
+        categories: [LIABILITY]
+        body:
+          - Subject to Clause 11.3, the aggregate liability of either Party arising out of or in connection with this Agreement shall not exceed the total Fees paid by the Client in the twelve (12) months preceding the event giving rise to the claim.
+      - number: "11.2"
+        categories: [LIABILITY]
+        body:
+          - In no event shall either Party be liable for any indirect, incidental or consequential damages, including but not limited to loss of profits or loss of business, even if advised of the possibility of such damages.
+      - number: "11.3"
+        categories: [LIABILITY]
+        body:
+          - The limitation in Clause 11.1 shall not apply to the Service Provider's obligations under Clause 10 (Indemnity) or to a breach of Clause 8 (Confidentiality).
+
+  - number: "12"
+    heading: Termination
+    sub:
+      - number: "12.1"
+        categories: [TERMINATION]
+        body:
+          - Either Party may terminate this Agreement or any Statement of Work for convenience by giving the other Party not less than sixty (60) days' prior written notice.
+      - number: "12.2"
+        categories: [TERMINATION]
+        body:
+          - Either Party may terminate this Agreement by written notice if the other Party commits a material breach and fails to remedy it within thirty (30) days of being notified of the breach.
+      - number: "12.3"
+        categories: [TERMINATION]
+        body:
+          - Either Party may terminate this Agreement immediately if the other Party becomes insolvent or is subject to proceedings under the Insolvency and Bankruptcy Code, 2016.
+
+  - number: "13"
+    heading: Consequences of Termination
+    categories: [TERMINATION]
+    body:
+      - On expiry or termination, the Service Provider shall deliver to the Client all Deliverables and work in progress, and shall provide reasonable transition assistance for a period of up to ninety (90) days at the rates set out in the applicable Statement of Work.
+      - Clauses 8, 9, 10, 11 and 14 survive expiry or termination of this Agreement.
+
+  - number: "14"
+    heading: Governing Law and Jurisdiction
+    categories: [GOVERNING_LAW]
+    body:
+      - This Agreement shall be governed by the laws of India, and subject to Clause 15 the courts of Mumbai, Maharashtra shall have exclusive jurisdiction.
+
+  - number: "15"
+    heading: Dispute Resolution
+    categories: [OTHER]
+    body:
+      - Any dispute that is not resolved by negotiation within thirty (30) days shall be finally resolved by arbitration under the Arbitration and Conciliation Act, 1996 by a tribunal of three arbitrators. The seat of arbitration shall be Mumbai.
+
+  - number: "16"
+    heading: Miscellaneous
+    categories: [OTHER]
+    body:
+      - Neither Party may assign this Agreement without the prior written consent of the other Party, except to an affiliate in connection with a corporate reorganisation.
+      - This Agreement and its Schedules constitute the entire agreement between the Parties. No amendment is effective unless it is in writing and signed by both Parties.
+
+signature:
+  - IN WITNESS WHEREOF, the Parties have caused this Agreement to be executed by their authorised signatories.
+  - For ABC Technologies Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Ritu Malhotra, Designation: Chief Operating Officer"
+  - For Nexgen Consulting Services Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Farhan Qureshi, Designation: Director"
+
+exhibits:
+  - heading: SCHEDULE 1 - FORM OF STATEMENT OF WORK
+    categories: [OTHER]
+    body:
+      - Each Statement of Work shall specify the project description, deliverables, milestones, acceptance criteria, key personnel, Fees and any project-specific terms.
+  - heading: SCHEDULE 2 - SERVICE LEVELS AND SERVICE CREDITS
+    categories: [SLA]
+    body:
+      - The following service levels apply to production applications maintained by the Service Provider.
+    table:
+      - [Service level, Target, Service credit]
+      - [Application availability, 99.5% per month, 5% of monthly Fees per 0.5% shortfall]
+      - [Response time for Severity 1 incidents, 30 minutes, 2% of monthly Fees per breach]
+      - [Resolution time for Severity 1 incidents, 8 hours, 3% of monthly Fees per breach]
+
+gold:
+  meta:
+    parties:
+      - {name: ABC Technologies Pvt. Ltd., alias: Client, role: OUR_ORG}
+      - {name: Nexgen Consulting Services Pvt. Ltd., alias: Service Provider, role: COUNTERPARTY}
+    effective_date: "2026-05-15"
+    expiry_date: "2029-05-14"
+    term_text: initial term of three (3) years
+    governing_law: India
+  facts:
+    termination.notice_days: 60
+    termination.counterparty_unilateral: false
+    liability.has_cap: true
+    liability.is_uncapped: false
+    renewal.is_automatic: false
+    payment.due_days: 45
+    governing_law.jurisdiction: India
+  rules:
+    R01: {status: COMPLIANT, clauses: ["11.1"]}
+    R02: {status: COMPLIANT, clauses: ["11.1", "11.2", "11.3"]}
+    R03: {status: COMPLIANT, clauses: ["12.1"]}
+    R04: {status: COMPLIANT, clauses: ["12.1"]}
+    R05: {status: COMPLIANT, clauses: ["3.2"]}
+    R06: {status: COMPLIANT, clauses: ["6.1", "6.2"]}
+    R07: {status: COMPLIANT, clauses: ["8.1"]}
+    R08: {status: COMPLIANT, clauses: ["14"]}
+    R09: {status: COMPLIANT, clauses: ["5.2"]}
+    R10: {status: COMPLIANT, clauses: ["10"]}

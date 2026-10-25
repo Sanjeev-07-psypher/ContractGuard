@@ -1,0 +1,264 @@
+{
+  "id": "gc08",
+  "title": "EQUIPMENT RENTAL AGREEMENT",
+  "contract_type": "OTHER",
+  "our_org": "ABC Technologies Pvt. Ltd.",
+  "files": {
+    "docx": "contract.docx",
+    "text_pdf": "contract_text.pdf",
+    "scanned_pdf": "contract_scanned.pdf"
+  },
+  "annotation": {
+    "status": "DRAFT",
+    "drafted_by": "Claude (generated from contract.yaml)",
+    "labeller_1": null,
+    "labeller_2": null,
+    "adjudicated": false,
+    "notes": "Needs two independent human labellers per GUIDELINES.md before use."
+  },
+  "meta": {
+    "parties": [
+      {
+        "name": "Sai Office Equipment Rentals Pvt. Ltd.",
+        "alias": "Lessor",
+        "role": "COUNTERPARTY"
+      },
+      {
+        "name": "ABC Technologies Pvt. Ltd.",
+        "alias": "Lessee",
+        "role": "OUR_ORG"
+      }
+    ],
+    "effective_date": "2026-09-14",
+    "expiry_date": null,
+    "term_text": "twelve (12) months from the date of delivery of the Equipment",
+    "governing_law": "India"
+  },
+  "clauses": [
+    {
+      "index": 1,
+      "number": null,
+      "heading": null,
+      "kind": "PREAMBLE",
+      "section_path": "PREAMBLE",
+      "first_words": "EQUIPMENT RENTAL AGREEMENT This Equipment Rental Agreement is",
+      "categories": []
+    },
+    {
+      "index": 2,
+      "number": "1",
+      "heading": "Definitions",
+      "kind": "DEFINITIONS",
+      "section_path": "1",
+      "first_words": "1. Definitions In this Agreement, \"Equipment\" means the",
+      "categories": []
+    },
+    {
+      "index": 3,
+      "number": "2",
+      "heading": "Rental of Equipment",
+      "kind": "BODY",
+      "section_path": "2",
+      "first_words": "2. Rental of Equipment The Lessor agrees to",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 4,
+      "number": "3",
+      "heading": "Rental Period",
+      "kind": "BODY",
+      "section_path": "3",
+      "first_words": "3. Rental Period The Rental Period is twelve",
+      "categories": [
+        "RENEWAL"
+      ]
+    },
+    {
+      "index": 5,
+      "number": "4",
+      "heading": "Rent and Security Deposit",
+      "kind": "BODY",
+      "section_path": "4",
+      "first_words": "4. Rent and Security Deposit The Lessee shall",
+      "categories": [
+        "PAYMENT"
+      ]
+    },
+    {
+      "index": 6,
+      "number": "5",
+      "heading": "Delivery and Installation",
+      "kind": "BODY",
+      "section_path": "5",
+      "first_words": "5. Delivery and Installation The Lessor shall deliver",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 7,
+      "number": "6",
+      "heading": "Use and Care of Equipment",
+      "kind": "BODY",
+      "section_path": "6",
+      "first_words": "6. Use and Care of Equipment The Lessee",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 8,
+      "number": "7",
+      "heading": "Maintenance and Repairs",
+      "kind": "BODY",
+      "section_path": "7",
+      "first_words": "7. Maintenance and Repairs The Lessor shall carry",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 9,
+      "number": "8",
+      "heading": "Insurance and Risk",
+      "kind": "BODY",
+      "section_path": "8",
+      "first_words": "8. Insurance and Risk The Lessor shall keep",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 10,
+      "number": "9",
+      "heading": "Liability",
+      "kind": "BODY",
+      "section_path": "9",
+      "first_words": "9. Liability The Lessor's total liability under this",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 11,
+      "number": "10",
+      "heading": "Termination",
+      "kind": "BODY",
+      "section_path": "10",
+      "first_words": "10. Termination Either Party may terminate this Agreement",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 12,
+      "number": "11",
+      "heading": "Return of Equipment",
+      "kind": "BODY",
+      "section_path": "11",
+      "first_words": "11. Return of Equipment On expiry or termination,",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 13,
+      "number": "12",
+      "heading": "Governing Law and Jurisdiction",
+      "kind": "BODY",
+      "section_path": "12",
+      "first_words": "12. Governing Law and Jurisdiction This Agreement shall",
+      "categories": [
+        "GOVERNING_LAW"
+      ]
+    },
+    {
+      "index": 14,
+      "number": "13",
+      "heading": "Miscellaneous",
+      "kind": "BODY",
+      "section_path": "13",
+      "first_words": "13. Miscellaneous Any notice under this Agreement shall",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 15,
+      "number": null,
+      "heading": null,
+      "kind": "SIGNATURE",
+      "section_path": "SIGNATURE",
+      "first_words": "IN WITNESS WHEREOF the Parties have signed this",
+      "categories": []
+    },
+    {
+      "index": 16,
+      "number": null,
+      "heading": "SCHEDULE 1 - EQUIPMENT LIST",
+      "kind": "EXHIBIT",
+      "section_path": "SCHEDULE 1 - EQUIPMENT LIST",
+      "first_words": "SCHEDULE 1 - EQUIPMENT LIST The Lessor shall",
+      "categories": [
+        "OTHER"
+      ]
+    }
+  ],
+  "facts": {
+    "termination.notice_days": 60,
+    "termination.counterparty_unilateral": false,
+    "liability.has_cap": true,
+    "liability.is_uncapped": false,
+    "renewal.is_automatic": false,
+    "payment.due_days": 15,
+    "governing_law.jurisdiction": "India"
+  },
+  "rules": {
+    "R01": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R02": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R03": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R04": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R05": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "3"
+      ]
+    },
+    "R06": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R07": {
+      "status": "MISSING",
+      "clauses": []
+    },
+    "R08": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "12"
+      ]
+    },
+    "R09": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R10": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    }
+  }
+}

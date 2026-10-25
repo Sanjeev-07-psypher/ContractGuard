@@ -1,0 +1,152 @@
+# GC08: OTHER (equipment rental). Only R05, R07 and R08 apply to OTHER.
+# Planted: no confidentiality clause anywhere (R07 MISSING).
+# Compliant: renewal by mutual written agreement, Indian law.
+# Tests: applies_to filtering (a 15-day payment term and a liability cap exist but R09/R01 do
+# not apply), aliases "Lessor"/"Lessee" outside the role lists, a schedule table.
+# Keep the words "confidential", "vendor", "services agreement", "licence agreement" and
+# "subscription" out of this contract: they would change the planted results.
+id: gc08
+contract_type: OTHER
+title: EQUIPMENT RENTAL AGREEMENT
+short_title: Equipment Rental Agreement
+heading_style: num_title
+numbering: text
+our_org: ABC Technologies Pvt. Ltd.
+counterparty: Sai Office Equipment Rentals Pvt. Ltd.
+
+preamble:
+  - This Equipment Rental Agreement is made at Chennai on 14 September 2026 (the "Effective Date")
+  - between Sai Office Equipment Rentals Pvt. Ltd., having its registered office at 27, Mount Road, Chennai 600002 (the "Lessor"), and ABC Technologies Pvt. Ltd., having its registered office at 4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103 (the "Lessee").
+  - The Lessee wishes to rent office equipment for its new Chennai office and the Lessor has agreed to rent it on the terms below.
+
+clauses:
+  - number: "1"
+    heading: Definitions
+    kind: DEFINITIONS
+    categories: []
+    body:
+      - In this Agreement, "Equipment" means the items listed in Schedule 1, together with their accessories and manuals; "Site" means the Lessee's office at Olympia Tech Park, Guindy, Chennai 600032; and "Rental Period" has the meaning given in Clause 3.
+
+  - number: "2"
+    heading: Rental of Equipment
+    categories: [OTHER]
+    body:
+      - The Lessor agrees to rent the Equipment to the Lessee for use at the Site during the Rental Period. Ownership of the Equipment remains with the Lessor at all times.
+
+  - number: "3"
+    heading: Rental Period
+    categories: [RENEWAL]
+    body:
+      - The Rental Period is twelve (12) months from the date of delivery of the Equipment.
+      - The Rental Period may be renewed by mutual written agreement of the Parties on revised rental terms.
+
+  - number: "4"
+    heading: Rent and Security Deposit
+    categories: [PAYMENT]
+    body:
+      - The Lessee shall pay a monthly rent of INR 1,85,000 plus applicable Goods and Services Tax. The Lessor shall raise an invoice on the first day of each month and the Lessee shall pay each invoice within fifteen (15) days of receipt.
+      - The Lessee shall pay a refundable security deposit of INR 3,70,000, which the Lessor shall refund within thirty (30) days after the Equipment is returned in good condition.
+
+  - number: "5"
+    heading: Delivery and Installation
+    categories: [OTHER]
+    body:
+      - The Lessor shall deliver and install the Equipment at the Site within seven (7) days of the Effective Date at its own cost, and shall demonstrate that each item is in working order.
+
+  - number: "6"
+    heading: Use and Care of Equipment
+    categories: [OTHER]
+    body:
+      - The Lessee shall use the Equipment with reasonable care, only at the Site and only for its ordinary purpose. The Lessee shall not move the Equipment to another location or allow any third party to use it without the Lessor's prior written consent.
+
+  - number: "7"
+    heading: Maintenance and Repairs
+    categories: [OTHER]
+    body:
+      - The Lessor shall carry out preventive maintenance once every quarter and shall repair or replace any faulty Equipment at its own cost, except where the fault is caused by misuse by the Lessee.
+
+  - number: "8"
+    heading: Insurance and Risk
+    categories: [OTHER]
+    body:
+      - The Lessor shall keep the Equipment insured against fire, theft and accidental damage. Risk in the Equipment passes to the Lessee on delivery and returns to the Lessor when the Equipment is collected.
+
+  - number: "9"
+    heading: Liability
+    categories: [LIABILITY]
+    body:
+      - The Lessor's total liability under this Agreement shall not exceed the total rent paid by the Lessee in the six (6) months preceding the claim.
+
+  - number: "10"
+    heading: Termination
+    categories: [TERMINATION]
+    body:
+      - Either Party may terminate this Agreement by giving sixty (60) days' prior written notice to the other Party.
+      - The Lessor may terminate this Agreement immediately by written notice if the Lessee fails to pay any rent within thirty (30) days after it falls due.
+
+  - number: "11"
+    heading: Return of Equipment
+    categories: [OTHER]
+    body:
+      - On expiry or termination, the Lessee shall make the Equipment available for collection at the Site, and the Lessor shall collect it within ten (10) days at its own cost.
+
+  - number: "12"
+    heading: Governing Law and Jurisdiction
+    categories: [GOVERNING_LAW]
+    body:
+      - This Agreement shall be governed by the laws of India, and the courts at Chennai shall have exclusive jurisdiction over any dispute arising out of it.
+
+  - number: "13"
+    heading: Miscellaneous
+    categories: [OTHER]
+    body:
+      - Any notice under this Agreement shall be in writing. This Agreement, together with Schedule 1, is the entire agreement between the Parties and may be amended only in writing signed by both Parties.
+
+signature:
+  - IN WITNESS WHEREOF the Parties have signed this Agreement on the date first written above.
+  - For Sai Office Equipment Rentals Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: R. Venkatesh, Designation: Managing Director"
+  - For ABC Technologies Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Suresh Iyer, Designation: Head - Administration"
+
+exhibits:
+  - heading: SCHEDULE 1 - EQUIPMENT LIST
+    categories: [OTHER]
+    body:
+      - The Lessor shall rent the following Equipment to the Lessee.
+    table:
+      - [Item, Quantity, Monthly rent (INR)]
+      - [Multifunction printer, "4", "60,000"]
+      - [Projector with screen, "6", "45,000"]
+      - [Video conferencing kit, "5", "80,000"]
+
+gold:
+  meta:
+    parties:
+      - {name: Sai Office Equipment Rentals Pvt. Ltd., alias: Lessor, role: COUNTERPARTY}
+      - {name: ABC Technologies Pvt. Ltd., alias: Lessee, role: OUR_ORG}
+    effective_date: "2026-09-14"
+    expiry_date: null
+    term_text: twelve (12) months from the date of delivery of the Equipment
+    governing_law: India
+  facts:
+    termination.notice_days: 60
+    termination.counterparty_unilateral: false
+    liability.has_cap: true
+    liability.is_uncapped: false
+    renewal.is_automatic: false
+    payment.due_days: 15
+    governing_law.jurisdiction: India
+  rules:
+    R01: {status: NOT_APPLICABLE}
+    R02: {status: NOT_APPLICABLE}
+    R03: {status: NOT_APPLICABLE}
+    R04: {status: NOT_APPLICABLE}
+    R05: {status: COMPLIANT, clauses: ["3"]}
+    R06: {status: NOT_APPLICABLE}
+    R07: {status: MISSING}
+    R08: {status: COMPLIANT, clauses: ["12"]}
+    R09: {status: NOT_APPLICABLE}
+    R10: {status: NOT_APPLICABLE}

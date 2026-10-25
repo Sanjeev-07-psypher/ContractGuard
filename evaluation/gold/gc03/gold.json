@@ -1,0 +1,296 @@
+{
+  "id": "gc03",
+  "title": "FACILITY MANAGEMENT SERVICES AGREEMENT",
+  "contract_type": "VENDOR_SERVICE",
+  "our_org": "ABC Technologies Pvt. Ltd.",
+  "files": {
+    "docx": "contract.docx",
+    "text_pdf": "contract_text.pdf",
+    "scanned_pdf": "contract_scanned.pdf"
+  },
+  "annotation": {
+    "status": "DRAFT",
+    "drafted_by": "Claude (generated from contract.yaml)",
+    "labeller_1": null,
+    "labeller_2": null,
+    "adjudicated": false,
+    "notes": "Needs two independent human labellers per GUIDELINES.md before use."
+  },
+  "meta": {
+    "parties": [
+      {
+        "name": "ABC Technologies Pvt. Ltd.",
+        "alias": "Company",
+        "role": "OUR_ORG"
+      },
+      {
+        "name": "Shree Ganesh Facility Services Pvt. Ltd.",
+        "alias": "Contractor",
+        "role": "COUNTERPARTY"
+      }
+    ],
+    "effective_date": "2026-06-10",
+    "expiry_date": "2028-06-09",
+    "term_text": "a period of two (2) years",
+    "governing_law": "UK (England and Wales)"
+  },
+  "clauses": [
+    {
+      "index": 1,
+      "number": null,
+      "heading": null,
+      "kind": "PREAMBLE",
+      "section_path": "PREAMBLE",
+      "first_words": "FACILITY MANAGEMENT SERVICES AGREEMENT This Facility Management Services",
+      "categories": []
+    },
+    {
+      "index": 2,
+      "number": "1",
+      "heading": "Definitions",
+      "kind": "DEFINITIONS",
+      "section_path": "1",
+      "first_words": "1. Definitions In this Agreement, \"Services\" means the",
+      "categories": []
+    },
+    {
+      "index": 3,
+      "number": "2",
+      "heading": "Services",
+      "kind": "BODY",
+      "section_path": "2",
+      "first_words": "2. Services The Contractor shall deploy not less",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 4,
+      "number": "3",
+      "heading": "Term",
+      "kind": "BODY",
+      "section_path": "3",
+      "first_words": "3. Term This Agreement shall be valid for",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 5,
+      "number": "4",
+      "heading": "Contract Price and Payment",
+      "kind": "BODY",
+      "section_path": "4",
+      "first_words": "4. Contract Price and Payment The Company shall",
+      "categories": [
+        "PAYMENT"
+      ]
+    },
+    {
+      "index": 6,
+      "number": "5",
+      "heading": "Contractor's Personnel",
+      "kind": "BODY",
+      "section_path": "5",
+      "first_words": "5. Contractor's Personnel The Contractor shall be solely",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 7,
+      "number": "6",
+      "heading": "Equipment and Materials",
+      "kind": "BODY",
+      "section_path": "6",
+      "first_words": "6. Equipment and Materials The Contractor shall supply,",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 8,
+      "number": "7",
+      "heading": "Insurance",
+      "kind": "BODY",
+      "section_path": "7",
+      "first_words": "7. Insurance The Contractor shall maintain, throughout the",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 9,
+      "number": "8",
+      "heading": "Confidentiality",
+      "kind": "BODY",
+      "section_path": "8",
+      "first_words": "8. Confidentiality The Contractor shall ensure that its",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 10,
+      "number": "9",
+      "heading": "Limitation of Liability",
+      "kind": "BODY",
+      "section_path": "9",
+      "first_words": "9. Limitation of Liability The total aggregate liability",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 11,
+      "number": "10.1",
+      "heading": "Termination",
+      "kind": "BODY",
+      "section_path": "10 > 10.1",
+      "first_words": "10. Termination 10.1 Either Party may terminate this",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 12,
+      "number": "10.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "10 > 10.2",
+      "first_words": "10.2 If either Party commits a material breach",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 13,
+      "number": "10.3",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "10 > 10.3",
+      "first_words": "10.3 On termination, the Contractor shall withdraw its",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 14,
+      "number": "11",
+      "heading": "Force Majeure",
+      "kind": "BODY",
+      "section_path": "11",
+      "first_words": "11. Force Majeure Neither Party shall be liable",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 15,
+      "number": "12",
+      "heading": "Governing Law",
+      "kind": "BODY",
+      "section_path": "12",
+      "first_words": "12. Governing Law This Agreement shall be governed",
+      "categories": [
+        "GOVERNING_LAW"
+      ]
+    },
+    {
+      "index": 16,
+      "number": "13",
+      "heading": "Notices",
+      "kind": "BODY",
+      "section_path": "13",
+      "first_words": "13. Notices Any notice under this Agreement shall",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 17,
+      "number": "14",
+      "heading": "Miscellaneous",
+      "kind": "BODY",
+      "section_path": "14",
+      "first_words": "14. Miscellaneous The Contractor shall not subcontract the",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 18,
+      "number": null,
+      "heading": null,
+      "kind": "SIGNATURE",
+      "section_path": "SIGNATURE",
+      "first_words": "IN WITNESS WHEREOF the Parties have signed this",
+      "categories": []
+    }
+  ],
+  "facts": {
+    "termination.notice_days": 42,
+    "termination.counterparty_unilateral": false,
+    "liability.has_cap": true,
+    "liability.is_uncapped": false,
+    "renewal.is_automatic": null,
+    "payment.due_days": 30,
+    "governing_law.jurisdiction": "UK (England and Wales)"
+  },
+  "rules": {
+    "R01": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "9"
+      ]
+    },
+    "R02": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "9"
+      ]
+    },
+    "R03": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "10.1"
+      ]
+    },
+    "R04": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "10.1"
+      ]
+    },
+    "R05": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R06": {
+      "status": "MISSING",
+      "clauses": []
+    },
+    "R07": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "8"
+      ]
+    },
+    "R08": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "12"
+      ]
+    },
+    "R09": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "4"
+      ]
+    },
+    "R10": {
+      "status": "MISSING",
+      "clauses": []
+    }
+  }
+}

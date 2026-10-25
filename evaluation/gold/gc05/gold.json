@@ -1,0 +1,290 @@
+{
+  "id": "gc05",
+  "title": "SOFTWARE LICENSE AGREEMENT",
+  "contract_type": "SAAS_LICENSE",
+  "our_org": "ABC Technologies Pvt. Ltd.",
+  "files": {
+    "docx": "contract.docx",
+    "text_pdf": "contract_text.pdf",
+    "scanned_pdf": "contract_scanned.pdf"
+  },
+  "annotation": {
+    "status": "DRAFT",
+    "drafted_by": "Claude (generated from contract.yaml)",
+    "labeller_1": null,
+    "labeller_2": null,
+    "adjudicated": false,
+    "notes": "Needs two independent human labellers per GUIDELINES.md before use."
+  },
+  "meta": {
+    "parties": [
+      {
+        "name": "DataSutra Analytics LLP",
+        "alias": "Licensor",
+        "role": "COUNTERPARTY"
+      },
+      {
+        "name": "ABC Technologies Pvt. Ltd.",
+        "alias": "Licensee",
+        "role": "OUR_ORG"
+      }
+    ],
+    "effective_date": "2026-08-03",
+    "expiry_date": "2031-08-02",
+    "term_text": "License Term is five (5) years",
+    "governing_law": "USA (New York)"
+  },
+  "clauses": [
+    {
+      "index": 1,
+      "number": null,
+      "heading": null,
+      "kind": "PREAMBLE",
+      "section_path": "PREAMBLE",
+      "first_words": "SOFTWARE LICENSE AGREEMENT This Software License Agreement is",
+      "categories": []
+    },
+    {
+      "index": 2,
+      "number": "1",
+      "heading": "Definitions",
+      "kind": "DEFINITIONS",
+      "section_path": "1",
+      "first_words": "1. DEFINITIONS (a) \"Software\" means the SutraInsight software",
+      "categories": []
+    },
+    {
+      "index": 3,
+      "number": "2",
+      "heading": "Grant of License",
+      "kind": "BODY",
+      "section_path": "2",
+      "first_words": "2. GRANT OF LICENSE The Licensor grants the",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 4,
+      "number": "3",
+      "heading": "License Restrictions",
+      "kind": "BODY",
+      "section_path": "3",
+      "first_words": "3. LICENSE RESTRICTIONS The Licensee shall not (i)",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 5,
+      "number": "4",
+      "heading": "Delivery and Installation",
+      "kind": "BODY",
+      "section_path": "4",
+      "first_words": "4. DELIVERY AND INSTALLATION The Licensor shall deliver",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 6,
+      "number": "5",
+      "heading": "License Fees and Payment",
+      "kind": "BODY",
+      "section_path": "5",
+      "first_words": "5. LICENSE FEES AND PAYMENT The Licensee shall",
+      "categories": [
+        "PAYMENT"
+      ]
+    },
+    {
+      "index": 7,
+      "number": "6",
+      "heading": "Warranty",
+      "kind": "BODY",
+      "section_path": "6",
+      "first_words": "6. WARRANTY The Licensor warrants that for ninety",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 8,
+      "number": "7",
+      "heading": "Ownership of Intellectual Property",
+      "kind": "BODY",
+      "section_path": "7",
+      "first_words": "7. OWNERSHIP OF INTELLECTUAL PROPERTY The Software and",
+      "categories": [
+        "IP"
+      ]
+    },
+    {
+      "index": 9,
+      "number": "8",
+      "heading": "Confidentiality",
+      "kind": "BODY",
+      "section_path": "8",
+      "first_words": "8. CONFIDENTIALITY Each Party shall hold the confidential",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 10,
+      "number": "9",
+      "heading": "Indemnification",
+      "kind": "BODY",
+      "section_path": "9",
+      "first_words": "9. INDEMNIFICATION The Licensor shall indemnify the Licensee",
+      "categories": [
+        "INDEMNIFICATION"
+      ]
+    },
+    {
+      "index": 11,
+      "number": "10.1",
+      "heading": "Liability",
+      "kind": "BODY",
+      "section_path": "10 > 10.1",
+      "first_words": "10. LIABILITY 10.1 The Licensee shall be liable",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 12,
+      "number": "10.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "10 > 10.2",
+      "first_words": "10.2 The Licensor shall not be liable for",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 13,
+      "number": "11",
+      "heading": "Term and Renewal",
+      "kind": "BODY",
+      "section_path": "11",
+      "first_words": "11. TERM AND RENEWAL The License Term is",
+      "categories": [
+        "RENEWAL"
+      ]
+    },
+    {
+      "index": 14,
+      "number": "12",
+      "heading": "Termination",
+      "kind": "BODY",
+      "section_path": "12",
+      "first_words": "12. TERMINATION Either Party may terminate this Agreement",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 15,
+      "number": "13",
+      "heading": "Governing Law",
+      "kind": "BODY",
+      "section_path": "13",
+      "first_words": "13. GOVERNING LAW This Agreement shall be governed",
+      "categories": [
+        "GOVERNING_LAW"
+      ]
+    },
+    {
+      "index": 16,
+      "number": "14",
+      "heading": "General",
+      "kind": "BODY",
+      "section_path": "14",
+      "first_words": "14. GENERAL Neither Party may assign this Agreement",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 17,
+      "number": null,
+      "heading": null,
+      "kind": "SIGNATURE",
+      "section_path": "SIGNATURE",
+      "first_words": "IN WITNESS WHEREOF the Parties have executed this",
+      "categories": []
+    }
+  ],
+  "facts": {
+    "termination.notice_days": 90,
+    "termination.counterparty_unilateral": false,
+    "liability.has_cap": false,
+    "liability.is_uncapped": true,
+    "renewal.is_automatic": false,
+    "payment.due_days": 60,
+    "governing_law.jurisdiction": "USA (New York)"
+  },
+  "rules": {
+    "R01": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "10.1",
+        "10.2"
+      ]
+    },
+    "R02": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "10.1"
+      ]
+    },
+    "R03": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "12"
+      ]
+    },
+    "R04": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "12"
+      ]
+    },
+    "R05": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "11"
+      ]
+    },
+    "R06": {
+      "status": "MISSING",
+      "clauses": []
+    },
+    "R07": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "8"
+      ]
+    },
+    "R08": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "13"
+      ]
+    },
+    "R09": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "5"
+      ]
+    },
+    "R10": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "9"
+      ]
+    }
+  }
+}

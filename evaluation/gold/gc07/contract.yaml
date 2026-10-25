@@ -1,0 +1,127 @@
+# GC07: NDA (one-way), ABC is the recipient.
+# Planted: automatic renewal (R05), Singapore governing law (R08).
+# Tests: ARTICLE + roman numeral headings with an en dash, a multi-label clause
+# (RENEWAL + TERMINATION), "Disclosing Party"/"Receiving Party" aliases that need the
+# our-organization name to resolve roles.
+id: gc07
+contract_type: NDA
+title: NON-DISCLOSURE AGREEMENT
+short_title: Non-Disclosure Agreement
+heading_style: article
+numbering: text
+our_org: ABC Technologies Pvt. Ltd.
+counterparty: Orion Pharma Pvt. Ltd.
+
+preamble:
+  - This Non-Disclosure Agreement (the "Agreement") is dated 2 September 2026 (the "Effective Date")
+  - between Orion Pharma Pvt. Ltd., a company incorporated under the Companies Act, 2013, having its registered office at 501, Ashford Centre, Lower Parel, Mumbai 400013 (the "Disclosing Party"), and ABC Technologies Pvt. Ltd., a company incorporated under the Companies Act, 2013, having its registered office at 4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103 (the "Receiving Party").
+  - The Disclosing Party intends to share information about its clinical trial data platform so that the Receiving Party can propose an analytics solution (the "Proposal").
+
+clauses:
+  - number: "I"
+    heading: Purpose
+    categories: [OTHER]
+    body:
+      - The Receiving Party shall use the Confidential Information solely to evaluate and prepare the Proposal and for no other purpose.
+
+  - number: "II"
+    heading: Definitions
+    kind: DEFINITIONS
+    categories: []
+    body:
+      - '"Confidential Information" means all information disclosed by the Disclosing Party, including trial protocols, patient data schemas, system architecture and pricing, whether disclosed in writing, orally, electronically or by inspection.'
+      - '"Representatives" means the directors, employees and professional advisers of the Receiving Party who need to know the Confidential Information for the Proposal.'
+
+  - number: "III"
+    heading: Confidentiality Obligations
+    categories: [CONFIDENTIALITY]
+    body:
+      - The Receiving Party shall hold the Confidential Information in strict confidence, shall not disclose it to any person other than its Representatives, and shall ensure that its Representatives are bound by written obligations of confidentiality at least as protective as this Agreement.
+      - The Receiving Party shall not copy or reproduce the Confidential Information except as reasonably necessary for the Proposal.
+
+  - number: "IV"
+    heading: Permitted Disclosures
+    categories: [CONFIDENTIALITY]
+    body:
+      - The obligations in Article III do not apply to information that is publicly available through no act of the Receiving Party, or that the Receiving Party is required to disclose by law or by a regulator, provided that it gives the Disclosing Party prompt prior notice where lawful.
+
+  - number: "V"
+    heading: Ownership and No Licence
+    categories: [IP]
+    body:
+      - All Confidential Information remains the property of the Disclosing Party. Nothing in this Agreement grants the Receiving Party any licence or right in any patent, copyright, trade secret or other intellectual property of the Disclosing Party.
+
+  - number: "VI"
+    heading: No Warranty
+    categories: [OTHER]
+    body:
+      - All Confidential Information is provided "as is". The Disclosing Party makes no warranty as to its accuracy or completeness.
+
+  - number: "VII"
+    heading: Term and Renewal
+    categories: [RENEWAL, TERMINATION]
+    body:
+      - This Agreement shall have an initial term of one (1) year from the Effective Date and shall automatically renew for successive periods of one (1) year each, unless terminated by either Party by giving thirty (30) days' written notice before the end of the then-current term.
+      - The obligations of confidentiality shall survive for five (5) years after the expiry or termination of this Agreement.
+
+  - number: "VIII"
+    heading: Return of Materials
+    categories: [CONFIDENTIALITY]
+    body:
+      - Within fifteen (15) days of a written request by the Disclosing Party, the Receiving Party shall return or destroy all documents and media containing Confidential Information and shall certify the destruction in writing.
+
+  - number: "IX"
+    heading: Remedies
+    categories: [OTHER]
+    body:
+      - The Receiving Party agrees that a breach of this Agreement may cause irreparable harm to the Disclosing Party, which shall be entitled to seek injunctive relief in addition to any other remedy.
+
+  - number: "X"
+    heading: Governing Law
+    categories: [GOVERNING_LAW]
+    body:
+      - This Agreement shall be governed by the laws of Singapore, and the Parties submit to the exclusive jurisdiction of the courts of Singapore.
+
+  - number: "XI"
+    heading: Miscellaneous
+    categories: [OTHER]
+    body:
+      - This Agreement is the entire agreement between the Parties on its subject matter and may be amended only in writing signed by both Parties. The Receiving Party may not assign this Agreement without the Disclosing Party's prior written consent.
+
+signature:
+  - IN WITNESS WHEREOF the Parties have executed this Agreement on the Effective Date.
+  - For Orion Pharma Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Meera Joshi, Designation: Vice President - Clinical Systems"
+  - For ABC Technologies Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Neha Kulkarni, Designation: General Counsel"
+
+gold:
+  meta:
+    parties:
+      - {name: Orion Pharma Pvt. Ltd., alias: Disclosing Party, role: COUNTERPARTY}
+      - {name: ABC Technologies Pvt. Ltd., alias: Receiving Party, role: OUR_ORG}
+    effective_date: "2026-09-02"
+    expiry_date: "2027-09-01"
+    term_text: initial term of one (1) year
+    governing_law: Singapore
+  facts:
+    termination.notice_days: 30
+    termination.counterparty_unilateral: false
+    liability.has_cap: null
+    liability.is_uncapped: null
+    renewal.is_automatic: true
+    payment.due_days: null
+    governing_law.jurisdiction: Singapore
+  rules:
+    R01: {status: NOT_APPLICABLE}
+    R02: {status: NOT_APPLICABLE}
+    R03: {status: NOT_APPLICABLE}
+    R04: {status: NOT_APPLICABLE}
+    R05: {status: NON_COMPLIANT, clauses: ["VII"]}
+    R06: {status: NOT_APPLICABLE}
+    R07: {status: COMPLIANT, clauses: ["III"]}
+    R08: {status: NON_COMPLIANT, clauses: ["X"]}
+    R09: {status: NOT_APPLICABLE}
+    R10: {status: NOT_APPLICABLE}

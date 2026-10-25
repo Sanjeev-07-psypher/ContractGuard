@@ -1,0 +1,234 @@
+{
+  "id": "gc06",
+  "title": "MUTUAL NON-DISCLOSURE AGREEMENT",
+  "contract_type": "NDA",
+  "our_org": "ABC Technologies Pvt. Ltd.",
+  "files": {
+    "docx": "contract.docx",
+    "text_pdf": "contract_text.pdf",
+    "scanned_pdf": "contract_scanned.pdf"
+  },
+  "annotation": {
+    "status": "DRAFT",
+    "drafted_by": "Claude (generated from contract.yaml)",
+    "labeller_1": null,
+    "labeller_2": null,
+    "adjudicated": false,
+    "notes": "Needs two independent human labellers per GUIDELINES.md before use."
+  },
+  "meta": {
+    "parties": [
+      {
+        "name": "ABC Technologies Pvt. Ltd.",
+        "alias": "ABC",
+        "role": "OUR_ORG"
+      },
+      {
+        "name": "Pinnacle Biotech Pvt. Ltd.",
+        "alias": "Pinnacle",
+        "role": "COUNTERPARTY"
+      }
+    ],
+    "effective_date": "2026-08-20",
+    "expiry_date": "2028-08-19",
+    "term_text": "two (2) years from the Effective Date",
+    "governing_law": "India"
+  },
+  "clauses": [
+    {
+      "index": 1,
+      "number": null,
+      "heading": null,
+      "kind": "PREAMBLE",
+      "section_path": "PREAMBLE",
+      "first_words": "MUTUAL NON-DISCLOSURE AGREEMENT This Mutual Non-Disclosure Agreement (the",
+      "categories": []
+    },
+    {
+      "index": 2,
+      "number": "1",
+      "heading": "Purpose",
+      "kind": "BODY",
+      "section_path": "1",
+      "first_words": "1. Purpose The Parties intend to exchange information",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 3,
+      "number": "2",
+      "heading": "Definition of Confidential Information",
+      "kind": "BODY",
+      "section_path": "2",
+      "first_words": "2. Definition of Confidential Information \"Confidential Information\" means",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 4,
+      "number": "3",
+      "heading": "Obligations of the Receiving Party",
+      "kind": "BODY",
+      "section_path": "3",
+      "first_words": "3. Obligations of the Receiving Party The Receiving",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 5,
+      "number": "4",
+      "heading": "Exceptions",
+      "kind": "BODY",
+      "section_path": "4",
+      "first_words": "4. Exceptions The obligations in Clause 3 do",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 6,
+      "number": "5",
+      "heading": "Compelled Disclosure",
+      "kind": "BODY",
+      "section_path": "5",
+      "first_words": "5. Compelled Disclosure If the Receiving Party is",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 7,
+      "number": "6",
+      "heading": "Return or Destruction of Information",
+      "kind": "BODY",
+      "section_path": "6",
+      "first_words": "6. Return or Destruction of Information On written",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 8,
+      "number": "7",
+      "heading": "No Licence",
+      "kind": "BODY",
+      "section_path": "7",
+      "first_words": "7. No Licence All Confidential Information remains the",
+      "categories": [
+        "IP"
+      ]
+    },
+    {
+      "index": 9,
+      "number": "8",
+      "heading": "Term and Termination",
+      "kind": "BODY",
+      "section_path": "8",
+      "first_words": "8. Term and Termination This Agreement shall remain",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 10,
+      "number": "9",
+      "heading": "Remedies",
+      "kind": "BODY",
+      "section_path": "9",
+      "first_words": "9. Remedies The Receiving Party acknowledges that damages",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 11,
+      "number": "10",
+      "heading": "Governing Law and Jurisdiction",
+      "kind": "BODY",
+      "section_path": "10",
+      "first_words": "10. Governing Law and Jurisdiction This Agreement shall",
+      "categories": [
+        "GOVERNING_LAW"
+      ]
+    },
+    {
+      "index": 12,
+      "number": "11",
+      "heading": "General",
+      "kind": "BODY",
+      "section_path": "11",
+      "first_words": "11. General This Agreement constitutes the entire agreement",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 13,
+      "number": null,
+      "heading": null,
+      "kind": "SIGNATURE",
+      "section_path": "SIGNATURE",
+      "first_words": "IN WITNESS WHEREOF, the Parties have executed this",
+      "categories": []
+    }
+  ],
+  "facts": {
+    "termination.notice_days": 30,
+    "termination.counterparty_unilateral": false,
+    "liability.has_cap": null,
+    "liability.is_uncapped": null,
+    "renewal.is_automatic": null,
+    "payment.due_days": null,
+    "governing_law.jurisdiction": "India"
+  },
+  "rules": {
+    "R01": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R02": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R03": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R04": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R05": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R06": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R07": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "2",
+        "3"
+      ]
+    },
+    "R08": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "10"
+      ]
+    },
+    "R09": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R10": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    }
+  }
+}

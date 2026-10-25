@@ -1,0 +1,234 @@
+{
+  "id": "gc07",
+  "title": "NON-DISCLOSURE AGREEMENT",
+  "contract_type": "NDA",
+  "our_org": "ABC Technologies Pvt. Ltd.",
+  "files": {
+    "docx": "contract.docx",
+    "text_pdf": "contract_text.pdf",
+    "scanned_pdf": "contract_scanned.pdf"
+  },
+  "annotation": {
+    "status": "DRAFT",
+    "drafted_by": "Claude (generated from contract.yaml)",
+    "labeller_1": null,
+    "labeller_2": null,
+    "adjudicated": false,
+    "notes": "Needs two independent human labellers per GUIDELINES.md before use."
+  },
+  "meta": {
+    "parties": [
+      {
+        "name": "Orion Pharma Pvt. Ltd.",
+        "alias": "Disclosing Party",
+        "role": "COUNTERPARTY"
+      },
+      {
+        "name": "ABC Technologies Pvt. Ltd.",
+        "alias": "Receiving Party",
+        "role": "OUR_ORG"
+      }
+    ],
+    "effective_date": "2026-09-02",
+    "expiry_date": "2027-09-01",
+    "term_text": "initial term of one (1) year",
+    "governing_law": "Singapore"
+  },
+  "clauses": [
+    {
+      "index": 1,
+      "number": null,
+      "heading": null,
+      "kind": "PREAMBLE",
+      "section_path": "PREAMBLE",
+      "first_words": "NON-DISCLOSURE AGREEMENT This Non-Disclosure Agreement (the \"Agreement\") is",
+      "categories": []
+    },
+    {
+      "index": 2,
+      "number": "I",
+      "heading": "Purpose",
+      "kind": "BODY",
+      "section_path": "I",
+      "first_words": "ARTICLE I - PURPOSE The Receiving Party shall",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 3,
+      "number": "II",
+      "heading": "Definitions",
+      "kind": "DEFINITIONS",
+      "section_path": "II",
+      "first_words": "ARTICLE II - DEFINITIONS \"Confidential Information\" means all",
+      "categories": []
+    },
+    {
+      "index": 4,
+      "number": "III",
+      "heading": "Confidentiality Obligations",
+      "kind": "BODY",
+      "section_path": "III",
+      "first_words": "ARTICLE III - CONFIDENTIALITY OBLIGATIONS The Receiving Party",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 5,
+      "number": "IV",
+      "heading": "Permitted Disclosures",
+      "kind": "BODY",
+      "section_path": "IV",
+      "first_words": "ARTICLE IV - PERMITTED DISCLOSURES The obligations in",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 6,
+      "number": "V",
+      "heading": "Ownership and No Licence",
+      "kind": "BODY",
+      "section_path": "V",
+      "first_words": "ARTICLE V - OWNERSHIP AND NO LICENCE All",
+      "categories": [
+        "IP"
+      ]
+    },
+    {
+      "index": 7,
+      "number": "VI",
+      "heading": "No Warranty",
+      "kind": "BODY",
+      "section_path": "VI",
+      "first_words": "ARTICLE VI - NO WARRANTY All Confidential Information",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 8,
+      "number": "VII",
+      "heading": "Term and Renewal",
+      "kind": "BODY",
+      "section_path": "VII",
+      "first_words": "ARTICLE VII - TERM AND RENEWAL This Agreement",
+      "categories": [
+        "RENEWAL",
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 9,
+      "number": "VIII",
+      "heading": "Return of Materials",
+      "kind": "BODY",
+      "section_path": "VIII",
+      "first_words": "ARTICLE VIII - RETURN OF MATERIALS Within fifteen",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 10,
+      "number": "IX",
+      "heading": "Remedies",
+      "kind": "BODY",
+      "section_path": "IX",
+      "first_words": "ARTICLE IX - REMEDIES The Receiving Party agrees",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 11,
+      "number": "X",
+      "heading": "Governing Law",
+      "kind": "BODY",
+      "section_path": "X",
+      "first_words": "ARTICLE X - GOVERNING LAW This Agreement shall",
+      "categories": [
+        "GOVERNING_LAW"
+      ]
+    },
+    {
+      "index": 12,
+      "number": "XI",
+      "heading": "Miscellaneous",
+      "kind": "BODY",
+      "section_path": "XI",
+      "first_words": "ARTICLE XI - MISCELLANEOUS This Agreement is the",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 13,
+      "number": null,
+      "heading": null,
+      "kind": "SIGNATURE",
+      "section_path": "SIGNATURE",
+      "first_words": "IN WITNESS WHEREOF the Parties have executed this",
+      "categories": []
+    }
+  ],
+  "facts": {
+    "termination.notice_days": 30,
+    "termination.counterparty_unilateral": false,
+    "liability.has_cap": null,
+    "liability.is_uncapped": null,
+    "renewal.is_automatic": true,
+    "payment.due_days": null,
+    "governing_law.jurisdiction": "Singapore"
+  },
+  "rules": {
+    "R01": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R02": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R03": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R04": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R05": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "VII"
+      ]
+    },
+    "R06": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R07": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "III"
+      ]
+    },
+    "R08": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "X"
+      ]
+    },
+    "R09": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    },
+    "R10": {
+      "status": "NOT_APPLICABLE",
+      "clauses": []
+    }
+  }
+}

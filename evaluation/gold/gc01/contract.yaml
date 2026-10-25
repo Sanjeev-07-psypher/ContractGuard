@@ -1,0 +1,175 @@
+# GC01: VENDOR_SERVICE with many planted violations.
+# Planted: 7-day vendor-only convenience termination (R03, R04), uncapped liability (R01, R02),
+# automatic renewal (R05), 15-day payment (R09). Compliant: SLA, confidentiality, Indian law,
+# indemnity.
+id: gc01
+contract_type: VENDOR_SERVICE
+title: IT SUPPORT SERVICES AGREEMENT
+short_title: IT Support Services Agreement
+heading_style: num_title          # "3. Term and Renewal"
+numbering: text
+our_org: ABC Technologies Pvt. Ltd.
+counterparty: Sharma Infotech Solutions Pvt. Ltd.
+
+preamble:
+  - This IT Support Services Agreement (the "Agreement") is made and entered into at Bengaluru on this 1st day of April, 2026 (the "Effective Date")
+  - BETWEEN ABC Technologies Pvt. Ltd., a company incorporated under the Companies Act, 2013, having its registered office at 4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103 (hereinafter referred to as the "Company"), and Sharma Infotech Solutions Pvt. Ltd., a company incorporated under the Companies Act, 2013, having its registered office at 21, Residency Road, Bengaluru 560025 (hereinafter referred to as the "Vendor").
+  - The Company and the Vendor are each referred to as a "Party" and together as the "Parties".
+  - WHEREAS the Company wishes to obtain information technology support services for its offices, and the Vendor has represented that it has the skills, personnel and resources to provide such services;
+  - NOW, THEREFORE, in consideration of the mutual covenants set out below, the Parties agree as follows.
+
+clauses:
+  - number: "1"
+    heading: Definitions
+    kind: DEFINITIONS
+    categories: []
+    body:
+      - In this Agreement, unless the context otherwise requires, the following expressions have the meanings given below.
+      - (a) "Services" means the information technology support services described in Schedule 1.
+      - (b) "Business Day" means any day other than a Saturday, Sunday or a public holiday in Bengaluru.
+      - (c) "Confidential Information" means all non-public business, technical and financial information disclosed by one Party to the other, whether in writing, orally or by any other means.
+      - (d) "Incident" means any failure or degradation of the Company's IT systems reported to the Vendor.
+
+  - number: "2"
+    heading: Scope of Services
+    categories: [OTHER]
+    body:
+      - The Vendor shall provide the Services at the Company's offices in Bengaluru and Hyderabad in a professional and workmanlike manner, using suitably qualified personnel and in accordance with good industry practice.
+      - The Vendor shall comply with all reasonable instructions of the Company and with the Company's information security policies as notified to the Vendor from time to time.
+
+  - number: "3"
+    heading: Term and Renewal
+    categories: [RENEWAL]
+    body:
+      - This Agreement shall commence on the Effective Date and shall continue for an initial term of one (1) year.
+      - Thereafter, this Agreement shall automatically renew for successive periods of one (1) year each, unless either Party gives the other written notice of non-renewal at least thirty (30) days before the end of the then-current term.
+
+  - number: "4"
+    heading: Fees and Payment
+    categories: [PAYMENT]
+    body:
+      - In consideration of the Services, the Company shall pay the Vendor a fixed monthly fee of INR 3,50,000 (Rupees Three Lakh Fifty Thousand only), exclusive of applicable Goods and Services Tax.
+      - The Vendor shall raise a tax invoice at the end of each calendar month. The Company shall pay each undisputed invoice within fifteen (15) days of receipt of the invoice.
+      - The Company may withhold payment of any amount disputed in good faith, and the Parties shall resolve such dispute promptly.
+
+  - number: "5"
+    heading: Service Levels
+    categories: [SLA]
+    body:
+      - The Vendor shall ensure availability of 99.5% for the Company's critical systems, measured on a monthly basis, excluding scheduled maintenance notified at least two (2) Business Days in advance.
+      - The Vendor shall meet a response time of thirty (30) minutes and a resolution time of four (4) hours for every Priority 1 Incident.
+      - If the Vendor fails to meet these service levels in any month, the Company shall be entitled to service credits equal to five percent (5%) of the monthly fee for each percentage point below the availability target.
+
+  - number: "6"
+    heading: Confidentiality
+    categories: [CONFIDENTIALITY]
+    body:
+      - Each Party shall keep the other Party's Confidential Information strictly confidential, shall use it only for the purposes of this Agreement, and shall not disclose it to any third party without the prior written consent of the disclosing Party.
+      - The obligations in this Clause shall not apply to information that is or becomes publicly available other than through a breach of this Agreement, or that is required to be disclosed by law or by order of a competent court.
+      - The obligations in this Clause shall survive for a period of three (3) years after the expiry or termination of this Agreement.
+
+  - number: "7"
+    heading: Intellectual Property
+    categories: [IP]
+    body:
+      - All scripts, documentation, reports and other materials created by the Vendor specifically for the Company in the course of providing the Services shall vest in and be the exclusive property of the Company upon creation.
+      - The Vendor retains ownership of its pre-existing tools and know-how, and grants the Company a non-exclusive, royalty-free licence to use them to the extent they are incorporated in the deliverables.
+
+  - number: "8"
+    heading: Indemnification
+    categories: [INDEMNIFICATION]
+    body:
+      - The Vendor shall indemnify, defend and hold harmless the Company and its directors, officers and employees from and against all claims, losses, damages, costs and expenses, including without limitation reasonable legal fees, arising out of any negligent act or omission of the Vendor or its personnel, or any breach by the Vendor of applicable law.
+
+  - number: "9"
+    heading: Liability
+    categories: [LIABILITY]
+    body:
+      - Each Party shall be liable to the other Party for any and all losses and damages arising out of or in connection with a breach of its obligations under this Agreement.
+      - Nothing in this Agreement shall restrict either Party's liability for fraud, gross negligence or wilful misconduct.
+
+  - number: "10"
+    heading: Termination
+    categories: [TERMINATION]
+    body:
+      - The Vendor may terminate this Agreement for convenience at any time by giving the Company seven (7) days' prior written notice.
+      - Either Party may terminate this Agreement with immediate effect by written notice if the other Party commits a material breach of this Agreement and fails to cure such breach within thirty (30) days of receiving notice of the breach.
+      - Upon termination, the Vendor shall promptly hand over all Company data, passwords and documentation in its possession, and the Company shall pay for Services properly performed up to the date of termination.
+
+  - number: "11"
+    heading: Data Protection
+    categories: [OTHER]
+    body:
+      - The Vendor shall process any personal data made available by the Company only on the documented instructions of the Company and in compliance with the Digital Personal Data Protection Act, 2023 and the rules made under it.
+      - The Vendor shall notify the Company without undue delay, and in any event within twenty-four (24) hours, upon becoming aware of any personal data breach.
+
+  - number: "12"
+    heading: Force Majeure
+    categories: [OTHER]
+    body:
+      - Neither Party shall be responsible for any delay or failure in performance caused by events beyond its reasonable control, including flood, earthquake, epidemic, war, riot or government action, provided that the affected Party notifies the other Party promptly and uses reasonable efforts to mitigate the effects of the event.
+
+  - number: "13"
+    heading: Governing Law and Jurisdiction
+    categories: [GOVERNING_LAW]
+    body:
+      - This Agreement shall be governed by and construed in accordance with the laws of India. Subject to Clause 14, the courts at Bengaluru, Karnataka shall have exclusive jurisdiction over all matters arising out of this Agreement.
+
+  - number: "14"
+    heading: Dispute Resolution
+    categories: [OTHER]
+    body:
+      - Any dispute arising out of or in connection with this Agreement shall first be referred to the senior management of both Parties. If the dispute is not resolved within thirty (30) days, it shall be referred to arbitration by a sole arbitrator under the Arbitration and Conciliation Act, 1996. The seat and venue of arbitration shall be Bengaluru and the language of arbitration shall be English.
+
+  - number: "15"
+    heading: General
+    categories: [OTHER]
+    body:
+      - The Vendor shall not assign or subcontract any of its obligations under this Agreement without the prior written consent of the Company.
+      - All notices under this Agreement shall be in writing and delivered by hand, registered post or e-mail to the addresses set out above.
+      - This Agreement, together with its Schedule, constitutes the entire agreement between the Parties and supersedes all prior discussions. Any amendment must be in writing and signed by both Parties.
+
+signature:
+  - IN WITNESS WHEREOF the Parties have executed this Agreement through their duly authorised representatives on the date first written above.
+  - For ABC Technologies Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Ritu Malhotra, Designation: Chief Operating Officer"
+  - For Sharma Infotech Solutions Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Anil Sharma, Designation: Managing Director"
+
+exhibits:
+  - heading: SCHEDULE 1 - DESCRIPTION OF SERVICES
+    categories: [OTHER]
+    body:
+      - The Services comprise desktop and laptop support, network administration, e-mail administration, backup management and vendor coordination for hardware warranty claims.
+      - The Vendor shall deploy two (2) resident engineers at the Bengaluru office and one (1) resident engineer at the Hyderabad office during business hours, from 9:00 a.m. to 7:00 p.m. on Business Days.
+
+gold:
+  meta:
+    parties:
+      - {name: ABC Technologies Pvt. Ltd., alias: Company, role: OUR_ORG}
+      - {name: Sharma Infotech Solutions Pvt. Ltd., alias: Vendor, role: COUNTERPARTY}
+    effective_date: "2026-04-01"
+    expiry_date: "2027-03-31"
+    term_text: initial term of one (1) year
+    governing_law: India
+  facts:
+    termination.notice_days: 7
+    termination.counterparty_unilateral: true
+    liability.has_cap: false
+    liability.is_uncapped: true
+    renewal.is_automatic: true
+    payment.due_days: 15
+    governing_law.jurisdiction: India
+  rules:
+    R01: {status: NON_COMPLIANT, clauses: ["9"]}
+    R02: {status: NON_COMPLIANT, clauses: ["9"]}
+    R03: {status: NON_COMPLIANT, clauses: ["10"]}
+    R04: {status: NON_COMPLIANT, clauses: ["10"]}
+    R05: {status: NON_COMPLIANT, clauses: ["3"]}
+    R06: {status: COMPLIANT, clauses: ["5"]}
+    R07: {status: COMPLIANT, clauses: ["6"]}
+    R08: {status: COMPLIANT, clauses: ["13"]}
+    R09: {status: NON_COMPLIANT, clauses: ["4"]}
+    R10: {status: COMPLIANT, clauses: ["8"]}

@@ -1,0 +1,178 @@
+# GC04: SAAS_LICENSE.
+# Planted: automatic renewal (R05); provider convenience notice of 15 days next to a customer
+# notice of 30 days, so the minimum (15) fails R03 while R04 passes (both parties hold the right).
+# Compliant: cap defined by formula (fees in prior 12 months), SLA with uptime and service credits,
+# Indian law, Net 30 payment, IP indemnity.
+id: gc04
+contract_type: SAAS_LICENSE
+title: SOFTWARE AS A SERVICE SUBSCRIPTION AGREEMENT
+short_title: SaaS Subscription Agreement
+heading_style: num_title
+numbering: text
+our_org: ABC Technologies Pvt. Ltd.
+counterparty: CloudNova Software Pvt. Ltd.
+
+preamble:
+  - This Software as a Service Subscription Agreement (the "Agreement") is entered into with effect from 1 July 2026 (the "Effective Date")
+  - between CloudNova Software Pvt. Ltd., a company incorporated under the laws of India with its registered office at 3rd Floor, Cyber Towers, HITEC City, Hyderabad 500081 (the "Provider"), and ABC Technologies Pvt. Ltd., a company incorporated under the laws of India with its registered office at 4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103 (the "Customer").
+  - The Provider operates a cloud-based human resources management platform and the Customer wishes to subscribe to it for use by its employees.
+
+clauses:
+  - number: "1"
+    heading: Definitions
+    kind: DEFINITIONS
+    categories: []
+    body:
+      - '"Platform" means the Provider''s hosted human resources management software made available as a service, including updates.'
+      - '"Authorised Users" means employees and contractors of the Customer who are permitted to use the Platform, up to the number of subscriptions purchased.'
+      - '"Customer Data" means all data uploaded to the Platform by or on behalf of the Customer.'
+      - '"Subscription Term" means the initial term and every renewal term under Clause 11.'
+
+  - number: "2"
+    heading: Subscription and Access
+    categories: [OTHER]
+    body:
+      - Subject to payment of the fees, the Provider grants the Customer a non-exclusive, non-transferable right for its Authorised Users to access and use the Platform during the Subscription Term for the Customer's internal business purposes.
+      - The Customer shall not resell, sublicense or make the Platform available to any third party, or attempt to reverse engineer the Platform.
+
+  - number: "3"
+    heading: Customer Obligations
+    categories: [OTHER]
+    body:
+      - The Customer is responsible for maintaining the confidentiality of user credentials, for the accuracy of Customer Data and for ensuring that its Authorised Users comply with this Agreement.
+
+  - number: "4"
+    heading: Subscription Fees and Payment
+    categories: [PAYMENT]
+    body:
+      - The subscription fee is INR 1,200 per Authorised User per month for 400 Authorised Users, invoiced annually in advance.
+      - Payment terms are Net 30 from the date of invoice. Late payments carry interest at one percent (1%) per month.
+
+  - number: "5"
+    heading: Service Availability and Support
+    categories: [SLA]
+    body:
+      - The Provider shall make the Platform available with an uptime of at least 99.9% in each calendar month, excluding planned maintenance announced at least seventy-two (72) hours in advance.
+      - The Provider shall provide support by e-mail and telephone with a response time of one (1) hour for critical issues. If monthly uptime falls below the target, the Customer shall receive service credits as set out in Schedule 1.
+
+  - number: "6"
+    heading: Data Protection and Security
+    categories: [OTHER]
+    body:
+      - The Provider shall process Customer Data only to provide the Platform and in accordance with the Digital Personal Data Protection Act, 2023. The Provider shall host Customer Data in data centres located in India and shall maintain ISO/IEC 27001 certification throughout the Subscription Term.
+
+  - number: "7"
+    heading: Confidentiality
+    categories: [CONFIDENTIALITY]
+    body:
+      - Each Party shall protect the other Party's confidential information with at least the same degree of care it uses for its own confidential information, and in no case less than reasonable care, and shall not disclose it except to employees and advisers who need to know it for the purposes of this Agreement.
+      - Customer Data is the Customer's confidential information.
+
+  - number: "8"
+    heading: Intellectual Property Rights
+    categories: [IP]
+    body:
+      - The Provider owns all intellectual property rights in the Platform. The Customer owns all rights in the Customer Data. Nothing in this Agreement transfers ownership of any intellectual property right from one Party to the other.
+
+  - number: "9"
+    heading: Indemnification
+    categories: [INDEMNIFICATION]
+    body:
+      - The Provider shall defend and indemnify the Customer against any third-party claim alleging that the Customer's use of the Platform in accordance with this Agreement infringes that third party's intellectual property rights, and shall pay any damages and costs finally awarded against the Customer.
+
+  - number: "10"
+    heading: Limitation of Liability
+    categories: [LIABILITY]
+    body:
+      - Except for liability arising under Clause 9 (Indemnification), each Party's total aggregate liability under this Agreement shall be limited to the fees paid or payable by the Customer in the twelve (12) months immediately preceding the event giving rise to the claim.
+      - Neither Party shall be liable for any indirect or consequential loss, or for loss of profits, revenue or goodwill.
+
+  - number: "11"
+    heading: Term and Renewal
+    categories: [RENEWAL]
+    body:
+      - The initial Subscription Term is one (1) year from the Effective Date.
+      - The Subscription Term shall automatically renew for successive renewal terms of one (1) year each unless either Party gives notice of non-renewal at least sixty (60) days before the end of the then-current term.
+
+  - number: "12"
+    heading: Termination
+    sub:
+      - number: "12.1"
+        categories: [TERMINATION]
+        body:
+          - The Provider may terminate this Agreement for convenience by giving the Customer fifteen (15) days' prior written notice.
+      - number: "12.2"
+        categories: [TERMINATION]
+        body:
+          - The Customer may terminate this Agreement for convenience by giving the Provider thirty (30) days' prior written notice.
+      - number: "12.3"
+        categories: [TERMINATION]
+        body:
+          - Either Party may terminate this Agreement by notice if the other Party materially breaches it and does not cure the breach within thirty (30) days after receiving notice of it.
+
+  - number: "13"
+    heading: Effect of Termination
+    categories: [TERMINATION]
+    body:
+      - Upon expiry or termination, the Customer's right to access the Platform ends. The Provider shall make Customer Data available for export for thirty (30) days and shall then securely delete it, and shall refund any prepaid fees for the period after the effective date of termination, except where the Agreement is terminated by the Provider for the Customer's breach.
+
+  - number: "14"
+    heading: Governing Law and Dispute Resolution
+    categories: [GOVERNING_LAW]
+    body:
+      - This Agreement is governed by the laws of India. The courts at Bengaluru shall have exclusive jurisdiction over any dispute arising out of or in connection with this Agreement.
+
+  - number: "15"
+    heading: General
+    categories: [OTHER]
+    body:
+      - The Provider may use subcontractors for hosting and support, but remains responsible for their performance. Neither Party may assign this Agreement without the consent of the other. This Agreement, including Schedule 1, is the entire agreement between the Parties.
+
+signature:
+  - IN WITNESS WHEREOF the Parties have executed this Agreement as of the Effective Date.
+  - For CloudNova Software Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Kavya Reddy, Designation: Chief Executive Officer"
+  - For ABC Technologies Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Ritu Malhotra, Designation: Chief Operating Officer"
+
+exhibits:
+  - heading: SCHEDULE 1 - SERVICE LEVEL AGREEMENT
+    categories: [SLA]
+    body:
+      - Monthly uptime is measured by the Provider's monitoring system and reported to the Customer by the tenth (10th) day of the following month.
+    table:
+      - [Monthly uptime, Service credit (% of monthly fee)]
+      - [99.0% to below 99.9%, 5%]
+      - [95.0% to below 99.0%, 10%]
+      - [Below 95.0%, 25%]
+
+gold:
+  meta:
+    parties:
+      - {name: CloudNova Software Pvt. Ltd., alias: Provider, role: COUNTERPARTY}
+      - {name: ABC Technologies Pvt. Ltd., alias: Customer, role: OUR_ORG}
+    effective_date: "2026-07-01"
+    expiry_date: "2027-06-30"
+    term_text: initial Subscription Term is one (1) year
+    governing_law: India
+  facts:
+    termination.notice_days: 15
+    termination.counterparty_unilateral: false
+    liability.has_cap: true
+    liability.is_uncapped: false
+    renewal.is_automatic: true
+    payment.due_days: 30
+    governing_law.jurisdiction: India
+  rules:
+    R01: {status: COMPLIANT, clauses: ["10"]}
+    R02: {status: COMPLIANT, clauses: ["10"]}
+    R03: {status: NON_COMPLIANT, clauses: ["12.1"]}
+    R04: {status: COMPLIANT, clauses: ["12.1", "12.2"]}
+    R05: {status: NON_COMPLIANT, clauses: ["11"]}
+    R06: {status: COMPLIANT, clauses: ["5"]}
+    R07: {status: COMPLIANT, clauses: ["7"]}
+    R08: {status: COMPLIANT, clauses: ["14"]}
+    R09: {status: COMPLIANT, clauses: ["4"]}
+    R10: {status: COMPLIANT, clauses: ["9"]}

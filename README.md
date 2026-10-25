@@ -11,8 +11,8 @@ The design is in the HLD (`docs/` / project files). Build progress follows HLD �
 
 | Phase | Status |
 |---|---|
-| 0 Skeleton, config, models, tooling | done |
-| 1 Gold set + label inspection | drafted; needs human labelling and a label-inspection run |
+| 0 Skeleton, config, models, tooling (pytest, ruff, mypy) | done |
+| 1 Gold set + label inspection | 8 contracts × 3 formats built; human labelling and the label-inspection run (needs Hugging Face access) still open |
 | 2–10 | not started |
 
 ## Setup (development)

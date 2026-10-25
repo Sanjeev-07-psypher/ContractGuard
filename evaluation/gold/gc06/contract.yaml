@@ -1,0 +1,123 @@
+# GC06: NDA (mutual), compliant.
+# Tests: party aliases outside the role lists ("ABC", "Pinnacle"), so roles need the
+# our-organization name; "Definition of Confidential Information" is a BODY clause (singular
+# heading); a termination notice exists but R03/R04 do not apply to NDAs; no renewal clause.
+id: gc06
+contract_type: NDA
+title: MUTUAL NON-DISCLOSURE AGREEMENT
+short_title: Mutual Non-Disclosure Agreement
+heading_style: num_title
+numbering: text
+our_org: ABC Technologies Pvt. Ltd.
+counterparty: Pinnacle Biotech Pvt. Ltd.
+
+preamble:
+  - This Mutual Non-Disclosure Agreement (the "Agreement") is effective as of 20 August 2026 (the "Effective Date")
+  - between ABC Technologies Pvt. Ltd., a company incorporated under the Companies Act, 2013, with its registered office at 4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103 ("ABC"), and Pinnacle Biotech Pvt. Ltd., a company incorporated under the Companies Act, 2013, with its registered office at 12, Okhla Industrial Estate Phase III, New Delhi 110020 ("Pinnacle").
+  - ABC and Pinnacle wish to exchange certain information for the purpose of evaluating a potential collaboration on a laboratory information management system (the "Purpose"). Each Party may act as a disclosing party (the "Disclosing Party") or a receiving party (the "Receiving Party").
+
+clauses:
+  - number: "1"
+    heading: Purpose
+    categories: [OTHER]
+    body:
+      - The Parties intend to exchange information solely for the Purpose. Nothing in this Agreement obliges either Party to disclose any particular information or to enter into any further agreement.
+
+  - number: "2"
+    heading: Definition of Confidential Information
+    categories: [CONFIDENTIALITY]
+    body:
+      - '"Confidential Information" means any information disclosed by the Disclosing Party to the Receiving Party, whether before or after the Effective Date, in oral, written, electronic or any other form, including business plans, research data, formulations, software, customer lists and pricing, that is marked as confidential or that a reasonable person would understand to be confidential.'
+
+  - number: "3"
+    heading: Obligations of the Receiving Party
+    categories: [CONFIDENTIALITY]
+    body:
+      - The Receiving Party shall (a) use the Confidential Information only for the Purpose; (b) not disclose it to any third party other than its employees, directors and professional advisers who need to know it for the Purpose and are bound by obligations of confidentiality no less protective than this Agreement; and (c) protect it using at least the same degree of care it uses to protect its own confidential information.
+
+  - number: "4"
+    heading: Exceptions
+    categories: [CONFIDENTIALITY]
+    body:
+      - The obligations in Clause 3 do not apply to information that (a) is or becomes publicly available without breach of this Agreement; (b) was lawfully in the Receiving Party's possession before disclosure; (c) is lawfully received from a third party without restriction; or (d) is independently developed by the Receiving Party without reference to the Confidential Information.
+
+  - number: "5"
+    heading: Compelled Disclosure
+    categories: [CONFIDENTIALITY]
+    body:
+      - If the Receiving Party is required by law, regulation or order of a court to disclose any Confidential Information, it shall, where legally permitted, give the Disclosing Party prompt notice so that the Disclosing Party may seek a protective order, and shall disclose only the part of the Confidential Information that it is legally required to disclose.
+
+  - number: "6"
+    heading: Return or Destruction of Information
+    categories: [CONFIDENTIALITY]
+    body:
+      - On written request of the Disclosing Party, the Receiving Party shall promptly return or destroy all Confidential Information and all copies of it, and shall confirm in writing that it has done so, except for copies retained in automatic electronic back-ups or as required by law.
+
+  - number: "7"
+    heading: No Licence
+    categories: [IP]
+    body:
+      - All Confidential Information remains the property of the Disclosing Party. No licence or other right under any patent, copyright, trade secret or other intellectual property right is granted by this Agreement, except the limited right to use the Confidential Information for the Purpose.
+
+  - number: "8"
+    heading: Term and Termination
+    categories: [TERMINATION]
+    body:
+      - This Agreement shall remain in force for two (2) years from the Effective Date. Either Party may terminate this Agreement at any time by giving thirty (30) days' written notice to the other Party.
+      - The obligations of confidentiality shall survive for three (3) years after the expiry or termination of this Agreement.
+
+  - number: "9"
+    heading: Remedies
+    categories: [OTHER]
+    body:
+      - The Receiving Party acknowledges that damages alone may not be an adequate remedy for breach of this Agreement, and that the Disclosing Party shall be entitled to seek injunctive relief and specific performance in addition to any other remedy available at law.
+
+  - number: "10"
+    heading: Governing Law and Jurisdiction
+    categories: [GOVERNING_LAW]
+    body:
+      - This Agreement shall be governed by the laws of India and the courts at New Delhi shall have exclusive jurisdiction over any dispute arising out of it.
+
+  - number: "11"
+    heading: General
+    categories: [OTHER]
+    body:
+      - This Agreement constitutes the entire agreement between the Parties regarding its subject matter. It may be amended only in writing signed by both Parties, and may be executed in counterparts, including by electronic signature.
+
+signature:
+  - IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date.
+  - For ABC Technologies Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Neha Kulkarni, Designation: General Counsel"
+  - For Pinnacle Biotech Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Dr. Arvind Bose, Designation: Chief Scientific Officer"
+
+gold:
+  meta:
+    parties:
+      - {name: ABC Technologies Pvt. Ltd., alias: ABC, role: OUR_ORG}
+      - {name: Pinnacle Biotech Pvt. Ltd., alias: Pinnacle, role: COUNTERPARTY}
+    effective_date: "2026-08-20"
+    expiry_date: "2028-08-19"
+    term_text: two (2) years from the Effective Date
+    governing_law: India
+  facts:
+    termination.notice_days: 30
+    termination.counterparty_unilateral: false
+    liability.has_cap: null
+    liability.is_uncapped: null
+    renewal.is_automatic: null
+    payment.due_days: null
+    governing_law.jurisdiction: India
+  rules:
+    R01: {status: NOT_APPLICABLE}
+    R02: {status: NOT_APPLICABLE}
+    R03: {status: NOT_APPLICABLE}
+    R04: {status: NOT_APPLICABLE}
+    R05: {status: NOT_APPLICABLE}
+    R06: {status: NOT_APPLICABLE}
+    R07: {status: COMPLIANT, clauses: ["2", "3"]}
+    R08: {status: COMPLIANT, clauses: ["10"]}
+    R09: {status: NOT_APPLICABLE}
+    R10: {status: NOT_APPLICABLE}

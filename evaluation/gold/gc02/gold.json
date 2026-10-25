@@ -1,0 +1,437 @@
+{
+  "id": "gc02",
+  "title": "MASTER SERVICES AGREEMENT",
+  "contract_type": "VENDOR_SERVICE",
+  "our_org": "ABC Technologies Pvt. Ltd.",
+  "files": {
+    "docx": "contract.docx",
+    "text_pdf": "contract_text.pdf",
+    "scanned_pdf": "contract_scanned.pdf"
+  },
+  "annotation": {
+    "status": "DRAFT",
+    "drafted_by": "Claude (generated from contract.yaml)",
+    "labeller_1": null,
+    "labeller_2": null,
+    "adjudicated": false,
+    "notes": "Needs two independent human labellers per GUIDELINES.md before use."
+  },
+  "meta": {
+    "parties": [
+      {
+        "name": "ABC Technologies Pvt. Ltd.",
+        "alias": "Client",
+        "role": "OUR_ORG"
+      },
+      {
+        "name": "Nexgen Consulting Services Pvt. Ltd.",
+        "alias": "Service Provider",
+        "role": "COUNTERPARTY"
+      }
+    ],
+    "effective_date": "2026-05-15",
+    "expiry_date": "2029-05-14",
+    "term_text": "initial term of three (3) years",
+    "governing_law": "India"
+  },
+  "clauses": [
+    {
+      "index": 1,
+      "number": null,
+      "heading": null,
+      "kind": "PREAMBLE",
+      "section_path": "PREAMBLE",
+      "first_words": "MASTER SERVICES AGREEMENT This Master Services Agreement (this",
+      "categories": []
+    },
+    {
+      "index": 2,
+      "number": "1",
+      "heading": "Definitions and Interpretation",
+      "kind": "DEFINITIONS",
+      "section_path": "1",
+      "first_words": "1. DEFINITIONS AND INTERPRETATION In this Agreement the",
+      "categories": []
+    },
+    {
+      "index": 3,
+      "number": "2",
+      "heading": "Appointment and Scope",
+      "kind": "BODY",
+      "section_path": "2",
+      "first_words": "2. APPOINTMENT AND SCOPE The Client appoints the",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 4,
+      "number": "3.1",
+      "heading": "Term and Renewal",
+      "kind": "BODY",
+      "section_path": "3 > 3.1",
+      "first_words": "3. TERM AND RENEWAL 3.1 This Agreement commences",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 5,
+      "number": "3.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "3 > 3.2",
+      "first_words": "3.2 On expiry of the initial term, this",
+      "categories": [
+        "RENEWAL"
+      ]
+    },
+    {
+      "index": 6,
+      "number": "4",
+      "heading": "Statements of Work and Change Control",
+      "kind": "BODY",
+      "section_path": "4",
+      "first_words": "4. STATEMENTS OF WORK AND CHANGE CONTROL The",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 7,
+      "number": "5.1",
+      "heading": "Fees and Payment",
+      "kind": "BODY",
+      "section_path": "5 > 5.1",
+      "first_words": "5. FEES AND PAYMENT 5.1 The Client shall",
+      "categories": [
+        "PAYMENT"
+      ]
+    },
+    {
+      "index": 8,
+      "number": "5.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "5 > 5.2",
+      "first_words": "5.2 The Client shall pay each correct and",
+      "categories": [
+        "PAYMENT"
+      ]
+    },
+    {
+      "index": 9,
+      "number": "5.3",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "5 > 5.3",
+      "first_words": "5.3 All Fees are exclusive of Goods and",
+      "categories": [
+        "PAYMENT"
+      ]
+    },
+    {
+      "index": 10,
+      "number": "6.1",
+      "heading": "Service Levels",
+      "kind": "BODY",
+      "section_path": "6 > 6.1",
+      "first_words": "6. SERVICE LEVELS 6.1 The Service Provider shall",
+      "categories": [
+        "SLA"
+      ]
+    },
+    {
+      "index": 11,
+      "number": "6.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "6 > 6.2",
+      "first_words": "6.2 If the Service Provider fails to meet",
+      "categories": [
+        "SLA"
+      ]
+    },
+    {
+      "index": 12,
+      "number": "7",
+      "heading": "Personnel",
+      "kind": "BODY",
+      "section_path": "7",
+      "first_words": "7. PERSONNEL The Service Provider shall assign suitably",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 13,
+      "number": "8.1",
+      "heading": "Confidentiality",
+      "kind": "BODY",
+      "section_path": "8 > 8.1",
+      "first_words": "8. CONFIDENTIALITY 8.1 Each Party (the \"Recipient\") shall",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 14,
+      "number": "8.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "8 > 8.2",
+      "first_words": "8.2 Clause 8.1 does not apply to information",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 15,
+      "number": "8.3",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "8 > 8.3",
+      "first_words": "8.3 The obligations in this Clause 8 shall",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 16,
+      "number": "9",
+      "heading": "Intellectual Property",
+      "kind": "BODY",
+      "section_path": "9",
+      "first_words": "9. INTELLECTUAL PROPERTY Upon full payment of the",
+      "categories": [
+        "IP"
+      ]
+    },
+    {
+      "index": 17,
+      "number": "10",
+      "heading": "Indemnity",
+      "kind": "BODY",
+      "section_path": "10",
+      "first_words": "10. INDEMNITY The Service Provider shall indemnify and",
+      "categories": [
+        "INDEMNIFICATION"
+      ]
+    },
+    {
+      "index": 18,
+      "number": "11.1",
+      "heading": "Limitation of Liability",
+      "kind": "BODY",
+      "section_path": "11 > 11.1",
+      "first_words": "11. LIMITATION OF LIABILITY 11.1 Subject to Clause",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 19,
+      "number": "11.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "11 > 11.2",
+      "first_words": "11.2 In no event shall either Party be",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 20,
+      "number": "11.3",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "11 > 11.3",
+      "first_words": "11.3 The limitation in Clause 11.1 shall not",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 21,
+      "number": "12.1",
+      "heading": "Termination",
+      "kind": "BODY",
+      "section_path": "12 > 12.1",
+      "first_words": "12. TERMINATION 12.1 Either Party may terminate this",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 22,
+      "number": "12.2",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "12 > 12.2",
+      "first_words": "12.2 Either Party may terminate this Agreement by",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 23,
+      "number": "12.3",
+      "heading": null,
+      "kind": "BODY",
+      "section_path": "12 > 12.3",
+      "first_words": "12.3 Either Party may terminate this Agreement immediately",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 24,
+      "number": "13",
+      "heading": "Consequences of Termination",
+      "kind": "BODY",
+      "section_path": "13",
+      "first_words": "13. CONSEQUENCES OF TERMINATION On expiry or termination,",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 25,
+      "number": "14",
+      "heading": "Governing Law and Jurisdiction",
+      "kind": "BODY",
+      "section_path": "14",
+      "first_words": "14. GOVERNING LAW AND JURISDICTION This Agreement shall",
+      "categories": [
+        "GOVERNING_LAW"
+      ]
+    },
+    {
+      "index": 26,
+      "number": "15",
+      "heading": "Dispute Resolution",
+      "kind": "BODY",
+      "section_path": "15",
+      "first_words": "15. DISPUTE RESOLUTION Any dispute that is not",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 27,
+      "number": "16",
+      "heading": "Miscellaneous",
+      "kind": "BODY",
+      "section_path": "16",
+      "first_words": "16. MISCELLANEOUS Neither Party may assign this Agreement",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 28,
+      "number": null,
+      "heading": null,
+      "kind": "SIGNATURE",
+      "section_path": "SIGNATURE",
+      "first_words": "IN WITNESS WHEREOF, the Parties have caused this",
+      "categories": []
+    },
+    {
+      "index": 29,
+      "number": null,
+      "heading": "SCHEDULE 1 - FORM OF STATEMENT OF WORK",
+      "kind": "EXHIBIT",
+      "section_path": "SCHEDULE 1 - FORM OF STATEMENT OF WORK",
+      "first_words": "SCHEDULE 1 - FORM OF STATEMENT OF WORK",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 30,
+      "number": null,
+      "heading": "SCHEDULE 2 - SERVICE LEVELS AND SERVICE CREDITS",
+      "kind": "EXHIBIT",
+      "section_path": "SCHEDULE 2 - SERVICE LEVELS AND SERVICE CREDITS",
+      "first_words": "SCHEDULE 2 - SERVICE LEVELS AND SERVICE CREDITS",
+      "categories": [
+        "SLA"
+      ]
+    }
+  ],
+  "facts": {
+    "termination.notice_days": 60,
+    "termination.counterparty_unilateral": false,
+    "liability.has_cap": true,
+    "liability.is_uncapped": false,
+    "renewal.is_automatic": false,
+    "payment.due_days": 45,
+    "governing_law.jurisdiction": "India"
+  },
+  "rules": {
+    "R01": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "11.1"
+      ]
+    },
+    "R02": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "11.1",
+        "11.2",
+        "11.3"
+      ]
+    },
+    "R03": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "12.1"
+      ]
+    },
+    "R04": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "12.1"
+      ]
+    },
+    "R05": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "3.2"
+      ]
+    },
+    "R06": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "6.1",
+        "6.2"
+      ]
+    },
+    "R07": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "8.1"
+      ]
+    },
+    "R08": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "14"
+      ]
+    },
+    "R09": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "5.2"
+      ]
+    },
+    "R10": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "10"
+      ]
+    }
+  }
+}

@@ -1,0 +1,156 @@
+# GC03: VENDOR_SERVICE with Word auto-numbering (w:numPr) in the DOCX.
+# Planted: no SLA (R06 MISSING), English governing law (R08), no indemnity (R10 MISSING).
+# Compliant: 30 business days' mutual convenience notice (= 42 days) next to a 15-day breach cure
+# notice (the extractor must prefer the convenience sentence), INR cap, 30-day payment.
+# No renewal clause at all (R05 NOT_APPLICABLE).
+id: gc03
+contract_type: VENDOR_SERVICE
+title: FACILITY MANAGEMENT SERVICES AGREEMENT
+short_title: Facility Management Services Agreement
+heading_style: num_title
+numbering: auto
+our_org: ABC Technologies Pvt. Ltd.
+counterparty: Shree Ganesh Facility Services Pvt. Ltd.
+
+preamble:
+  - This Facility Management Services Agreement is made at Pune on 10 June 2026 (the "Effective Date")
+  - between ABC Technologies Pvt. Ltd., having its registered office at 4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103 (the "Company"), and Shree Ganesh Facility Services Pvt. Ltd., having its registered office at Plot 14, Bhosari MIDC, Pune 411026 (the "Contractor").
+  - The Company requires housekeeping, security and maintenance services at its development centre at Hinjewadi Phase 2, Pune (the "Premises"), and the Contractor has agreed to provide those services on the terms below.
+
+clauses:
+  - number: "1"
+    heading: Definitions
+    kind: DEFINITIONS
+    categories: []
+    body:
+      - In this Agreement, "Services" means the housekeeping, security, pantry and minor electrical and plumbing maintenance services described in Clause 2; "Contract Price" means the monthly amount set out in Clause 4; and "Personnel" means the staff deployed by the Contractor at the Premises.
+
+  - number: "2"
+    heading: Services
+    categories: [OTHER]
+    body:
+      - The Contractor shall deploy not less than twenty-two (22) housekeeping staff, eight (8) security guards and two (2) technicians at the Premises in three shifts, seven days a week.
+      - The Contractor shall maintain attendance registers, cleaning checklists and visitor logs and shall make them available to the Company for inspection on request.
+
+  - number: "3"
+    heading: Term
+    categories: [OTHER]
+    body:
+      - This Agreement shall be valid for a period of two (2) years from the Effective Date, unless terminated earlier in accordance with Clause 10.
+
+  - number: "4"
+    heading: Contract Price and Payment
+    categories: [PAYMENT]
+    body:
+      - The Company shall pay the Contractor a monthly Contract Price of INR 9,80,000 (Rupees Nine Lakh Eighty Thousand only) plus applicable Goods and Services Tax.
+      - The Contractor shall submit its invoice by the fifth (5th) day of each month together with proof of payment of wages and statutory dues for the previous month. The Company shall make payment within thirty (30) days of receipt of a valid invoice.
+
+  - number: "5"
+    heading: Contractor's Personnel
+    categories: [OTHER]
+    body:
+      - The Contractor shall be solely responsible for compliance with the Contract Labour (Regulation and Abolition) Act, 1970, the Code on Wages, 2019, and all laws relating to provident fund, employees' state insurance and minimum wages in respect of its Personnel.
+      - The Personnel shall remain employees of the Contractor at all times, and nothing in this Agreement creates any employment relationship between the Company and the Personnel.
+
+  - number: "6"
+    heading: Equipment and Materials
+    categories: [OTHER]
+    body:
+      - The Contractor shall supply, at its own cost, all cleaning equipment, consumables, uniforms and safety gear required for the Services. All chemicals used shall be non-toxic and approved by the Company.
+
+  - number: "7"
+    heading: Insurance
+    categories: [OTHER]
+    body:
+      - The Contractor shall maintain, throughout the term, workmen's compensation insurance for all Personnel and public liability insurance of not less than INR 50,00,000, and shall provide copies of the policies to the Company on request.
+
+  - number: "8"
+    heading: Confidentiality
+    categories: [CONFIDENTIALITY]
+    body:
+      - The Contractor shall ensure that its Personnel keep confidential all information, documents and data of the Company that they may come across at the Premises, and shall not copy, remove or disclose any such information to any person.
+      - This obligation shall survive the expiry or termination of this Agreement.
+
+  - number: "9"
+    heading: Limitation of Liability
+    categories: [LIABILITY]
+    body:
+      - The total aggregate liability of either Party arising out of or in connection with this Agreement shall not exceed INR 25,00,000 (Rupees Twenty-Five Lakh only).
+
+  - number: "10"
+    heading: Termination
+    sub:
+      - number: "10.1"
+        categories: [TERMINATION]
+        body:
+          - Either Party may terminate this Agreement without cause by giving thirty (30) business days' prior written notice to the other Party.
+      - number: "10.2"
+        categories: [TERMINATION]
+        body:
+          - If either Party commits a material breach of this Agreement and fails to remedy it within fifteen (15) days of written notice from the other Party, the other Party may terminate this Agreement immediately.
+      - number: "10.3"
+        categories: [TERMINATION]
+        body:
+          - On termination, the Contractor shall withdraw its Personnel and equipment from the Premises in an orderly manner and the Company shall pay for Services rendered up to the date of termination.
+
+  - number: "11"
+    heading: Force Majeure
+    categories: [OTHER]
+    body:
+      - Neither Party shall be liable for failure to perform its obligations due to causes beyond its reasonable control, including natural calamities, epidemics and lockdowns ordered by a government authority.
+
+  - number: "12"
+    heading: Governing Law
+    categories: [GOVERNING_LAW]
+    body:
+      - This Agreement shall be governed by and construed in accordance with the laws of England and Wales, and the courts of London shall have exclusive jurisdiction to settle any dispute arising out of it.
+
+  - number: "13"
+    heading: Notices
+    categories: [OTHER]
+    body:
+      - Any notice under this Agreement shall be in writing and sent by registered post or e-mail to the registered office of the receiving Party, marked for the attention of its authorised signatory.
+
+  - number: "14"
+    heading: Miscellaneous
+    categories: [OTHER]
+    body:
+      - The Contractor shall not subcontract the Services or any part of them without the prior written consent of the Company. This Agreement constitutes the entire agreement between the Parties and may be amended only in writing.
+
+signature:
+  - IN WITNESS WHEREOF the Parties have signed this Agreement on the date first written above.
+  - For ABC Technologies Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Suresh Iyer, Designation: Head - Administration"
+  - For Shree Ganesh Facility Services Pvt. Ltd.
+  - "By: ____________________"
+  - "Name: Ganesh Patil, Designation: Proprietor and Director"
+
+gold:
+  meta:
+    parties:
+      - {name: ABC Technologies Pvt. Ltd., alias: Company, role: OUR_ORG}
+      - {name: Shree Ganesh Facility Services Pvt. Ltd., alias: Contractor, role: COUNTERPARTY}
+    effective_date: "2026-06-10"
+    expiry_date: "2028-06-09"
+    term_text: a period of two (2) years
+    governing_law: UK (England and Wales)
+  facts:
+    termination.notice_days: 42
+    termination.counterparty_unilateral: false
+    liability.has_cap: true
+    liability.is_uncapped: false
+    renewal.is_automatic: null
+    payment.due_days: 30
+    governing_law.jurisdiction: UK (England and Wales)
+  rules:
+    R01: {status: COMPLIANT, clauses: ["9"]}
+    R02: {status: COMPLIANT, clauses: ["9"]}
+    R03: {status: COMPLIANT, clauses: ["10.1"]}
+    R04: {status: COMPLIANT, clauses: ["10.1"]}
+    R05: {status: NOT_APPLICABLE}
+    R06: {status: MISSING}
+    R07: {status: COMPLIANT, clauses: ["8"]}
+    R08: {status: NON_COMPLIANT, clauses: ["12"]}
+    R09: {status: COMPLIANT, clauses: ["4"]}
+    R10: {status: MISSING}

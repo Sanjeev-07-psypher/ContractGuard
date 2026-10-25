@@ -1,0 +1,302 @@
+{
+  "id": "gc01",
+  "title": "IT SUPPORT SERVICES AGREEMENT",
+  "contract_type": "VENDOR_SERVICE",
+  "our_org": "ABC Technologies Pvt. Ltd.",
+  "files": {
+    "docx": "contract.docx",
+    "text_pdf": "contract_text.pdf",
+    "scanned_pdf": "contract_scanned.pdf"
+  },
+  "annotation": {
+    "status": "DRAFT",
+    "drafted_by": "Claude (generated from contract.yaml)",
+    "labeller_1": null,
+    "labeller_2": null,
+    "adjudicated": false,
+    "notes": "Needs two independent human labellers per GUIDELINES.md before use."
+  },
+  "meta": {
+    "parties": [
+      {
+        "name": "ABC Technologies Pvt. Ltd.",
+        "alias": "Company",
+        "role": "OUR_ORG"
+      },
+      {
+        "name": "Sharma Infotech Solutions Pvt. Ltd.",
+        "alias": "Vendor",
+        "role": "COUNTERPARTY"
+      }
+    ],
+    "effective_date": "2026-04-01",
+    "expiry_date": "2027-03-31",
+    "term_text": "initial term of one (1) year",
+    "governing_law": "India"
+  },
+  "clauses": [
+    {
+      "index": 1,
+      "number": null,
+      "heading": null,
+      "kind": "PREAMBLE",
+      "section_path": "PREAMBLE",
+      "first_words": "IT SUPPORT SERVICES AGREEMENT This IT Support Services",
+      "categories": []
+    },
+    {
+      "index": 2,
+      "number": "1",
+      "heading": "Definitions",
+      "kind": "DEFINITIONS",
+      "section_path": "1",
+      "first_words": "1. Definitions In this Agreement, unless the context",
+      "categories": []
+    },
+    {
+      "index": 3,
+      "number": "2",
+      "heading": "Scope of Services",
+      "kind": "BODY",
+      "section_path": "2",
+      "first_words": "2. Scope of Services The Vendor shall provide",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 4,
+      "number": "3",
+      "heading": "Term and Renewal",
+      "kind": "BODY",
+      "section_path": "3",
+      "first_words": "3. Term and Renewal This Agreement shall commence",
+      "categories": [
+        "RENEWAL"
+      ]
+    },
+    {
+      "index": 5,
+      "number": "4",
+      "heading": "Fees and Payment",
+      "kind": "BODY",
+      "section_path": "4",
+      "first_words": "4. Fees and Payment In consideration of the",
+      "categories": [
+        "PAYMENT"
+      ]
+    },
+    {
+      "index": 6,
+      "number": "5",
+      "heading": "Service Levels",
+      "kind": "BODY",
+      "section_path": "5",
+      "first_words": "5. Service Levels The Vendor shall ensure availability",
+      "categories": [
+        "SLA"
+      ]
+    },
+    {
+      "index": 7,
+      "number": "6",
+      "heading": "Confidentiality",
+      "kind": "BODY",
+      "section_path": "6",
+      "first_words": "6. Confidentiality Each Party shall keep the other",
+      "categories": [
+        "CONFIDENTIALITY"
+      ]
+    },
+    {
+      "index": 8,
+      "number": "7",
+      "heading": "Intellectual Property",
+      "kind": "BODY",
+      "section_path": "7",
+      "first_words": "7. Intellectual Property All scripts, documentation, reports and",
+      "categories": [
+        "IP"
+      ]
+    },
+    {
+      "index": 9,
+      "number": "8",
+      "heading": "Indemnification",
+      "kind": "BODY",
+      "section_path": "8",
+      "first_words": "8. Indemnification The Vendor shall indemnify, defend and",
+      "categories": [
+        "INDEMNIFICATION"
+      ]
+    },
+    {
+      "index": 10,
+      "number": "9",
+      "heading": "Liability",
+      "kind": "BODY",
+      "section_path": "9",
+      "first_words": "9. Liability Each Party shall be liable to",
+      "categories": [
+        "LIABILITY"
+      ]
+    },
+    {
+      "index": 11,
+      "number": "10",
+      "heading": "Termination",
+      "kind": "BODY",
+      "section_path": "10",
+      "first_words": "10. Termination The Vendor may terminate this Agreement",
+      "categories": [
+        "TERMINATION"
+      ]
+    },
+    {
+      "index": 12,
+      "number": "11",
+      "heading": "Data Protection",
+      "kind": "BODY",
+      "section_path": "11",
+      "first_words": "11. Data Protection The Vendor shall process any",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 13,
+      "number": "12",
+      "heading": "Force Majeure",
+      "kind": "BODY",
+      "section_path": "12",
+      "first_words": "12. Force Majeure Neither Party shall be responsible",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 14,
+      "number": "13",
+      "heading": "Governing Law and Jurisdiction",
+      "kind": "BODY",
+      "section_path": "13",
+      "first_words": "13. Governing Law and Jurisdiction This Agreement shall",
+      "categories": [
+        "GOVERNING_LAW"
+      ]
+    },
+    {
+      "index": 15,
+      "number": "14",
+      "heading": "Dispute Resolution",
+      "kind": "BODY",
+      "section_path": "14",
+      "first_words": "14. Dispute Resolution Any dispute arising out of",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 16,
+      "number": "15",
+      "heading": "General",
+      "kind": "BODY",
+      "section_path": "15",
+      "first_words": "15. General The Vendor shall not assign or",
+      "categories": [
+        "OTHER"
+      ]
+    },
+    {
+      "index": 17,
+      "number": null,
+      "heading": null,
+      "kind": "SIGNATURE",
+      "section_path": "SIGNATURE",
+      "first_words": "IN WITNESS WHEREOF the Parties have executed this",
+      "categories": []
+    },
+    {
+      "index": 18,
+      "number": null,
+      "heading": "SCHEDULE 1 - DESCRIPTION OF SERVICES",
+      "kind": "EXHIBIT",
+      "section_path": "SCHEDULE 1 - DESCRIPTION OF SERVICES",
+      "first_words": "SCHEDULE 1 - DESCRIPTION OF SERVICES The Services",
+      "categories": [
+        "OTHER"
+      ]
+    }
+  ],
+  "facts": {
+    "termination.notice_days": 7,
+    "termination.counterparty_unilateral": true,
+    "liability.has_cap": false,
+    "liability.is_uncapped": true,
+    "renewal.is_automatic": true,
+    "payment.due_days": 15,
+    "governing_law.jurisdiction": "India"
+  },
+  "rules": {
+    "R01": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "9"
+      ]
+    },
+    "R02": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "9"
+      ]
+    },
+    "R03": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "10"
+      ]
+    },
+    "R04": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "10"
+      ]
+    },
+    "R05": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "3"
+      ]
+    },
+    "R06": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "5"
+      ]
+    },
+    "R07": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "6"
+      ]
+    },
+    "R08": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "13"
+      ]
+    },
+    "R09": {
+      "status": "NON_COMPLIANT",
+      "clauses": [
+        "4"
+      ]
+    },
+    "R10": {
+      "status": "COMPLIANT",
+      "clauses": [
+        "8"
+      ]
+    }
+  }
+}
