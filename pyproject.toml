@@ -38,7 +38,7 @@ dev = ["pytest", "httpx", "ruff", "mypy", "reportlab"]
 contractguard = "contractguard.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["contractguard*", "backend*"]
+include = ["contractguard*", "backend*", "frontend*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
