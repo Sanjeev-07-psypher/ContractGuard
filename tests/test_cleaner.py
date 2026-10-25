@@ -156,3 +156,29 @@ def test_ingestion_report_handles_missing_ocr_results():
     }  # fmt: skip
     md = mod.to_markdown(report)
     assert "n/a" in md and "FAILED: IngestionError" in md
+
+
+def test_sentence_wrapping_across_a_page_break_is_not_a_header():
+    """Regression (D23): a footer-zone line on one page and a header-zone line on the next
+    differ only in digits, but they are body text, not a running header."""
+
+    def filler(page):
+        return [f"Filler line {w} on page {page}." for w in ("alpha", "beta", "gamma", "delta")]
+
+    pages = [
+        [body(1), *filler("one"),
+         "The Vendor may terminate on giving fifteen\n(15) days' prior written notice."],
+        ["The Company may terminate on giving thirty\n(30) days' prior written notice.",
+         *filler("two"), body(2)],
+        [body(3), *filler("three"), body(4)],
+    ]  # fmt: skip
+    text = clean_document(pdf_doc(pages)).text
+    assert "fifteen (15) days' prior written notice." in text
+    assert "thirty (30) days' prior written notice." in text
+
+
+def test_parenthesised_number_line_joins_previous_line():
+    doc = pdf_doc([["giving the Customer fifteen\n(15) days' prior written notice."]])
+    assert (
+        clean_document(doc).text == "giving the Customer fifteen (15) days' prior written notice."
+    )

@@ -1,0 +1,2230 @@
+{
+  "e4_target": 0.85,
+  "summary": {
+    "docx": {
+      "fact_accuracy": 1.0,
+      "fact_accuracy_non_null_gold": 1.0,
+      "per_fact": {
+        "termination.notice_days": 1.0,
+        "termination.counterparty_unilateral": 1.0,
+        "liability.has_cap": 1.0,
+        "liability.is_uncapped": 1.0,
+        "renewal.is_automatic": 1.0,
+        "payment.due_days": 1.0,
+        "governing_law.jurisdiction": 1.0
+      },
+      "per_meta": {
+        "parties": 1.0,
+        "effective_date": 1.0,
+        "expiry_date": 1.0,
+        "governing_law": 1.0,
+        "contract_type": 1.0
+      },
+      "failed_files": 0
+    },
+    "text_pdf": {
+      "fact_accuracy": 1.0,
+      "fact_accuracy_non_null_gold": 1.0,
+      "per_fact": {
+        "termination.notice_days": 1.0,
+        "termination.counterparty_unilateral": 1.0,
+        "liability.has_cap": 1.0,
+        "liability.is_uncapped": 1.0,
+        "renewal.is_automatic": 1.0,
+        "payment.due_days": 1.0,
+        "governing_law.jurisdiction": 1.0
+      },
+      "per_meta": {
+        "parties": 1.0,
+        "effective_date": 1.0,
+        "expiry_date": 1.0,
+        "governing_law": 1.0,
+        "contract_type": 1.0
+      },
+      "failed_files": 0
+    },
+    "scanned_pdf": {
+      "fact_accuracy": 1.0,
+      "fact_accuracy_non_null_gold": 1.0,
+      "per_fact": {
+        "termination.notice_days": 1.0,
+        "termination.counterparty_unilateral": 1.0,
+        "liability.has_cap": 1.0,
+        "liability.is_uncapped": 1.0,
+        "renewal.is_automatic": 1.0,
+        "payment.due_days": 1.0,
+        "governing_law.jurisdiction": 1.0
+      },
+      "per_meta": {
+        "parties": 1.0,
+        "effective_date": 1.0,
+        "expiry_date": 1.0,
+        "governing_law": 1.0,
+        "contract_type": 1.0
+      },
+      "failed_files": 0
+    }
+  },
+  "contracts": [
+    {
+      "contract": "gc01",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 7,
+            "pred": 7,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Sharma Infotech Solutions Pvt. Ltd.",
+                "Vendor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Sharma Infotech Solutions Pvt. Ltd.",
+                "Vendor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-04-01",
+            "pred": "2026-04-01",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-03-31",
+            "pred": "2027-03-31",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 7,
+            "pred": 7,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Sharma Infotech Solutions Pvt. Ltd.",
+                "Vendor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Sharma Infotech Solutions Pvt. Ltd.",
+                "Vendor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-04-01",
+            "pred": "2026-04-01",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-03-31",
+            "pred": "2027-03-31",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 7,
+            "pred": 7,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Sharma Infotech Solutions Pvt. Ltd.",
+                "Vendor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Sharma Infotech Solutions Pvt. Ltd.",
+                "Vendor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-04-01",
+            "pred": "2026-04-01",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-03-31",
+            "pred": "2027-03-31",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc02",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 45,
+            "pred": 45,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Client",
+                "OUR_ORG"
+              ],
+              [
+                "Nexgen Consulting Services Pvt. Ltd.",
+                "Service Provider",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Client",
+                "OUR_ORG"
+              ],
+              [
+                "Nexgen Consulting Services Pvt. Ltd.",
+                "Service Provider",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-05-15",
+            "pred": "2026-05-15",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2029-05-14",
+            "pred": "2029-05-14",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 45,
+            "pred": 45,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Client",
+                "OUR_ORG"
+              ],
+              [
+                "Nexgen Consulting Services Pvt. Ltd.",
+                "Service Provider",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Client",
+                "OUR_ORG"
+              ],
+              [
+                "Nexgen Consulting Services Pvt. Ltd.",
+                "Service Provider",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-05-15",
+            "pred": "2026-05-15",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2029-05-14",
+            "pred": "2029-05-14",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 45,
+            "pred": 45,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Client",
+                "OUR_ORG"
+              ],
+              [
+                "Nexgen Consulting Services Pvt. Ltd.",
+                "Service Provider",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Client",
+                "OUR_ORG"
+              ],
+              [
+                "Nexgen Consulting Services Pvt. Ltd.",
+                "Service Provider",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-05-15",
+            "pred": "2026-05-15",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2029-05-14",
+            "pred": "2029-05-14",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc03",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 42,
+            "pred": 42,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "UK (England and Wales)",
+            "pred": "UK (England and Wales)",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Shree Ganesh Facility Services Pvt. Ltd.",
+                "Contractor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Shree Ganesh Facility Services Pvt. Ltd.",
+                "Contractor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-06-10",
+            "pred": "2026-06-10",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2028-06-09",
+            "pred": "2028-06-09",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "UK (England and Wales)",
+            "pred": "UK (England and Wales)",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 42,
+            "pred": 42,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "UK (England and Wales)",
+            "pred": "UK (England and Wales)",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Shree Ganesh Facility Services Pvt. Ltd.",
+                "Contractor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Shree Ganesh Facility Services Pvt. Ltd.",
+                "Contractor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-06-10",
+            "pred": "2026-06-10",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2028-06-09",
+            "pred": "2028-06-09",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "UK (England and Wales)",
+            "pred": "UK (England and Wales)",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 42,
+            "pred": 42,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "UK (England and Wales)",
+            "pred": "UK (England and Wales)",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Shree Ganesh Facility Services Pvt. Ltd.",
+                "Contractor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Company",
+                "OUR_ORG"
+              ],
+              [
+                "Shree Ganesh Facility Services Pvt. Ltd.",
+                "Contractor",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-06-10",
+            "pred": "2026-06-10",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2028-06-09",
+            "pred": "2028-06-09",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "UK (England and Wales)",
+            "pred": "UK (England and Wales)",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "VENDOR_SERVICE",
+            "pred": "VENDOR_SERVICE",
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc04",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "CloudNova Software Pvt. Ltd.",
+                "Provider",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Customer",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "CloudNova Software Pvt. Ltd.",
+                "Provider",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Customer",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-07-01",
+            "pred": "2026-07-01",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-06-30",
+            "pred": "2027-06-30",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "SAAS_LICENSE",
+            "pred": "SAAS_LICENSE",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "CloudNova Software Pvt. Ltd.",
+                "Provider",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Customer",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "CloudNova Software Pvt. Ltd.",
+                "Provider",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Customer",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-07-01",
+            "pred": "2026-07-01",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-06-30",
+            "pred": "2027-06-30",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "SAAS_LICENSE",
+            "pred": "SAAS_LICENSE",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "CloudNova Software Pvt. Ltd.",
+                "Provider",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Customer",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "CloudNova Software Pvt. Ltd.",
+                "Provider",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Customer",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-07-01",
+            "pred": "2026-07-01",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-06-30",
+            "pred": "2027-06-30",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "SAAS_LICENSE",
+            "pred": "SAAS_LICENSE",
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc05",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 90,
+            "pred": 90,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "USA (New York)",
+            "pred": "USA (New York)",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "DataSutra Analytics LLP",
+                "Licensor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Licensee",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "DataSutra Analytics LLP",
+                "Licensor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Licensee",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-08-03",
+            "pred": "2026-08-03",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2031-08-02",
+            "pred": "2031-08-02",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "USA (New York)",
+            "pred": "USA (New York)",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "SAAS_LICENSE",
+            "pred": "SAAS_LICENSE",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 90,
+            "pred": 90,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "USA (New York)",
+            "pred": "USA (New York)",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "DataSutra Analytics LLP",
+                "Licensor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Licensee",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "DataSutra Analytics LLP",
+                "Licensor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Licensee",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-08-03",
+            "pred": "2026-08-03",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2031-08-02",
+            "pred": "2031-08-02",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "USA (New York)",
+            "pred": "USA (New York)",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "SAAS_LICENSE",
+            "pred": "SAAS_LICENSE",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 90,
+            "pred": 90,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "USA (New York)",
+            "pred": "USA (New York)",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "DataSutra Analytics LLP",
+                "Licensor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Licensee",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "DataSutra Analytics LLP",
+                "Licensor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Licensee",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-08-03",
+            "pred": "2026-08-03",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2031-08-02",
+            "pred": "2031-08-02",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "USA (New York)",
+            "pred": "USA (New York)",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "SAAS_LICENSE",
+            "pred": "SAAS_LICENSE",
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc06",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "ABC",
+                "OUR_ORG"
+              ],
+              [
+                "Pinnacle Biotech Pvt. Ltd.",
+                "Pinnacle",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "ABC",
+                "OUR_ORG"
+              ],
+              [
+                "Pinnacle Biotech Pvt. Ltd.",
+                "Pinnacle",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-08-20",
+            "pred": "2026-08-20",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2028-08-19",
+            "pred": "2028-08-19",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "NDA",
+            "pred": "NDA",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "ABC",
+                "OUR_ORG"
+              ],
+              [
+                "Pinnacle Biotech Pvt. Ltd.",
+                "Pinnacle",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "ABC",
+                "OUR_ORG"
+              ],
+              [
+                "Pinnacle Biotech Pvt. Ltd.",
+                "Pinnacle",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-08-20",
+            "pred": "2026-08-20",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2028-08-19",
+            "pred": "2028-08-19",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "NDA",
+            "pred": "NDA",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "ABC",
+                "OUR_ORG"
+              ],
+              [
+                "Pinnacle Biotech Pvt. Ltd.",
+                "Pinnacle",
+                "COUNTERPARTY"
+              ]
+            ],
+            "pred": [
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "ABC",
+                "OUR_ORG"
+              ],
+              [
+                "Pinnacle Biotech Pvt. Ltd.",
+                "Pinnacle",
+                "COUNTERPARTY"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-08-20",
+            "pred": "2026-08-20",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2028-08-19",
+            "pred": "2028-08-19",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "NDA",
+            "pred": "NDA",
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc07",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "Singapore",
+            "pred": "Singapore",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "Orion Pharma Pvt. Ltd.",
+                "Disclosing Party",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Receiving Party",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "Orion Pharma Pvt. Ltd.",
+                "Disclosing Party",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Receiving Party",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-09-02",
+            "pred": "2026-09-02",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-09-01",
+            "pred": "2027-09-01",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "Singapore",
+            "pred": "Singapore",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "NDA",
+            "pred": "NDA",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "Singapore",
+            "pred": "Singapore",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "Orion Pharma Pvt. Ltd.",
+                "Disclosing Party",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Receiving Party",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "Orion Pharma Pvt. Ltd.",
+                "Disclosing Party",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Receiving Party",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-09-02",
+            "pred": "2026-09-02",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-09-01",
+            "pred": "2027-09-01",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "Singapore",
+            "pred": "Singapore",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "NDA",
+            "pred": "NDA",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 30,
+            "pred": 30,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "Singapore",
+            "pred": "Singapore",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "Orion Pharma Pvt. Ltd.",
+                "Disclosing Party",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Receiving Party",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "Orion Pharma Pvt. Ltd.",
+                "Disclosing Party",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Receiving Party",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-09-02",
+            "pred": "2026-09-02",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": "2027-09-01",
+            "pred": "2027-09-01",
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "Singapore",
+            "pred": "Singapore",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "NDA",
+            "pred": "NDA",
+            "ok": true
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc08",
+      "docx": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "Sai Office Equipment Rentals Pvt. Ltd.",
+                "Lessor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Lessee",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "Sai Office Equipment Rentals Pvt. Ltd.",
+                "Lessor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Lessee",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-09-14",
+            "pred": "2026-09-14",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "OTHER",
+            "pred": "OTHER",
+            "ok": true
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "Sai Office Equipment Rentals Pvt. Ltd.",
+                "Lessor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Lessee",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "Sai Office Equipment Rentals Pvt. Ltd.",
+                "Lessor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Lessee",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-09-14",
+            "pred": "2026-09-14",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "OTHER",
+            "pred": "OTHER",
+            "ok": true
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "facts": {
+          "termination.notice_days": {
+            "gold": 60,
+            "pred": 60,
+            "ok": true
+          },
+          "termination.counterparty_unilateral": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "liability.has_cap": {
+            "gold": true,
+            "pred": true,
+            "ok": true
+          },
+          "liability.is_uncapped": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "renewal.is_automatic": {
+            "gold": false,
+            "pred": false,
+            "ok": true
+          },
+          "payment.due_days": {
+            "gold": 15,
+            "pred": 15,
+            "ok": true
+          },
+          "governing_law.jurisdiction": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          }
+        },
+        "meta": {
+          "parties": {
+            "gold": [
+              [
+                "Sai Office Equipment Rentals Pvt. Ltd.",
+                "Lessor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Lessee",
+                "OUR_ORG"
+              ]
+            ],
+            "pred": [
+              [
+                "Sai Office Equipment Rentals Pvt. Ltd.",
+                "Lessor",
+                "COUNTERPARTY"
+              ],
+              [
+                "ABC Technologies Pvt. Ltd.",
+                "Lessee",
+                "OUR_ORG"
+              ]
+            ],
+            "ok": true
+          },
+          "effective_date": {
+            "gold": "2026-09-14",
+            "pred": "2026-09-14",
+            "ok": true
+          },
+          "expiry_date": {
+            "gold": null,
+            "pred": null,
+            "ok": true
+          },
+          "governing_law": {
+            "gold": "India",
+            "pred": "India",
+            "ok": true
+          },
+          "contract_type": {
+            "gold": "OTHER",
+            "pred": "OTHER",
+            "ok": true
+          }
+        }
+      }
+    }
+  ]
+}

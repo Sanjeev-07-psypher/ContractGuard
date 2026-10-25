@@ -62,13 +62,17 @@ def _line_key(line: str) -> str:
 def find_repeating_lines(doc: Document, rules: CleaningRules) -> set[tuple[int, int]]:
     """(block index, line index) of header/footer lines to drop.
 
-    A line counts when, after stripping digits, it sits in the top or bottom ``zone_lines``
-    lines of at least ``min_ratio`` of the pages. Only lines inside those zones are dropped.
+    A line counts when, after stripping digits, it sits in the same zone (the top or the bottom
+    ``zone_lines`` lines) of at least ``min_ratio`` of the pages. Only lines inside those zones
+    are dropped. Keeping top and bottom apart stops a sentence that wraps across a page break
+    ("... fifteen" | "(15) days' notice" at the foot of one page and "(30) days' notice" at the
+    head of the next) from being taken for a running header (DECISIONS D23).
     """
     pages = sorted({b.page for b in doc.blocks if b.page is not None})
     if doc.file_type != "pdf" or len(pages) < rules.min_pages:
         return set()
-    zones: dict[int, list[tuple[int, int, str]]] = {}
+    zones: dict[int, list[tuple[int, int, str, str]]] = {}
+    n = rules.zone_lines
     for page in pages:
         lines = [
             (bi, li, line)
@@ -77,13 +81,22 @@ def find_repeating_lines(doc: Document, rules: CleaningRules) -> set[tuple[int, 
             for li, line in enumerate(block.text.split("\n"))
             if line.strip()
         ]
-        n = rules.zone_lines
-        zones[page] = lines[:n] + lines[n:][-n:] if len(lines) > n else lines
+        top = [(*x, "top") for x in lines[:n]]
+        bottom = [(*x, "bottom") for x in lines[n:][-n:]]
+        zones[page] = top + bottom
     seen = Counter(
-        key for page in pages for key in {_line_key(t) for _, _, t in zones[page]} if key
+        key
+        for page in pages
+        for key in {(zone, _line_key(t)) for _, _, t, zone in zones[page]}
+        if key[1]
     )
     repeating = {k for k, count in seen.items() if count / len(pages) >= rules.min_ratio}
-    return {(bi, li) for page in pages for bi, li, t in zones[page] if _line_key(t) in repeating}
+    return {
+        (bi, li)
+        for page in pages
+        for bi, li, t, zone in zones[page]
+        if (zone, _line_key(t)) in repeating
+    }
 
 
 def _join_lines(lines: list[str], rules: CleaningRules) -> list[str]:

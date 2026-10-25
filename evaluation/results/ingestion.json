@@ -19,7 +19,7 @@
         "blocks": 62,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.69
+        "seconds": 0.73
       },
       "scanned_pdf": {
         "ok": true,
@@ -31,7 +31,7 @@
           4
         ],
         "warnings": [],
-        "seconds": 10.62
+        "seconds": 11.9
       },
       "ocr_cer": 0.005
     },
@@ -42,7 +42,7 @@
         "blocks": 71,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.09
+        "seconds": 0.11
       },
       "text_pdf": {
         "ok": true,
@@ -61,7 +61,7 @@
           4
         ],
         "warnings": [],
-        "seconds": 10.86
+        "seconds": 12.58
       },
       "ocr_cer": 0.0161
     },
@@ -72,7 +72,7 @@
         "blocks": 45,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.07
+        "seconds": 0.12
       },
       "text_pdf": {
         "ok": true,
@@ -90,7 +90,7 @@
           3
         ],
         "warnings": [],
-        "seconds": 7.51
+        "seconds": 9.75
       },
       "ocr_cer": 0.0088
     },
@@ -101,7 +101,7 @@
         "blocks": 58,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.09
+        "seconds": 0.1
       },
       "text_pdf": {
         "ok": true,
@@ -119,9 +119,9 @@
           3
         ],
         "warnings": [],
-        "seconds": 8.62
+        "seconds": 10.3
       },
-      "ocr_cer": 0.0115
+      "ocr_cer": 0.0113
     },
     {
       "contract": "gc05",
@@ -130,7 +130,7 @@
         "blocks": 44,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.06
+        "seconds": 0.08
       },
       "text_pdf": {
         "ok": true,
@@ -148,7 +148,7 @@
           3
         ],
         "warnings": [],
-        "seconds": 7.25
+        "seconds": 8.26
       },
       "ocr_cer": 0.0091
     },
@@ -159,14 +159,14 @@
         "blocks": 34,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.07
+        "seconds": 0.05
       },
       "text_pdf": {
         "ok": true,
         "blocks": 27,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.0
+        "seconds": 0.01
       },
       "scanned_pdf": {
         "ok": true,
@@ -176,7 +176,7 @@
           2
         ],
         "warnings": [],
-        "seconds": 6.07
+        "seconds": 6.62
       },
       "ocr_cer": 0.0089
     },
@@ -204,7 +204,7 @@
           2
         ],
         "warnings": [],
-        "seconds": 5.4
+        "seconds": 6.73
       },
       "ocr_cer": 0.0112
     },
@@ -215,7 +215,7 @@
         "blocks": 46,
         "ocr_pages": [],
         "warnings": [],
-        "seconds": 0.06
+        "seconds": 0.09
       },
       "text_pdf": {
         "ok": true,
@@ -233,7 +233,7 @@
           3
         ],
         "warnings": [],
-        "seconds": 7.08
+        "seconds": 8.3
       },
       "ocr_cer": 0.0176
     }

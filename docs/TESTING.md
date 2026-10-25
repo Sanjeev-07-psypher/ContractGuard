@@ -58,7 +58,7 @@ All four must pass. Results are quoted verbatim in each phase summary.
 | 2 | every gold file → `Document`; OCR CER on scanned gold files | 24/24; CER < 5% |
 | 3 | `python evaluation/eval_segmentation.py`: boundary P/R/F1 on 10 annotated contracts (E2; 8 gold now, 2 CUAD pending) | F1 ≥ 0.85 |
 | 4 | macro-F1 on combined test set (E1) | ≥ 0.75 |
-| 5 | fact exact-match accuracy on gold (E4); ≥ 25 duration/liability unit tests | ≥ 85% |
+| 5 | `python evaluation/eval_facts.py`: fact exact-match accuracy on gold (E4); ≥ 25 duration/liability unit tests (`tests/test_durations.py`, `tests/test_facts.py`) | ≥ 85% |
 | 6 | violation recall/precision on gold, LLM off (E5); a test per check type and status branch | R ≥ 0.85, P ≥ 0.80 |
 | 7 | grounding pass rate; 30-finding rating sheet by 2 raters (E7) | mean ≥ 4.0, 0 hallucinated values |
 | 8 | every endpoint tested; upload → DONE for text PDF, scanned PDF, DOCX | all pass |

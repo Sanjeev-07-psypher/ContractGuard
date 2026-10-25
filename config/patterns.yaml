@@ -8,7 +8,7 @@ cleaning:
   header_footer_min_ratio: 0.5    # fraction of pages a line must appear on
   header_footer_min_pages: 3
   soft_wrap_end: '[.:;]\s*$'          # a line ending like this is NOT joined to the next
-  soft_wrap_next: '^[a-z]'            # ...and the next line must start lowercase
+  soft_wrap_next: '^([a-z]|\(\d{1,3}\)\s+[a-z])'  # next line starts lowercase, or "(15) days" after "fifteen"
   number_only_line: '^\(?(\d{1,2}(\.\d{1,2})*|[a-z]|[ivx]+)[.)]?$'  # "10.1" alone on a line
 
 segmentation:
@@ -45,13 +45,40 @@ sla_keywords:
   - '(?i)service credits'
 
 parties:
-  preamble: '(?is)between\s+(?P<a>.+?)\s*\(.*?["“](?P<alias_a>[^"”]+)["”].*?\)\s*,?\s*and\s+(?P<b>.+?)\s*\(.*?["“](?P<alias_b>[^"”]+)["”].*?\)'
+  # alias = the quoted words inside the parentheses after each name; the opening quote may be
+  # lost to OCR ('(the Provider")'), so it is optional
+  preamble: '(?is)between\s+(?P<a>.+?)\s*\((?:[^()"]*?")?(?P<alias_a>[^"()]+)"\s*\)\s*,?\s*and\s+(?P<b>.+?)\s*\((?:[^()"]*?")?(?P<alias_b>[^"()]+)"\s*\)'
   fuzzy_threshold: 85
+  # a party's name ends at the first descriptor ("ABC Ltd., a company incorporated ...")
+  name_end: '(?i),\s+(a|an|having|with|incorporated|registered|whose)\b|\s+having\b|\s+with its\b'
   our_org_aliases: [Company, Client, Customer, Licensee, Buyer, Purchaser]
   counterparty_aliases: [Vendor, Supplier, Service Provider, Provider, Contractor, Consultant, Licensor, Seller]
 
 dates:
-  effective: '(?i)(effective\s+(as\s+of|date)|dated)'
+  effective: '(?i)(effective\s+(as\s+of|date|from)|with effect from|dated)'
+  # date expressions; parsed with dateparser using org.date_order
+  formats:
+    - '(?i)\b\d{1,2}(st|nd|rd|th)?\s+day\s+of\s+(january|february|march|april|may|june|july|august|september|october|november|december),?\s+\d{4}'
+    - '(?i)\b\d{1,2}(st|nd|rd|th)?\s+(january|february|march|april|may|june|july|august|september|october|november|december),?\s+\d{4}'
+    - '(?i)\b(january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}'
+    - '\b\d{1,2}[/.-]\d{1,2}[/.-]\d{4}\b'
+  expiry: '(?i)(expire|terminate automatically|end)s?\s+on'
+  # term of the agreement; {dur} is replaced by the duration regex. A term counts towards the
+  # expiry date only if its sentence ties it to the Effective Date (start_anchor).
+  term:
+    - '(?i)initial\s+(\w+\s+)?term\s+(of|is)\s+{dur}'
+    - '(?i)\b(license|subscription|rental)\s+(term|period)\s+is\s+{dur}'
+    - '(?i)for\s+a\s+period\s+of\s+{dur}'
+    - '(?i)remain\s+in\s+force\s+for\s+{dur}'
+    - '(?i){dur}\s+from\s+the\s+effective\s+date'
+  start_anchor: '(?i)effective date'
+
+durations:
+  # multiplier to days per unit (HLD 7.2); business/working days -> ceil(n * 7 / 5)
+  unit_days: {day: 1, week: 7, month: 30, year: 365}
+  business_qualifiers: [business, working]
+  other_qualifiers: [calendar, consecutive]
+  net: '(?i)\bnet\s*(?P<n>\d{1,3})\b'
 
 governing_law:
   jurisdiction: 'laws of (the )?(State of )?(?P<j>[A-Z][A-Za-z ]+?)(,|\.| and| without)'
@@ -74,6 +101,9 @@ facts:
     keyword: '(?i)terminat\w*'
     notice: '(?i)notice|prior written'
     window_tokens: 12
+    # a duration introduced by "within" is a cure or payment period, not a notice period
+    cure: '(?i)\bwithin\s*$'
+    subject_end: '(?i)\b(may|shall|will|can)\b[^.]{0,40}?terminat|\bterminat'
     convenience: ['(?i)for convenience', '(?i)without cause', '(?i)for any reason', '(?i)at any time']
     mutual: ['(?i)either party', '(?i)both parties']
   liability:
@@ -88,7 +118,8 @@ facts:
       - '(?i)without (any )?limit(ation)? (as to|on) (the )?amount'
       - '(?i)liable for all (losses|damages)'
       - '(?i)any and all (losses|damages)'
-    exclusions: ['(?i)including (but not limited to|without limitation)']
+    # applies to cap and uncapped patterns: "including but not limited to" is not a cap
+    exclusions: ['(?i)including,?\s+(but\s+not\s+limited\s+to|without\s+limitation)']
     carve_out: '(?i)(cap|limitation).{0,40}shall not apply'
   renewal:
     automatic:
@@ -99,4 +130,8 @@ facts:
     manual: ['(?i)may be renewed by mutual (written )?agreement']
   payment:
     sentence: '(?i)invoice|payment'
-    trigger: '(?i)within|net|no later than'
+    trigger: '(?i)\b(within|net|no later than)\b'
+
+sentences:
+  # a sentence ending in one of these does not end there (spaCy's sentencizer splits on ".")
+  abbreviations: [Pvt., No., Nos., Rs., Mr., Ms., Mrs., Dr., St., Sr., Jr., viz., e.g., i.e., cf., Co., Inc., Ltd., Corp., Cl., Art., Sec.]

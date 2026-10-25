@@ -18,9 +18,9 @@ import logging
 import re
 import string
 from dataclasses import dataclass
-from functools import lru_cache
 
 from contractguard.config import Settings, get_patterns, get_settings
+from contractguard.extraction.sentences import sentencizer
 from contractguard.models import Clause, ClauseKind, CleanedText, Document
 
 log = logging.getLogger(__name__)
@@ -260,21 +260,12 @@ def _merge_short(drafts: list[_Draft], rules: SegmentationRules) -> list[_Draft]
     return out
 
 
-@lru_cache(maxsize=1)
-def _sentencizer():
-    import spacy
-
-    nlp = spacy.blank("en")
-    nlp.add_pipe("sentencizer")
-    return nlp
-
-
 def _split_long(d: _Draft, text: str, max_chars: int) -> list[tuple[int, int]]:
     """Sentence-boundary cuts so no part exceeds max_chars (a single long sentence stays whole)."""
     body = text[d.start : d.end]
     parts: list[tuple[int, int]] = []
     cur_start = d.start
-    for sent in _sentencizer()(body).sents:
+    for sent in sentencizer()(body).sents:
         s_end = d.start + sent.end_char
         s_start = d.start + sent.start_char
         if s_end - cur_start > max_chars and s_start > cur_start:
