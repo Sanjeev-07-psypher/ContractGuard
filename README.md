@@ -14,7 +14,8 @@ The design is in the HLD (`docs/` / project files). Build progress follows HLD �
 | 0 Skeleton, config, models, tooling (pytest, ruff, mypy) | done |
 | 1 Gold set + label inspection | 8 contracts × 3 formats built; human labelling and the label-inspection run (needs Hugging Face access) still open |
 | 2 Ingestion (PDF, OCR, DOCX) + cleaning | done: 24/24 gold files load; OCR CER 1.1% mean (simulated scans), see `evaluation/results/ingestion.md` |
-| 3–10 | not started |
+| 3 Clause segmentation | done on the draft gold set: boundary F1 1.000 (DOCX), 0.986 (text and scanned PDF), see `evaluation/results/segmentation.md`; 2 CUAD contracts still to add (needs Hugging Face) |
+| 4–10 | not started |
 
 ## Setup (development)
 

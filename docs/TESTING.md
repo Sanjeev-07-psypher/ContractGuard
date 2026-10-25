@@ -56,7 +56,7 @@ All four must pass. Results are quoted verbatim in each phase summary.
 | 0 | gates above; `python -m contractguard.cli --help` | all green |
 | 1 | `build_gold.py` validates all 8 sources and builds 24 files; two human labellings | 24 files; agreement logged |
 | 2 | every gold file → `Document`; OCR CER on scanned gold files | 24/24; CER < 5% |
-| 3 | boundary P/R/F1 on 10 annotated contracts (E2) | F1 ≥ 0.85 |
+| 3 | `python evaluation/eval_segmentation.py`: boundary P/R/F1 on 10 annotated contracts (E2; 8 gold now, 2 CUAD pending) | F1 ≥ 0.85 |
 | 4 | macro-F1 on combined test set (E1) | ≥ 0.75 |
 | 5 | fact exact-match accuracy on gold (E4); ≥ 25 duration/liability unit tests | ≥ 85% |
 | 6 | violation recall/precision on gold, LLM off (E5); a test per check type and status branch | R ≥ 0.85, P ≥ 0.80 |

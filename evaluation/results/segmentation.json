@@ -1,0 +1,378 @@
+{
+  "f1_target": 0.85,
+  "summary": {
+    "docx": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "number_acc": 1.0,
+      "kind_acc": 1.0,
+      "heading_acc": 1.0,
+      "failed_files": 0
+    },
+    "text_pdf": {
+      "precision": 0.9862,
+      "recall": 0.9862,
+      "f1": 0.9862,
+      "number_acc": 1.0,
+      "kind_acc": 1.0,
+      "heading_acc": 1.0,
+      "failed_files": 0
+    },
+    "scanned_pdf": {
+      "precision": 0.9862,
+      "recall": 0.9862,
+      "f1": 0.9862,
+      "number_acc": 1.0,
+      "kind_acc": 1.0,
+      "heading_acc": 1.0,
+      "failed_files": 0
+    }
+  },
+  "contracts": [
+    {
+      "contract": "gc01",
+      "docx": {
+        "ok": true,
+        "gold": 18,
+        "predicted": 18,
+        "matched": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 18,
+        "kind_ok": 18,
+        "heading_ok": 18,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 18,
+        "predicted": 18,
+        "matched": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 18,
+        "kind_ok": 18,
+        "heading_ok": 18,
+        "missed": []
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 18,
+        "predicted": 18,
+        "matched": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 18,
+        "kind_ok": 18,
+        "heading_ok": 18,
+        "missed": []
+      }
+    },
+    {
+      "contract": "gc02",
+      "docx": {
+        "ok": true,
+        "gold": 30,
+        "predicted": 30,
+        "matched": 30,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 30,
+        "kind_ok": 30,
+        "heading_ok": 30,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 30,
+        "predicted": 30,
+        "matched": 30,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 30,
+        "kind_ok": 30,
+        "heading_ok": 30,
+        "missed": []
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 30,
+        "predicted": 30,
+        "matched": 30,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 30,
+        "kind_ok": 30,
+        "heading_ok": 30,
+        "missed": []
+      }
+    },
+    {
+      "contract": "gc03",
+      "docx": {
+        "ok": true,
+        "gold": 18,
+        "predicted": 18,
+        "matched": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 18,
+        "kind_ok": 18,
+        "heading_ok": 18,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 18,
+        "predicted": 18,
+        "matched": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 18,
+        "kind_ok": 18,
+        "heading_ok": 18,
+        "missed": []
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 18,
+        "predicted": 18,
+        "matched": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 18,
+        "kind_ok": 18,
+        "heading_ok": 18,
+        "missed": []
+      }
+    },
+    {
+      "contract": "gc04",
+      "docx": {
+        "ok": true,
+        "gold": 20,
+        "predicted": 20,
+        "matched": 20,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 20,
+        "kind_ok": 20,
+        "heading_ok": 20,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 20,
+        "predicted": 20,
+        "matched": 20,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 20,
+        "kind_ok": 20,
+        "heading_ok": 20,
+        "missed": []
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 20,
+        "predicted": 20,
+        "matched": 20,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 20,
+        "kind_ok": 20,
+        "heading_ok": 20,
+        "missed": []
+      }
+    },
+    {
+      "contract": "gc05",
+      "docx": {
+        "ok": true,
+        "gold": 17,
+        "predicted": 17,
+        "matched": 17,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 17,
+        "kind_ok": 17,
+        "heading_ok": 17,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 17,
+        "predicted": 17,
+        "matched": 17,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 17,
+        "kind_ok": 17,
+        "heading_ok": 17,
+        "missed": []
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 17,
+        "predicted": 17,
+        "matched": 17,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 17,
+        "kind_ok": 17,
+        "heading_ok": 17,
+        "missed": []
+      }
+    },
+    {
+      "contract": "gc06",
+      "docx": {
+        "ok": true,
+        "gold": 13,
+        "predicted": 13,
+        "matched": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 13,
+        "kind_ok": 13,
+        "heading_ok": 13,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 13,
+        "predicted": 13,
+        "matched": 12,
+        "precision": 0.9231,
+        "recall": 0.9231,
+        "f1": 0.9231,
+        "number_ok": 12,
+        "kind_ok": 12,
+        "heading_ok": 12,
+        "missed": [
+          "MUTUAL NON-DISCLOSURE AGREEMENT This Mutual Non-Disclosure Agreement (the"
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 13,
+        "predicted": 13,
+        "matched": 12,
+        "precision": 0.9231,
+        "recall": 0.9231,
+        "f1": 0.9231,
+        "number_ok": 12,
+        "kind_ok": 12,
+        "heading_ok": 12,
+        "missed": [
+          "MUTUAL NON-DISCLOSURE AGREEMENT This Mutual Non-Disclosure Agreement (the"
+        ]
+      }
+    },
+    {
+      "contract": "gc07",
+      "docx": {
+        "ok": true,
+        "gold": 13,
+        "predicted": 13,
+        "matched": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 13,
+        "kind_ok": 13,
+        "heading_ok": 13,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 13,
+        "predicted": 13,
+        "matched": 12,
+        "precision": 0.9231,
+        "recall": 0.9231,
+        "f1": 0.9231,
+        "number_ok": 12,
+        "kind_ok": 12,
+        "heading_ok": 12,
+        "missed": [
+          "NON-DISCLOSURE AGREEMENT This Non-Disclosure Agreement (the \"Agreement\") is"
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 13,
+        "predicted": 13,
+        "matched": 12,
+        "precision": 0.9231,
+        "recall": 0.9231,
+        "f1": 0.9231,
+        "number_ok": 12,
+        "kind_ok": 12,
+        "heading_ok": 12,
+        "missed": [
+          "NON-DISCLOSURE AGREEMENT This Non-Disclosure Agreement (the \"Agreement\") is"
+        ]
+      }
+    },
+    {
+      "contract": "gc08",
+      "docx": {
+        "ok": true,
+        "gold": 16,
+        "predicted": 16,
+        "matched": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 16,
+        "kind_ok": 16,
+        "heading_ok": 16,
+        "missed": []
+      },
+      "text_pdf": {
+        "ok": true,
+        "gold": 16,
+        "predicted": 16,
+        "matched": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 16,
+        "kind_ok": 16,
+        "heading_ok": 16,
+        "missed": []
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "gold": 16,
+        "predicted": 16,
+        "matched": 16,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "number_ok": 16,
+        "kind_ok": 16,
+        "heading_ok": 16,
+        "missed": []
+      }
+    }
+  ]
+}

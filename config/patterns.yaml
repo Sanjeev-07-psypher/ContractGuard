@@ -13,7 +13,7 @@ cleaning:
 
 segmentation:
   l1:
-    - '^(ARTICLE|Article)\s+[IVXLC\d]+'
+    - '^(ARTICLE|Article)\s+[IVXLCl1i|\d]+'  # l, 1, i and |: OCR misreads of I
     - '^\d{1,2}\.\s+[A-Z]'
     - '^\d{1,2}\s+[A-Z][A-Z ]{3,}$'
     - '^SECTION\s+\d+'
@@ -27,6 +27,13 @@ segmentation:
   exhibit_heading: '(?i)^\s*(exhibit|schedule|annex|appendix)\b'
   signature: '(?i)in witness whereof|^\s*signature|^\s*by:'
   fallback_merge_chars: 200
+  # Parsing a clause-start line into number + heading (first match wins).
+  parse:
+    - '^(?:ARTICLE|Article)\s+(?P<num>[IVXLCl1i|\d]+)(?![A-Za-z])\s*[-:.]?\s*(?P<rest>.*)$'
+    - '^SECTION\s+(?P<num>\d+)\b\s*[-:.]?\s*(?P<rest>.*)$'
+    - '^(?P<num>\d{1,2}(?:\.\d{1,2})?)\.?\s+(?P<rest>.*)$'
+  heading_max_words: 12      # a start line longer than this (or ending in ".") has no heading
+  docx_heading_style: '^Heading'
 
 sla_keywords:
   - '(?i)service level'
