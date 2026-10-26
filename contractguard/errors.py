@@ -31,3 +31,18 @@ class IngestionError(ContractGuardError):
     CORRUPT_FILE = "CORRUPT_FILE"
     OCR_UNAVAILABLE = "OCR_UNAVAILABLE"
     EMPTY_DOCUMENT = "EMPTY_DOCUMENT"
+
+
+class PolicyError(ContractGuardError):
+    """A policy file is missing, unreadable or fails schema validation."""
+
+    code = "POLICY_ERROR"
+
+    NOT_FOUND = "POLICY_NOT_FOUND"
+    INVALID = "POLICY_INVALID"
+
+
+class ModelArtifactError(ContractGuardError):
+    """A trained artifact (classifier, thresholds, prototypes) is missing or unreadable."""
+
+    code = "MODEL_ARTIFACT_ERROR"

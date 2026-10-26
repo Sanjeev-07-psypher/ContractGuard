@@ -78,6 +78,7 @@ class PolicySettings(BaseModel):
 class LLMSettings(BaseModel):
     provider: Literal["gemini", "ollama", "mock", "none"]
     model: str | None = None
+    ollama_host: str = "http://localhost:11434"
     rpm: int
     max_findings: int
     temperature: float
@@ -93,6 +94,7 @@ class OrgSettings(BaseModel):
 class FrontendSettings(BaseModel):
     api_url: str
     poll_seconds: float
+    origin: str = "http://localhost:8501"  # Streamlit origin allowed by CORS
 
 
 class PathSettings(BaseModel):
@@ -192,6 +194,11 @@ def get_contract_types() -> dict[str, Any]:
     return load_yaml("contract_types.yaml")
 
 
+@lru_cache(maxsize=1)
+def get_templates() -> dict[str, Any]:
+    return load_yaml("templates.yaml")
+
+
 def clear_caches() -> None:
-    for fn in (get_settings, get_patterns, get_label_map, get_contract_types):
+    for fn in (get_settings, get_patterns, get_label_map, get_contract_types, get_templates):
         fn.cache_clear()

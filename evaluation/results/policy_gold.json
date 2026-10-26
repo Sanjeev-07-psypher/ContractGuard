@@ -1,0 +1,1254 @@
+{
+  "categories": "gold",
+  "embeddings": false,
+  "targets": {
+    "recall": 0.85,
+    "precision": 0.8
+  },
+  "summary": {
+    "docx": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "status_accuracy": 1.0,
+      "confusion": {
+        "NON_COMPLIANT": {
+          "NON_COMPLIANT": 14,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "MISSING": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 4,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "NEEDS_REVIEW": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "COMPLIANT": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 39,
+          "NOT_APPLICABLE": 0
+        },
+        "NOT_APPLICABLE": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 23
+        }
+      },
+      "failed_files": 0
+    },
+    "text_pdf": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "status_accuracy": 1.0,
+      "confusion": {
+        "NON_COMPLIANT": {
+          "NON_COMPLIANT": 14,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "MISSING": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 4,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "NEEDS_REVIEW": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "COMPLIANT": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 39,
+          "NOT_APPLICABLE": 0
+        },
+        "NOT_APPLICABLE": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 23
+        }
+      },
+      "failed_files": 0
+    },
+    "scanned_pdf": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "status_accuracy": 1.0,
+      "confusion": {
+        "NON_COMPLIANT": {
+          "NON_COMPLIANT": 14,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "MISSING": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 4,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "NEEDS_REVIEW": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "COMPLIANT": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 39,
+          "NOT_APPLICABLE": 0
+        },
+        "NOT_APPLICABLE": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 23
+        }
+      },
+      "failed_files": 0
+    }
+  },
+  "contracts": [
+    {
+      "contract": "gc01",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc02",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc03",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc04",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc05",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc06",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc07",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      }
+    },
+    {
+      "contract": "gc08",
+      "docx": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "text_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        }
+      }
+    }
+  ]
+}
