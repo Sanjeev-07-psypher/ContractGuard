@@ -1,0 +1,2492 @@
+{
+  "targets": {
+    "recall": 0.85,
+    "precision": 0.8,
+    "e3_agreement": 0.9,
+    "p_at_3": 0.7,
+    "e8_seconds": 30
+  },
+  "summary": {
+    "docx": {
+      "tp": 16,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.8889,
+      "status_accuracy": 0.9375,
+      "confusion": {
+        "NON_COMPLIANT": {
+          "NON_COMPLIANT": 14,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "MISSING": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 2,
+          "NEEDS_REVIEW": 2,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "NEEDS_REVIEW": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "COMPLIANT": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 38,
+          "NOT_APPLICABLE": 1
+        },
+        "NOT_APPLICABLE": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 2,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 21
+        }
+      },
+      "failed_files": 0,
+      "seconds_mean": 0.26,
+      "seconds_max": 0.7,
+      "p_at_3": 0.3522,
+      "r_at_3": 0.9654,
+      "mrr": 0.9094,
+      "retrieval_queries": 53
+    },
+    "text_pdf": {
+      "tp": 16,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.8889,
+      "status_accuracy": 0.9375,
+      "confusion": {
+        "NON_COMPLIANT": {
+          "NON_COMPLIANT": 14,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "MISSING": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 2,
+          "NEEDS_REVIEW": 2,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "NEEDS_REVIEW": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "COMPLIANT": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 38,
+          "NOT_APPLICABLE": 1
+        },
+        "NOT_APPLICABLE": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 2,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 21
+        }
+      },
+      "failed_files": 0,
+      "seconds_mean": 0.2,
+      "seconds_max": 0.6,
+      "p_at_3": 0.3522,
+      "r_at_3": 0.9654,
+      "mrr": 0.9094,
+      "retrieval_queries": 53
+    },
+    "scanned_pdf": {
+      "tp": 16,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.8889,
+      "status_accuracy": 0.9375,
+      "confusion": {
+        "NON_COMPLIANT": {
+          "NON_COMPLIANT": 14,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "MISSING": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 2,
+          "NEEDS_REVIEW": 2,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "NEEDS_REVIEW": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "COMPLIANT": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 0,
+          "COMPLIANT": 38,
+          "NOT_APPLICABLE": 1
+        },
+        "NOT_APPLICABLE": {
+          "NON_COMPLIANT": 0,
+          "MISSING": 0,
+          "NEEDS_REVIEW": 2,
+          "COMPLIANT": 0,
+          "NOT_APPLICABLE": 21
+        }
+      },
+      "failed_files": 0,
+      "seconds_mean": 7.19,
+      "seconds_max": 10.6,
+      "p_at_3": 0.3522,
+      "r_at_3": 0.9654,
+      "mrr": 0.9094,
+      "retrieval_queries": 53
+    },
+    "e3_text_vs_scanned_agreement": 1.0
+  },
+  "contracts": [
+    {
+      "contract": "gc01",
+      "docx": {
+        "ok": true,
+        "seconds": 0.7,
+        "timings": {
+          "extract": 0.111,
+          "segment": 0.006,
+          "classify": 0.097,
+          "evaluate": 0.491,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.6,
+        "timings": {
+          "extract": 0.52,
+          "segment": 0.001,
+          "classify": 0.066,
+          "evaluate": 0.014,
+          "explain": 0.0
+        },
+        "pages": 4,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 9.86,
+        "timings": {
+          "extract": 9.745,
+          "segment": 0.001,
+          "classify": 0.094,
+          "evaluate": 0.015,
+          "explain": 0.0
+        },
+        "pages": 4,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "contract": "gc02",
+      "docx": {
+        "ok": true,
+        "seconds": 0.19,
+        "timings": {
+          "extract": 0.077,
+          "segment": 0.002,
+          "classify": 0.092,
+          "evaluate": 0.021,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 0.6666666666666666,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.1,
+        "timings": {
+          "extract": 0.007,
+          "segment": 0.001,
+          "classify": 0.078,
+          "evaluate": 0.014,
+          "explain": 0.0
+        },
+        "pages": 4,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 0.6666666666666666,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 10.6,
+        "timings": {
+          "extract": 10.504,
+          "segment": 0.001,
+          "classify": 0.084,
+          "evaluate": 0.015,
+          "explain": 0.0
+        },
+        "pages": 4,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 0.6666666666666666,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "contract": "gc03",
+      "docx": {
+        "ok": true,
+        "seconds": 0.29,
+        "timings": {
+          "extract": 0.058,
+          "segment": 0.001,
+          "classify": 0.083,
+          "evaluate": 0.145,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "MISSING",
+            "pred": "NEEDS_REVIEW"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.31,
+        "timings": {
+          "extract": 0.006,
+          "segment": 0.001,
+          "classify": 0.068,
+          "evaluate": 0.232,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "MISSING",
+            "pred": "NEEDS_REVIEW"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 6.96,
+        "timings": {
+          "extract": 6.767,
+          "segment": 0.001,
+          "classify": 0.064,
+          "evaluate": 0.129,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "MISSING",
+            "pred": "NEEDS_REVIEW"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "contract": "gc04",
+      "docx": {
+        "ok": true,
+        "seconds": 0.15,
+        "timings": {
+          "extract": 0.058,
+          "segment": 0.001,
+          "classify": 0.07,
+          "evaluate": 0.019,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.0,
+            "r_at_3": 0.0,
+            "rr": 0.2
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.1,
+        "timings": {
+          "extract": 0.008,
+          "segment": 0.001,
+          "classify": 0.071,
+          "evaluate": 0.015,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.0,
+            "r_at_3": 0.0,
+            "rr": 0.2
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 7.77,
+        "timings": {
+          "extract": 7.681,
+          "segment": 0.001,
+          "classify": 0.063,
+          "evaluate": 0.02,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R02": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R03": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R06",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.0,
+            "r_at_3": 0.0,
+            "rr": 0.2
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "contract": "gc05",
+      "docx": {
+        "ok": true,
+        "seconds": 0.26,
+        "timings": {
+          "extract": 0.062,
+          "segment": 0.001,
+          "classify": 0.065,
+          "evaluate": 0.136,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.17,
+        "timings": {
+          "extract": 0.005,
+          "segment": 0.001,
+          "classify": 0.037,
+          "evaluate": 0.126,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 6.71,
+        "timings": {
+          "extract": 6.544,
+          "segment": 0.001,
+          "classify": 0.046,
+          "evaluate": 0.121,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R02": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R03": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R04": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R06": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R10": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R01",
+            "p_at_3": 0.6666666666666666,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R02",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R03",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R04",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R09",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.5
+          },
+          {
+            "rule": "R10",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "contract": "gc06",
+      "docx": {
+        "ok": true,
+        "seconds": 0.11,
+        "timings": {
+          "extract": 0.057,
+          "segment": 0.001,
+          "classify": 0.036,
+          "evaluate": 0.013,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 0.5,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.05,
+        "timings": {
+          "extract": 0.005,
+          "segment": 0.001,
+          "classify": 0.034,
+          "evaluate": 0.012,
+          "explain": 0.0
+        },
+        "pages": 2,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 0.5,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 4.99,
+        "timings": {
+          "extract": 4.952,
+          "segment": 0.001,
+          "classify": 0.033,
+          "evaluate": 0.009,
+          "explain": 0.0
+        },
+        "pages": 2,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NEEDS_REVIEW"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 0.5,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "contract": "gc07",
+      "docx": {
+        "ok": true,
+        "seconds": 0.08,
+        "timings": {
+          "extract": 0.03,
+          "segment": 0.001,
+          "classify": 0.043,
+          "evaluate": 0.011,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.05,
+        "timings": {
+          "extract": 0.003,
+          "segment": 0.001,
+          "classify": 0.038,
+          "evaluate": 0.009,
+          "explain": 0.0
+        },
+        "pages": 2,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 4.5,
+        "timings": {
+          "extract": 4.434,
+          "segment": 0.001,
+          "classify": 0.057,
+          "evaluate": 0.012,
+          "explain": 0.0
+        },
+        "pages": 2,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R08": {
+            "gold": "NON_COMPLIANT",
+            "pred": "NON_COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R07",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "contract": "gc08",
+      "docx": {
+        "ok": true,
+        "seconds": 0.27,
+        "timings": {
+          "extract": 0.044,
+          "segment": 0.001,
+          "classify": 0.073,
+          "evaluate": 0.148,
+          "explain": 0.0
+        },
+        "pages": null,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "text_pdf": {
+        "ok": true,
+        "seconds": 0.21,
+        "timings": {
+          "extract": 0.005,
+          "segment": 0.001,
+          "classify": 0.065,
+          "evaluate": 0.138,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      },
+      "scanned_pdf": {
+        "ok": true,
+        "seconds": 6.12,
+        "timings": {
+          "extract": 5.9,
+          "segment": 0.001,
+          "classify": 0.081,
+          "evaluate": 0.138,
+          "explain": 0.0
+        },
+        "pages": 3,
+        "rules": {
+          "R01": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R02": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R03": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R04": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R05": {
+            "gold": "COMPLIANT",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R06": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R07": {
+            "gold": "MISSING",
+            "pred": "MISSING"
+          },
+          "R08": {
+            "gold": "COMPLIANT",
+            "pred": "COMPLIANT"
+          },
+          "R09": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          },
+          "R10": {
+            "gold": "NOT_APPLICABLE",
+            "pred": "NOT_APPLICABLE"
+          }
+        },
+        "retrieval": [
+          {
+            "rule": "R05",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 0.3333333333333333
+          },
+          {
+            "rule": "R08",
+            "p_at_3": 0.3333333333333333,
+            "r_at_3": 1.0,
+            "rr": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

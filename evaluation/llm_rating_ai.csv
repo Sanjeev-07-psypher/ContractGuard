@@ -1,0 +1,19 @@
+id,faithfulness,relevance,clarity,actionability,hallucinated_values,note
+gc01-R01,4,5,5,3,0,correct; review step is generic
+gc01-R02,4,4,4,3,0,quoted evidence is the fraud carve-out rather than the any-and-all sentence
+gc01-R03,3,5,3,3,0,garbles the breach clause as termination with 30-day notice
+gc01-R04,2,3,2,3,0,summary wrongly says rights are mutual; explanation muddled
+gc01-R05,4,5,4,4,0,why-it-matters is speculative
+gc01-R09,4,5,5,3,0,mentions late payment penalties not in the contract
+gc03-R08,5,5,4,4,0,
+gc03-R05,4,4,4,3,0,
+gc03-R10,4,4,4,3,0,right conclusion; quoted sentence is unrelated
+gc03-R06,4,4,4,4,0,
+gc04-R03,5,5,5,3,0,
+gc04-R05,5,5,5,4,0,
+gc05-R01,2,3,3,3,0,cites 10.2 as evidence and confuses which party is exposed; suggests drafting
+gc05-R02,5,5,5,3,0,action is prescriptive (revise the clause)
+gc05-R08,5,5,5,4,0,
+gc06-R05,4,4,4,4,0,
+gc07-R05,4,5,3,3,0,speculative link to confidentiality breaches; awkward wording
+gc07-R08,4,5,5,4,0,

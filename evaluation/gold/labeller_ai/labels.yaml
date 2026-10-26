@@ -1,0 +1,292 @@
+# Second labelling of GC01-GC08 made by an AI assistant from contract_text.pdf only, without
+# opening gold.json or the YAML gold blocks. These are NOT independent human labels (see README.md).
+# Clause list: [number, kind, categories]. Kinds: PREAMBLE, DEFINITIONS, BODY, SIGNATURE, EXHIBIT.
+gc01:
+  contract_type: VENDOR_SERVICE
+  meta: {effective_date: "2026-04-01", expiry_date: "2027-03-31", governing_law: India}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - ["1", DEFINITIONS, []]
+    - ["2", BODY, [OTHER]]
+    - ["3", BODY, [RENEWAL]]
+    - ["4", BODY, [PAYMENT]]
+    - ["5", BODY, [SLA]]
+    - ["6", BODY, [CONFIDENTIALITY]]
+    - ["7", BODY, [IP]]
+    - ["8", BODY, [INDEMNIFICATION]]
+    - ["9", BODY, [LIABILITY]]
+    - ["10", BODY, [TERMINATION]]
+    - ["11", BODY, [OTHER]]
+    - ["12", BODY, [OTHER]]
+    - ["13", BODY, [GOVERNING_LAW]]
+    - ["14", BODY, [OTHER]]
+    - ["15", BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+    - [SCHEDULE 1, EXHIBIT, [OTHER]]
+  facts: {termination.notice_days: 7, termination.counterparty_unilateral: true, liability.has_cap: false,
+          liability.is_uncapped: true, renewal.is_automatic: true, payment.due_days: 15,
+          governing_law.jurisdiction: India}
+  rules:
+    R01: [NON_COMPLIANT, ["9"]]
+    R02: [NON_COMPLIANT, ["9"]]
+    R03: [NON_COMPLIANT, ["10"]]
+    R04: [NON_COMPLIANT, ["10"]]
+    R05: [NON_COMPLIANT, ["3"]]
+    R06: [COMPLIANT, ["5"]]
+    R07: [COMPLIANT, ["6"]]
+    R08: [COMPLIANT, ["13"]]
+    R09: [NON_COMPLIANT, ["4"]]
+    R10: [COMPLIANT, ["8"]]
+gc02:
+  contract_type: VENDOR_SERVICE
+  meta: {effective_date: "2026-05-15", expiry_date: "2029-05-14", governing_law: India}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - ["1", DEFINITIONS, []]
+    - ["2", BODY, [OTHER]]
+    - ["3.1", BODY, [OTHER]]
+    - ["3.2", BODY, [RENEWAL]]
+    - ["4", BODY, [OTHER]]
+    - ["5.1", BODY, [PAYMENT]]
+    - ["5.2", BODY, [PAYMENT]]
+    - ["5.3", BODY, [PAYMENT]]
+    - ["6.1", BODY, [SLA]]
+    - ["6.2", BODY, [SLA]]
+    - ["7", BODY, [OTHER]]
+    - ["8.1", BODY, [CONFIDENTIALITY]]
+    - ["8.2", BODY, [CONFIDENTIALITY]]
+    - ["8.3", BODY, [CONFIDENTIALITY]]
+    - ["9", BODY, [IP]]
+    - ["10", BODY, [INDEMNIFICATION]]
+    - ["11.1", BODY, [LIABILITY]]
+    - ["11.2", BODY, [LIABILITY]]
+    - ["11.3", BODY, [LIABILITY]]
+    - ["12.1", BODY, [TERMINATION]]
+    - ["12.2", BODY, [TERMINATION]]
+    - ["12.3", BODY, [TERMINATION]]
+    - ["13", BODY, [TERMINATION]]
+    - ["14", BODY, [GOVERNING_LAW]]
+    - ["15", BODY, [OTHER]]
+    - ["16", BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+    - [SCHEDULE 1, EXHIBIT, [OTHER]]
+    - [SCHEDULE 2, EXHIBIT, [SLA]]
+  facts: {termination.notice_days: 60, termination.counterparty_unilateral: false, liability.has_cap: true,
+          liability.is_uncapped: false, renewal.is_automatic: false, payment.due_days: 45,
+          governing_law.jurisdiction: India}
+  rules:
+    R01: [COMPLIANT, ["11.1"]]
+    R02: [COMPLIANT, ["11.1"]]
+    R03: [COMPLIANT, ["12.1"]]
+    R04: [COMPLIANT, ["12.1"]]
+    R05: [COMPLIANT, ["3.2"]]
+    R06: [COMPLIANT, ["6.1", "6.2"]]
+    R07: [COMPLIANT, ["8.1"]]
+    R08: [COMPLIANT, ["14"]]
+    R09: [COMPLIANT, ["5.2"]]
+    R10: [COMPLIANT, ["10"]]
+gc03:
+  contract_type: VENDOR_SERVICE
+  meta: {effective_date: "2026-06-10", expiry_date: "2028-06-09", governing_law: UK (England and Wales)}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - ["1", DEFINITIONS, []]
+    - ["2", BODY, [OTHER]]
+    - ["3", BODY, [OTHER]]
+    - ["4", BODY, [PAYMENT]]
+    - ["5", BODY, [OTHER]]
+    - ["6", BODY, [OTHER]]
+    - ["7", BODY, [OTHER]]
+    - ["8", BODY, [CONFIDENTIALITY]]
+    - ["9", BODY, [LIABILITY]]
+    - ["10.1", BODY, [TERMINATION]]
+    - ["10.2", BODY, [TERMINATION]]
+    - ["10.3", BODY, [TERMINATION]]
+    - ["11", BODY, [OTHER]]
+    - ["12", BODY, [GOVERNING_LAW]]
+    - ["13", BODY, [OTHER]]
+    - ["14", BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+  facts: {termination.notice_days: 42, termination.counterparty_unilateral: false, liability.has_cap: true,
+          liability.is_uncapped: false, renewal.is_automatic: null, payment.due_days: 30,
+          governing_law.jurisdiction: UK (England and Wales)}
+  rules:
+    R01: [COMPLIANT, ["9"]]
+    R02: [COMPLIANT, ["9"]]
+    R03: [COMPLIANT, ["10.1"]]
+    R04: [COMPLIANT, ["10.1"]]
+    R05: [NOT_APPLICABLE, []]
+    R06: [MISSING, []]
+    R07: [COMPLIANT, ["8"]]
+    R08: [NON_COMPLIANT, ["12"]]
+    R09: [COMPLIANT, ["4"]]
+    R10: [MISSING, []]
+gc04:
+  contract_type: SAAS_LICENSE
+  meta: {effective_date: "2026-07-01", expiry_date: "2027-06-30", governing_law: India}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - ["1", DEFINITIONS, []]
+    - ["2", BODY, [OTHER]]
+    - ["3", BODY, [OTHER]]
+    - ["4", BODY, [PAYMENT]]
+    - ["5", BODY, [SLA]]
+    - ["6", BODY, [OTHER]]
+    - ["7", BODY, [CONFIDENTIALITY]]
+    - ["8", BODY, [IP]]
+    - ["9", BODY, [INDEMNIFICATION]]
+    - ["10", BODY, [LIABILITY]]
+    - ["11", BODY, [RENEWAL]]
+    - ["12.1", BODY, [TERMINATION]]
+    - ["12.2", BODY, [TERMINATION]]
+    - ["12.3", BODY, [TERMINATION]]
+    - ["13", BODY, [TERMINATION]]
+    - ["14", BODY, [GOVERNING_LAW]]
+    - ["15", BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+    - [SCHEDULE 1, EXHIBIT, [SLA]]
+  facts: {termination.notice_days: 15, termination.counterparty_unilateral: false, liability.has_cap: true,
+          liability.is_uncapped: false, renewal.is_automatic: true, payment.due_days: 30,
+          governing_law.jurisdiction: India}
+  rules:
+    R01: [COMPLIANT, ["10"]]
+    R02: [COMPLIANT, ["10"]]
+    R03: [NON_COMPLIANT, ["12.1"]]
+    R04: [COMPLIANT, ["12.1", "12.2"]]
+    R05: [NON_COMPLIANT, ["11"]]
+    R06: [COMPLIANT, ["5"]]
+    R07: [COMPLIANT, ["7"]]
+    R08: [COMPLIANT, ["14"]]
+    R09: [COMPLIANT, ["4"]]
+    R10: [COMPLIANT, ["9"]]
+gc05:
+  contract_type: SAAS_LICENSE
+  meta: {effective_date: "2026-08-03", expiry_date: "2031-08-02", governing_law: USA (New York)}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - ["1", DEFINITIONS, []]
+    - ["2", BODY, [OTHER]]
+    - ["3", BODY, [OTHER]]
+    - ["4", BODY, [OTHER]]
+    - ["5", BODY, [PAYMENT]]
+    - ["6", BODY, [OTHER]]
+    - ["7", BODY, [IP]]
+    - ["8", BODY, [CONFIDENTIALITY]]
+    - ["9", BODY, [INDEMNIFICATION]]
+    - ["10.1", BODY, [LIABILITY]]
+    - ["10.2", BODY, [LIABILITY]]
+    - ["11", BODY, [RENEWAL]]
+    - ["12", BODY, [TERMINATION]]
+    - ["13", BODY, [GOVERNING_LAW]]
+    - ["14", BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+  facts: {termination.notice_days: 90, termination.counterparty_unilateral: false, liability.has_cap: false,
+          liability.is_uncapped: true, renewal.is_automatic: false, payment.due_days: 60,
+          governing_law.jurisdiction: USA (New York)}
+  rules:
+    R01: [NON_COMPLIANT, ["10.1", "10.2"]]
+    R02: [NON_COMPLIANT, ["10.1"]]
+    R03: [COMPLIANT, ["12"]]
+    R04: [COMPLIANT, ["12"]]
+    R05: [COMPLIANT, ["11"]]
+    R06: [MISSING, []]
+    R07: [COMPLIANT, ["8"]]
+    R08: [NON_COMPLIANT, ["13"]]
+    R09: [COMPLIANT, ["5"]]
+    R10: [COMPLIANT, ["9"]]
+gc06:
+  contract_type: NDA
+  meta: {effective_date: "2026-08-20", expiry_date: "2028-08-19", governing_law: India}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - ["1", BODY, [OTHER]]
+    - ["2", BODY, [CONFIDENTIALITY]]
+    - ["3", BODY, [CONFIDENTIALITY]]
+    - ["4", BODY, [CONFIDENTIALITY]]
+    - ["5", BODY, [CONFIDENTIALITY]]
+    - ["6", BODY, [CONFIDENTIALITY]]
+    - ["7", BODY, [IP]]
+    - ["8", BODY, [TERMINATION, CONFIDENTIALITY]]
+    - ["9", BODY, [OTHER]]
+    - ["10", BODY, [GOVERNING_LAW]]
+    - ["11", BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+  facts: {termination.notice_days: 30, termination.counterparty_unilateral: false, liability.has_cap: null,
+          liability.is_uncapped: null, renewal.is_automatic: null, payment.due_days: null,
+          governing_law.jurisdiction: India}
+  rules:
+    R01: [NOT_APPLICABLE, []]
+    R02: [NOT_APPLICABLE, []]
+    R03: [NOT_APPLICABLE, []]
+    R04: [NOT_APPLICABLE, []]
+    R05: [NOT_APPLICABLE, []]
+    R06: [NOT_APPLICABLE, []]
+    R07: [COMPLIANT, ["3"]]
+    R08: [COMPLIANT, ["10"]]
+    R09: [NOT_APPLICABLE, []]
+    R10: [NOT_APPLICABLE, []]
+gc07:
+  contract_type: NDA
+  meta: {effective_date: "2026-09-02", expiry_date: "2027-09-01", governing_law: Singapore}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - [I, BODY, [CONFIDENTIALITY]]
+    - [II, DEFINITIONS, []]
+    - [III, BODY, [CONFIDENTIALITY]]
+    - [IV, BODY, [CONFIDENTIALITY]]
+    - [V, BODY, [IP]]
+    - [VI, BODY, [OTHER]]
+    - [VII, BODY, [RENEWAL, CONFIDENTIALITY]]
+    - [VIII, BODY, [CONFIDENTIALITY]]
+    - [IX, BODY, [OTHER]]
+    - [X, BODY, [GOVERNING_LAW]]
+    - [XI, BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+  facts: {termination.notice_days: null, termination.counterparty_unilateral: null, liability.has_cap: null,
+          liability.is_uncapped: null, renewal.is_automatic: true, payment.due_days: null,
+          governing_law.jurisdiction: Singapore}
+  rules:
+    R01: [NOT_APPLICABLE, []]
+    R02: [NOT_APPLICABLE, []]
+    R03: [NOT_APPLICABLE, []]
+    R04: [NOT_APPLICABLE, []]
+    R05: [NON_COMPLIANT, [VII]]
+    R06: [NOT_APPLICABLE, []]
+    R07: [COMPLIANT, [III]]
+    R08: [NON_COMPLIANT, [X]]
+    R09: [NOT_APPLICABLE, []]
+    R10: [NOT_APPLICABLE, []]
+gc08:
+  contract_type: OTHER
+  meta: {effective_date: "2026-09-14", expiry_date: null, governing_law: India}
+  clauses:
+    - [PREAMBLE, PREAMBLE, []]
+    - ["1", DEFINITIONS, []]
+    - ["2", BODY, [OTHER]]
+    - ["3", BODY, [RENEWAL]]
+    - ["4", BODY, [PAYMENT]]
+    - ["5", BODY, [OTHER]]
+    - ["6", BODY, [OTHER]]
+    - ["7", BODY, [OTHER]]
+    - ["8", BODY, [OTHER]]
+    - ["9", BODY, [LIABILITY]]
+    - ["10", BODY, [TERMINATION]]
+    - ["11", BODY, [TERMINATION]]
+    - ["12", BODY, [GOVERNING_LAW]]
+    - ["13", BODY, [OTHER]]
+    - [SIGNATURE, SIGNATURE, []]
+    - [SCHEDULE 1, EXHIBIT, [OTHER]]
+  facts: {termination.notice_days: 60, termination.counterparty_unilateral: false, liability.has_cap: true,
+          liability.is_uncapped: false, renewal.is_automatic: false, payment.due_days: 15,
+          governing_law.jurisdiction: India}
+  rules:
+    R01: [NOT_APPLICABLE, []]
+    R02: [NOT_APPLICABLE, []]
+    R03: [NOT_APPLICABLE, []]
+    R04: [NOT_APPLICABLE, []]
+    R05: [COMPLIANT, ["3"]]
+    R06: [NOT_APPLICABLE, []]
+    R07: [MISSING, []]
+    R08: [COMPLIANT, ["12"]]
+    R09: [NOT_APPLICABLE, []]
+    R10: [NOT_APPLICABLE, []]

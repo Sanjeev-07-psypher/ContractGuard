@@ -6,7 +6,7 @@ segmentation: {min_chars: 40, max_chars: 3000, fallback_min_headings: 3}
 classification: {model_path: models/classifier.joblib, thresholds_path: models/thresholds.json}
 embeddings:
   model_name: sentence-transformers/all-MiniLM-L6-v2
-  proto_threshold: 0.50          # tuned
+  proto_threshold: 0.80          # tuned (D50)
   prototypes_path: models/prototypes.npy
 policy: {default_policy_id: default_vendor_v1, tau_missing: 0.55, policies_dir: policies}
 llm: {provider: gemini, model: null, ollama_host: "http://localhost:11434", rpm: 8, max_findings: 15, temperature: 0.2, timeout_s: 30, max_retries: 3}

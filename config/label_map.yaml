@@ -2,11 +2,10 @@
 #
 # Only label names actually printed by `python training/inspect_labels.py` may be used.
 # CUAD: verified 2026-10-25 against CUADv1.json (docs/labels_cuad.txt, 41 categories).
-# LEDGAR: every name below appears in the LexGLUE dataset card's LEDGAR label list
-# (huggingface.co/datasets/coastalcph/lex_glue README), but the script has not printed them from the
-# dataset itself yet, because dataset file downloads are blocked in the build environment.
+# LEDGAR: verified 2026-10-26 against the coastalcph/lex_glue "ledgar" dataset itself
+# (docs/labels_ledgar.txt, 100 labels).
 # LEDGAR has no liability label, so LIABILITY comes from CUAD only. Unmapped labels go to OTHER.
-verified: false
+verified: true
 
 ledgar:
   CONFIDENTIALITY: [Confidentiality]

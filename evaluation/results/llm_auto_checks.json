@@ -1,0 +1,9 @@
+{
+  "provider": "ollama",
+  "model": "qwen2.5:3b",
+  "flagged_findings": 20,
+  "llm_explanations": 18,
+  "template_fallbacks": 2,
+  "grounding_pass_rate": 0.9,
+  "rows_in_sheet": 20
+}

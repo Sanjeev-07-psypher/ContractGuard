@@ -10,6 +10,7 @@ training or threshold tuning. These rules make two labellers' work comparable.
 | 0 (draft) | Automated draft generated from the YAML sources | Done for GC01–GC08 |
 | 1 | Sanjeev | To do |
 | 2 | Second team member | To do |
+| AI check | AI assistant, from `contract_text.pdf` only (`labeller_ai/`) | Done 2026-10-26; **not** a human labeller, does not replace 1 or 2 |
 
 Labellers 1 and 2 work **independently** from the generated files (`contract.docx` or
 `contract_text.pdf`), without looking at `gold.json` or the YAML `gold:` block. Use the blank sheet

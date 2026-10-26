@@ -1,0 +1,292 @@
+{
+  "labeller": "labeller_ai",
+  "boundary_f1": 1.0,
+  "category_kappa": {
+    "CONFIDENTIALITY": 0.898,
+    "TERMINATION": 0.93,
+    "PAYMENT": 1.0,
+    "LIABILITY": 1.0,
+    "INDEMNIFICATION": 1.0,
+    "IP": 1.0,
+    "GOVERNING_LAW": 1.0,
+    "RENEWAL": 1.0,
+    "SLA": 1.0,
+    "OTHER": 0.967
+  },
+  "categories_exact": {
+    "ok": 141,
+    "n": 145
+  },
+  "facts": {
+    "ok": 54,
+    "n": 56
+  },
+  "meta": {
+    "ok": 32,
+    "n": 32
+  },
+  "rules": {
+    "ok": 80,
+    "n": 80
+  },
+  "per_contract": [
+    {
+      "contract": "gc01",
+      "boundaries": {
+        "draft": 18,
+        "second": 18,
+        "matched": 18,
+        "f1": 1.0
+      },
+      "categories_exact": 18,
+      "facts": {
+        "ok": 7,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": []
+    },
+    {
+      "contract": "gc02",
+      "boundaries": {
+        "draft": 30,
+        "second": 30,
+        "matched": 30,
+        "f1": 1.0
+      },
+      "categories_exact": 30,
+      "facts": {
+        "ok": 7,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": [
+        {
+          "item": "rule R02 evidence",
+          "draft": [
+            "11.1",
+            "11.2",
+            "11.3"
+          ],
+          "second": [
+            "11.1"
+          ]
+        }
+      ]
+    },
+    {
+      "contract": "gc03",
+      "boundaries": {
+        "draft": 18,
+        "second": 18,
+        "matched": 18,
+        "f1": 1.0
+      },
+      "categories_exact": 18,
+      "facts": {
+        "ok": 7,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": []
+    },
+    {
+      "contract": "gc04",
+      "boundaries": {
+        "draft": 20,
+        "second": 20,
+        "matched": 20,
+        "f1": 1.0
+      },
+      "categories_exact": 20,
+      "facts": {
+        "ok": 7,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": []
+    },
+    {
+      "contract": "gc05",
+      "boundaries": {
+        "draft": 17,
+        "second": 17,
+        "matched": 17,
+        "f1": 1.0
+      },
+      "categories_exact": 17,
+      "facts": {
+        "ok": 7,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": []
+    },
+    {
+      "contract": "gc06",
+      "boundaries": {
+        "draft": 13,
+        "second": 13,
+        "matched": 13,
+        "f1": 1.0
+      },
+      "categories_exact": 12,
+      "facts": {
+        "ok": 7,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": [
+        {
+          "item": "categories 8",
+          "draft": [
+            "TERMINATION"
+          ],
+          "second": [
+            "CONFIDENTIALITY",
+            "TERMINATION"
+          ]
+        },
+        {
+          "item": "rule R07 evidence",
+          "draft": [
+            "2",
+            "3"
+          ],
+          "second": [
+            "3"
+          ]
+        }
+      ]
+    },
+    {
+      "contract": "gc07",
+      "boundaries": {
+        "draft": 13,
+        "second": 13,
+        "matched": 13,
+        "f1": 1.0
+      },
+      "categories_exact": 11,
+      "facts": {
+        "ok": 5,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": [
+        {
+          "item": "categories I",
+          "draft": [
+            "OTHER"
+          ],
+          "second": [
+            "CONFIDENTIALITY"
+          ]
+        },
+        {
+          "item": "categories VII",
+          "draft": [
+            "RENEWAL",
+            "TERMINATION"
+          ],
+          "second": [
+            "CONFIDENTIALITY",
+            "RENEWAL"
+          ]
+        },
+        {
+          "item": "fact termination.notice_days",
+          "draft": 30,
+          "second": null
+        },
+        {
+          "item": "fact termination.counterparty_unilateral",
+          "draft": false,
+          "second": null
+        }
+      ]
+    },
+    {
+      "contract": "gc08",
+      "boundaries": {
+        "draft": 16,
+        "second": 16,
+        "matched": 16,
+        "f1": 1.0
+      },
+      "categories_exact": 15,
+      "facts": {
+        "ok": 7,
+        "n": 7
+      },
+      "meta": {
+        "ok": 4,
+        "n": 4
+      },
+      "rules": {
+        "ok": 10,
+        "n": 10
+      },
+      "disagreements": [
+        {
+          "item": "categories 11",
+          "draft": [
+            "OTHER"
+          ],
+          "second": [
+            "TERMINATION"
+          ]
+        }
+      ]
+    }
+  ]
+}
