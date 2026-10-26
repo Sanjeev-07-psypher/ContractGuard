@@ -7,7 +7,7 @@ training or threshold tuning. These rules make two labellers' work comparable.
 
 | Labeller | Who | Status |
 |---|---|---|
-| 0 (draft) | Claude, from the YAML sources | Done for GC01–GC08 |
+| 0 (draft) | Automated draft generated from the YAML sources | Done for GC01–GC08 |
 | 1 | Sanjeev | To do |
 | 2 | Second team member | To do |
 

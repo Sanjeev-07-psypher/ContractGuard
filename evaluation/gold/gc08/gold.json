@@ -10,7 +10,7 @@
   },
   "annotation": {
     "status": "DRAFT",
-    "drafted_by": "Claude (generated from contract.yaml)",
+    "drafted_by": "automated draft (generated from contract.yaml)",
     "labeller_1": null,
     "labeller_2": null,
     "adjudicated": false,

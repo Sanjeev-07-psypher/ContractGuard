@@ -326,7 +326,7 @@ def gold_json(spec: dict) -> dict[str, Any]:
         },  # fmt: skip
         "annotation": {
             "status": "DRAFT",
-            "drafted_by": "Claude (generated from contract.yaml)",
+            "drafted_by": "automated draft (generated from contract.yaml)",
             "labeller_1": None,
             "labeller_2": None,
             "adjudicated": False,
