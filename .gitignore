@@ -8,5 +8,10 @@ __pycache__/
 data/*
 !data/.gitkeep
 models/*
+!models/classifier.joblib
+!models/thresholds.json
+!models/prototypes.npy
+!models/prototypes.json
 !models/README.md
 .mypy_cache/
+deploy/certs/*.crt

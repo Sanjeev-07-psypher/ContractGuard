@@ -1,0 +1,56 @@
+# Deploy the app to a Hugging Face Space (Docker SDK) on every push to main.
+# Needs the repository secret HF_TOKEN (a Hugging Face token with the Write role) and the
+# repository variable HF_SPACE ("username/space-name"). Without them the job is skipped.
+name: Deploy to Hugging Face Space
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-space
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: ${{ vars.HF_SPACE != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Stage the files the Space needs
+        run: |
+          mkdir -p space/deploy
+          cp -r contractguard backend frontend config policies models space/
+          cp Dockerfile .dockerignore pyproject.toml space/
+          cp deploy/requirements.txt deploy/start.sh space/deploy/
+          mkdir -p space/deploy/certs && touch space/deploy/certs/.gitkeep
+          cp deploy/huggingface/README.md space/README.md
+          find space -name __pycache__ -prune -exec rm -rf {} +
+
+      - name: Upload to the Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then echo "HF_TOKEN secret is not set"; exit 1; fi
+          pip install --quiet huggingface_hub
+          python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          api.upload_folder(
+              repo_id=os.environ["HF_SPACE"],
+              repo_type="space",
+              folder_path="space",
+              commit_message=f"Deploy {os.environ['GITHUB_SHA'][:7]}",
+              delete_patterns=["*"],
+          )
+          print("Uploaded to https://huggingface.co/spaces/" + os.environ["HF_SPACE"])
+          PY
