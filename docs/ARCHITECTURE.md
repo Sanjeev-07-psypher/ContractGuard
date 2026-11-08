@@ -1,14 +1,14 @@
 # Architecture
 
 ContractGuard follows the HLD v1.0 without changes. This file is the working summary; the HLD is the
-source of truth for details. Sections marked *planned* describe code that does not exist yet.
+source of truth for details.
 
 ## Layers
 
 | Layer | Owns | Must not |
 |---|---|---|
-| `frontend/` (Streamlit) *planned* | Upload form, progress polling, report dashboard, clause explorer, policy editor | Import `contractguard`; it talks to the API over HTTP only |
-| `backend/` (FastAPI) *planned* | Upload validation, job queue (one job at a time), SQLite persistence, REST contracts | Contain NLP logic |
+| `frontend/` (Streamlit) | Upload form, progress polling, report dashboard, clause explorer, policy editor | Import `contractguard`; it talks to the API over HTTP only |
+| `backend/` (FastAPI) | Upload validation, job queue (one job at a time), SQLite persistence, REST contracts | Contain NLP logic |
 | `contractguard/` | Ingestion, cleaning, segmentation, classification, extraction, policy engine, explanations, report | Import FastAPI or Streamlit |
 | `config/`, `policies/` | Every threshold, pattern, label map and rule | Live in Python code |
 | `training/`, `evaluation/` | Offline model building and metrics | Run at request time |

@@ -15,3 +15,4 @@ models/*
 !models/README.md
 .mypy_cache/
 deploy/certs/*.crt
+docs/build/documentation.html
