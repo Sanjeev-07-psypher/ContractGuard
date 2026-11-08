@@ -1,7 +1,7 @@
 # Deploy the app to a Hugging Face Space (Docker SDK) on every push to main.
 # Needs the repository secret HF_TOKEN (a Hugging Face token with the Write role) and
-# HF_SPACE ("username/space-name") as a repository variable or secret. Without them the
-# upload step is skipped with a notice.
+# HF_SPACE ("username/space-name", default Sanjeev-17/contractguard) as a variable or secret.
+# Without the token the upload step is skipped with a notice.
 name: Deploy to Hugging Face Space
 
 on:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      HF_SPACE: ${{ vars.HF_SPACE || secrets.HF_SPACE }}
+      HF_SPACE: ${{ vars.HF_SPACE || secrets.HF_SPACE || 'Sanjeev-17/contractguard' }}
     steps:
       - name: Check settings
         id: check
