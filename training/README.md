@@ -19,6 +19,25 @@ LEDGAR comes from Hugging Face (`coastalcph/lex_glue`, config `ledgar`). The Min
 (`sentence-transformers/all-MiniLM-L6-v2`) is downloaded on first use. If your network blocks
 Hugging Face file downloads, allow `huggingface.co`, `*.hf.co` and `*.xethub.hf.co`.
 
+## Commands
+
+```bash
+# 1. Data: CUAD from GitHub, LEDGAR from Hugging Face
+mkdir -p data/raw/cuad
+curl -L -o data/raw/cuad/data.zip https://github.com/TheAtticusProject/cuad/raw/main/data.zip
+unzip data/raw/cuad/data.zip -d data/raw/cuad
+python training/inspect_labels.py        # prints and saves the real label names
+python training/prepare_cuad.py          # paragraph examples, split by contract 80/10/10
+python training/prepare_ledgar.py        # official LexGLUE splits
+
+# 2. Train, compare 5 models, tune thresholds (writes models/ and evaluation/results/)
+python training/train_classifier.py
+python training/evaluate.py              # E1 on the test split + confusion matrix
+python training/build_prototypes.py      # embedding fallback + tuned proto_threshold
+```
+
+Copy the printed `proto_threshold` into `config/settings.yaml`.
+
 ## Data
 
 **CUAD** (510 contracts, 41 annotated categories). For every annotation of a mapped category,
