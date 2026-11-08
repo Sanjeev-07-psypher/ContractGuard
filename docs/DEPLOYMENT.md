@@ -42,7 +42,7 @@ One-time setup:
    **CPU basic**.
 2. Create a Hugging Face access token with the **Write** role.
 3. In the GitHub repository, **Settings → Secrets and variables → Actions**: add the secret
-   `HF_TOKEN` (the token) and the variable `HF_SPACE` (`username/space-name`).
+   `HF_TOKEN` (the token) and the variable `HF_SPACE` (`username/space-name`; a secret of that name also works).
 4. Optional, in the Space's **Settings → Variables and secrets**: the secret `GEMINI_API_KEY` and
    the variable `LLM_MODEL`. Without them, explanations use templates.
 

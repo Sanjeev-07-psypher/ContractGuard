@@ -1,6 +1,7 @@
 # Deploy the app to a Hugging Face Space (Docker SDK) on every push to main.
-# Needs the repository secret HF_TOKEN (a Hugging Face token with the Write role) and the
-# repository variable HF_SPACE ("username/space-name"). Without them the job is skipped.
+# Needs the repository secret HF_TOKEN (a Hugging Face token with the Write role) and
+# HF_SPACE ("username/space-name") as a repository variable or secret. Without them the
+# upload step is skipped with a notice.
 name: Deploy to Hugging Face Space
 
 on:
@@ -14,16 +15,31 @@ concurrency:
 
 jobs:
   deploy:
-    if: ${{ vars.HF_SPACE != '' }}
     runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      HF_SPACE: ${{ vars.HF_SPACE || secrets.HF_SPACE }}
     steps:
+      - name: Check settings
+        id: check
+        run: |
+          if [ -z "$HF_SPACE" ] || [ -z "$HF_TOKEN" ]; then
+            echo "::notice::Set the HF_TOKEN secret and the HF_SPACE variable to deploy."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.check.outputs.ready == 'true'
 
       - uses: actions/setup-python@v5
+        if: steps.check.outputs.ready == 'true'
         with:
           python-version: "3.11"
 
       - name: Stage the files the Space needs
+        if: steps.check.outputs.ready == 'true'
         run: |
           mkdir -p space/deploy
           cp -r contractguard backend frontend config policies models space/
@@ -34,11 +50,8 @@ jobs:
           find space -name __pycache__ -prune -exec rm -rf {} +
 
       - name: Upload to the Space
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          HF_SPACE: ${{ vars.HF_SPACE }}
+        if: steps.check.outputs.ready == 'true'
         run: |
-          if [ -z "$HF_TOKEN" ]; then echo "HF_TOKEN secret is not set"; exit 1; fi
           pip install --quiet huggingface_hub
           python - <<'PY'
           import os
