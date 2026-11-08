@@ -11,7 +11,7 @@ with the exact clause and page it came from.
 
 **Status:** every stage is built and tested end to end: reading files and OCR, clause splitting,
 classification, fact extraction, the policy engine, AI explanations, the FastAPI backend and the
-Streamlit UI (308 automated tests). The classifier is trained on LEDGAR + CUAD and the
+Streamlit UI (312 automated tests). The classifier is trained on LEDGAR + CUAD and the
 end-to-end evaluation has been run (see [Measured results](#measured-results)). What is still
 open is the human labelling of the gold set, the human rating of the LLM explanations, and the
 documentation PDF. See [Project status](#project-status) for exactly what exists today.
@@ -261,8 +261,9 @@ docker build -t contractguard .
 docker run -p 7860:7860 contractguard     # open http://localhost:7860
 ```
 
-The same image is deployed to a Hugging Face Space by a GitHub Action on every push to `main`.
-Setup and the limits of the free demo are in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+The public demo runs on Streamlit Community Cloud with main file `frontend/app.py`; there the UI
+starts the API in the same process. The Docker image is also uploaded to a Hugging Face Space on
+every push. Setup and the limits of the free demo are in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Try it
 

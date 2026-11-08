@@ -1,0 +1,31 @@
+# Dependencies for Streamlit Community Cloud, which reads the requirements file next to the
+# entry point (frontend/app.py). Same pins as deploy/requirements.txt, plus CPU-only torch.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0+cpu
+dateparser==1.4.3
+fastapi==0.162.0
+google-genai==2.33.0
+joblib==1.6.0
+jsonschema==4.26.0
+matplotlib==3.11.2
+numpy==2.4.6
+pandas==3.1.0
+pillow==13.0.0
+pydantic==2.14.1
+pydantic-settings==2.16.1
+pymupdf==2.0
+pytesseract==0.3.13
+python-docx==1.2.0
+python-multipart==0.0.32
+pyyaml==6.0.3
+rapidfuzz==3.14.6
+requests==2.34.2
+scikit-learn==1.9.1
+scipy==1.17.1
+sentence-transformers==6.2.0
+spacy==3.8.16
+sqlmodel==0.0.48
+streamlit==1.66.1
+transformers==5.20.2
+uvicorn==0.54.0
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

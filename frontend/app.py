@@ -12,6 +12,10 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from frontend.embedded_backend import ensure_backend  # noqa: E402
+
+ensure_backend()
+
 navigation = st.navigation(
     [
         st.Page("home.py", title="Home", icon="🛡️", default=True),

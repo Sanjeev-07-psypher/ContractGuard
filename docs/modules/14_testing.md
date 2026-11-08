@@ -1,6 +1,6 @@
 # 14 Tests and tooling
 
-Files: `tests/` (21 test files, 308 tests), `tests/conftest.py`, `tests/fakes.py`, `pyproject.toml`;
+Files: `tests/` (22 test files, 312 tests), `tests/conftest.py`, `tests/fakes.py`, `pyproject.toml`;
 strategy in [`docs/TESTING.md`](../TESTING.md).
 
 ## What
@@ -27,7 +27,7 @@ later change cannot silently undo it.
 | Policy | `test_policy_engine.py`, `test_policy_schema.py`, `test_policy_file.py` | every status path, schema errors, versioned saves, the shipped policy is valid |
 | LLM | `test_explainer.py` | grounding failures, invented numbers, retries with a fake clock, cache hits, templates |
 | Pipeline and CLI | `test_pipeline.py`, `test_cli.py` | gold files end to end, warnings, exit codes |
-| Backend | `test_backend.py` | every endpoint, bad uploads, models missing, policy versions |
+| Backend | `test_backend.py`, `test_embedded_backend.py` | every endpoint, bad uploads, models missing, policy versions; when the UI starts the API itself |
 | UI | `test_frontend.py` | every page headless with Streamlit `AppTest` against a real backend |
 | Scripts | `test_build_gold.py`, `test_inspect_labels.py`, `test_label_agreement.py` | gold building and agreement maths |
 
@@ -40,7 +40,7 @@ and embedder. The LLM is always mocked in tests.
 Pydantic plugin over `contractguard` and `backend`.
 
 ```bash
-pytest                    # 308 passed (2026-11-08), also inside the Docker image on Python 3.12
+pytest                    # 312 passed (2026-11-08); 308 of them also inside the Docker image on Python 3.12
 ruff check . && ruff format --check .
 mypy
 ```

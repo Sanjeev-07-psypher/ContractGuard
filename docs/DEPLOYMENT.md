@@ -31,7 +31,47 @@ Optional AI explanations: add `-e LLM_PROVIDER=gemini -e LLM_MODEL=<model> -e GE
 to `docker run`, or point at a local Ollama with `-e LLM_PROVIDER=ollama -e LLM_MODEL=qwen2.5:3b
 -e CG_LLM__OLLAMA_HOST=http://host.docker.internal:11434`. Never put a key in the Dockerfile.
 
+## Streamlit Community Cloud (free public demo)
+
+Hugging Face no longer gives new free accounts any CPU quota for Docker or Gradio Spaces (the
+Space is uploaded but refuses to start with "You've reached your cpu-basic quota limit"), so the
+public demo runs on Streamlit Community Cloud instead (D54).
+
+Streamlit Community Cloud runs one Python process, so `frontend/embedded_backend.py` starts the
+FastAPI backend in a background thread on 127.0.0.1:8000 on the first visit and points the UI at
+it. It switches on automatically on Streamlit Cloud (detected by its `/mount/src` folder) and can
+be forced with `CG_EMBED_BACKEND=1` or `0`. Locally and in Docker it does nothing.
+
+Files it reads, next to the entry point:
+
+- `frontend/requirements.txt`: the same pins as `deploy/requirements.txt`, plus CPU-only torch
+  from the PyTorch index.
+- `frontend/packages.txt`: `tesseract-ocr` and `tesseract-ocr-eng`, installed with apt.
+
+One-time setup:
+
+1. Sign in at https://share.streamlit.io with the GitHub account that owns the repository.
+2. **Create app → Deploy a public app from GitHub**. Repository `Sanjeev-07-psypher/ContractGuard`,
+   branch `main`, main file path `frontend/app.py`, and an app URL of your choice.
+3. **Advanced settings**: Python version **3.12** (the version the pins were tested with).
+   Optional secrets, in TOML: `LLM_PROVIDER = "gemini"`, `LLM_MODEL = "<model>"`,
+   `GEMINI_API_KEY = "<key>"`. Without them, explanations use templates.
+4. **Deploy**. The first build installs the packages (several minutes); the first visit then
+   loads the models (about a minute). Every later push to `main` redeploys automatically.
+
+Limits: about 2.7 GB of memory, the app sleeps after a period without visitors, and the disk is
+not persistent, so uploads and edited policies are lost on restart. No login: every visitor sees
+the same contract list, so use synthetic or public contracts only.
+
+The embedded mode was tested in the development environment on 2026-11-08 (Streamlit started the
+backend, `/health` reported models loaded and Tesseract available, and the scanned gold contract
+GC06 was analysed through the API). The Streamlit Cloud build itself could not be tested from
+there.
+
 ## Hugging Face Space (automatic)
+
+The Space needs a paid Hugging Face plan for new accounts (see above). The workflow still uploads
+the files on every push, so the Space works as soon as compute is available.
 
 `.github/workflows/deploy-space.yml` uploads the files the image needs to the Space on every push
 to `main` (and on demand from the Actions tab). The Space then rebuilds the image itself.
