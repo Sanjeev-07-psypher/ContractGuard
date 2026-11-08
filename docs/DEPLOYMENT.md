@@ -42,11 +42,11 @@ FastAPI backend in a background thread on 127.0.0.1:8000 on the first visit and 
 it. It switches on automatically on Streamlit Cloud (detected by its `/mount/src` folder) and can
 be forced with `CG_EMBED_BACKEND=1` or `0`. Locally and in Docker it does nothing.
 
-Files it reads, next to the entry point:
+Files it reads:
 
-- `frontend/requirements.txt`: the same pins as `deploy/requirements.txt`, plus CPU-only torch
+- `frontend/requirements.txt` (next to the entry point): the same pins as `deploy/requirements.txt`, plus CPU-only torch
   from the PyTorch index.
-- `frontend/packages.txt`: `tesseract-ocr` and `tesseract-ocr-eng`, installed with apt.
+- `packages.txt` (repository root, where Streamlit Cloud looks for it): `tesseract-ocr` and `tesseract-ocr-eng`, installed with apt.
 
 One-time setup:
 
