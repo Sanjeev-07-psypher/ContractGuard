@@ -1,6 +1,6 @@
 # 14 Tests and tooling
 
-Files: `tests/` (22 test files, 312 tests), `tests/conftest.py`, `tests/fakes.py`, `pyproject.toml`;
+Files: `tests/` (20 test files, 312 tests), `tests/conftest.py`, `tests/fakes.py`, `pyproject.toml`;
 strategy in [`docs/TESTING.md`](../TESTING.md).
 
 ## What
